@@ -30,7 +30,7 @@ const en: Dict = {
   legalAlso: 'This page in other languages:', backTo: 'Back to', legalBack: 'About the app',
   home: {
     title: 'Shuye Lab · 书叶工作室',
-    description: 'Shuye Lab is an independent studio. It makes an app for learning Chinese, an app for logging a daily practice, and printed study books.',
+    description: 'Shuye Lab makes apps and books for learning Chinese. Study HSK 3.0 vocabulary with tone training, practice Chinese characters stroke-by-stroke, and prepare for the U.S. citizenship test with bilingual study guides.',
     eyebrow: 'Independent studio · <span class="zh">书叶工作室</span>',
     h1: 'Apps for learning Chinese, <em>and books for study.</em>',
     lead: 'Shuye Lab makes two apps, one for learning Chinese and one for logging a daily practice, and printed study books on Chinese characters, the U.S. citizenship test, classical Chinese in translation and chess tactics.',
@@ -115,7 +115,7 @@ const zh: Dict = {
   legalAlso: '其他语言版本：', backTo: '返回', legalBack: 'App 介绍',
   home: {
     title: '书叶工作室 Shuye Lab',
-    description: '书叶工作室是一家独立工作室，做学中文、记功课的 App，也出纸质学习书：汉字练习、美国入籍考试、典籍英译和国际象棋。',
+    description: '书叶工作室出品中文学习 App 和纸质教材：开花 App 学 HSK 3.0 词汇与声调，Grid by Grid 系列教汉字笔顺书写，入籍考试中英大字版助长者备考，另有《孙子兵法》英译注释本和国际象棋战术题集。',
     eyebrow: 'Shuye Lab · 独立工作室',
     h1: '做学习用的<br><em>App 和书。</em>',
     lead: '书叶工作室做学习用的 App 和书：给海外中文学习者的背词与声调训练，给每天做功课的人的记录工具，还有汉字练习册、入籍考试中英对照书、典籍英译和国际象棋题集。',
