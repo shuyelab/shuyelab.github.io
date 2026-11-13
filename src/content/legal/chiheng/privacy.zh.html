@@ -1,0 +1,132 @@
+<h1>隐私政策</h1>
+<p class="meta">生效日期：2026 年 11 月 13 日 · 最后更新：2026 年 11 月 13 日</p>
+
+<p>本政策说明 <b>持恒</b> App（Android、iPhone / iPad、HarmonyOS 版，下称“持恒”）如何处理你的信息。持恒由 <b>书叶工作室（Shuye Lab）</b>开发，是一个免费、公益的功课记录工具。有任何疑问，请写信到 <a href="mailto:shuyelab@gmail.com">shuyelab@gmail.com</a>。</p>
+
+<div class="card">
+<b>要点</b>
+<ul>
+<li>持恒目前处于测试阶段，尚未在应用商店上架。正式上架前如有变化，我们会更新本页。</li>
+<li>不用注册，也不用登录，没有账号。</li>
+<li>我们不收集你的个人信息，也没有接收你数据的服务器。</li>
+<li>功课、记录、笔记和资料库都只存在你的设备上，不做云同步。</li>
+<li>没有广告，没有会员和付费项目，没有统计分析、崩溃上报或其他第三方 SDK。</li>
+<li>备份文件由你自己导出，存到哪里由你决定。</li>
+<li>卸载持恒，App 里的数据随之删除（你另外保存的备份文件不受影响）。</li>
+</ul>
+</div>
+
+<h2 id="collect">1. 我们不收集个人信息</h2>
+<p>持恒不会要求你提供姓名、手机号、邮箱、通讯录、位置等信息，也不会读取设备标识符或广告标识符。你在持恒里记下的内容不会发送给我们，也不会发送给任何第三方。</p>
+<p>唯一的例外是你主动写邮件给我们，见第 8 节。</p>
+
+<h2 id="network">2. 联网情况与第三方组件</h2>
+<p>持恒的功能都在设备上完成，不需要联网：</p>
+<ul>
+<li><b>Android：</b>安装包里没有申请联网权限（INTERNET），系统不允许没有这项权限的 App 访问网络。清单里有一项“查看网络状态”（ACCESS_NETWORK_STATE），是播放组件 Media3 自带的声明，只能读取当前是否联网，不能联网；持恒只用 Media3 播放你设备上的文件。</li>
+<li><b>HarmonyOS：</b>没有申请联网权限（ohos.permission.INTERNET），也没有引入任何第三方依赖包。</li>
+<li><b>iPhone / iPad：</b>iOS 没有单独的“联网权限”开关；持恒的代码里没有网络请求，除系统框架外也没有引入第三方库。</li>
+</ul>
+<!-- 待确认：iOS 阅读 EPUB 用系统 WKWebView，代码里没有阻止书中引用的远程图片、字体等子资源加载（Android / 鸿蒙因无联网权限不会加载）。是否需要在这里说明，或在代码里加限制？ -->
+<p>你读的书或 PDF 里如果有网页链接，点开后会交给系统浏览器打开，之后的访问由浏览器处理，与持恒无关。</p>
+<p>我们逐一核对过各端用到的组件，它们都在设备上运行，不含广告、统计或崩溃上报功能：</p>
+<div class="table"><table>
+<tr><th>平台</th><th>组件</th><th>用途</th></tr>
+<tr><td>Android</td><td>AndroidX（Compose、Activity、Lifecycle、Fragment、DataStore、Room 等）</td><td>界面、页面切换、设置与本地数据库</td></tr>
+<tr><td>Android</td><td>AndroidX Media3（ExoPlayer、Session）</td><td>播放资料库里的音视频，锁屏与通知栏播放控制</td></tr>
+<tr><td>Android</td><td>pdfiumandroid</td><td>显示 PDF、选字、搜索</td></tr>
+<tr><td>Android</td><td>Readium Kotlin Toolkit</td><td>阅读 EPUB 和 TXT</td></tr>
+<tr><td>Android</td><td>Timber</td><td>开发调试日志，只在调试版打开，正式版不记录</td></tr>
+<tr><td>Android</td><td>Kotlin 协程、kotlinx-datetime、desugar_jdk_libs</td><td>基础语言库与日期计算</td></tr>
+<tr><td>iPhone / iPad</td><td>仅系统框架（SwiftUI、AVFoundation、PDFKit、WebKit、ActivityKit 等）和系统自带的 SQLite</td><td>界面、播放、阅读、锁屏实时活动、本地数据库</td></tr>
+<tr><td>HarmonyOS</td><td>仅系统 Kit，无第三方依赖包</td><td>界面、播放、阅读、本地数据库</td></tr>
+</table></div>
+<!-- 待确认：上架后是否会接入任何统计 / 崩溃分析 SDK；应用商店（Google Play、App Store、华为应用市场）按用户系统设置向开发者提供的崩溃统计是否需要在此说明。 -->
+
+<h2 id="storage">3. 数据存在哪里</h2>
+<p>下面这些内容都保存在持恒在你设备上的私有存储里，其他 App 无法读取：</p>
+<ul>
+<li>功课、打卡记录、补卡和自动打卡记录、你录入的历史数据；</li>
+<li>笔记（文字、标签、关联），以及笔记里插入的图片——图片会复制一份存在 App 的私有目录；</li>
+<li>资料库的书架、专题、分节、学习进度、书签和划线；</li>
+<li>App 设置，例如日切时间、钟声和阅读偏好。</li>
+</ul>
+<p>资料文件（PDF、EPUB、TXT、音视频、图片文件夹）的存放方式因平台而不同：</p>
+<ul>
+<li><b>Android：</b>你通过系统的文件选择器选文件或文件夹，持恒只获得读取这些文件的授权，文件留在原处，不会被复制或修改。从别的 App“用持恒打开”或分享过来的文件、道友分享的资料包，会复制一份存在持恒里。</li>
+<li><b>iPhone / iPad、HarmonyOS：</b>导入的资料会复制一份存在持恒里，原文件不动。</li>
+</ul>
+<p>持恒在 Android 上关闭了系统的应用数据备份（allowBackup），不会把数据交给系统云备份。</p>
+<!-- 待确认：iOS 未把数据目录排除出 iCloud / 电脑整机备份（未见 isExcludedFromBackup）；鸿蒙系统备份行为未核实。是否需要写明“系统整机备份可能包含持恒数据”？ -->
+
+<h2 id="backup">4. 备份、分享与导出</h2>
+<p>在 <b>我的 › 数据 › 导出备份</b>，持恒会生成一个备份文件，再交给系统的保存或分享界面，由你决定存在哪里，比如手机本地、电脑或网盘。备份文件离开持恒之后就由你自己保管，我们拿不到它。</p>
+<ul>
+<li><b>Android 版</b>的备份是一个 .json 文件，包含功课、记录、历史数据、笔记文字，以及资料库的结构、进度、书签和划线；<b>不包含</b>资料文件本身、笔记里的图片和 App 设置。</li>
+<li><b>iPhone / iPad 和 HarmonyOS 版</b>的备份是一个文件，除上述内容外还包含存在持恒里的资料文件和笔记图片。</li>
+</ul>
+<p>你在持恒里分享某份资料或某个专题时，会打开系统的分享面板，内容只发到你选的地方；如果选择附上划线和笔记，这些也会一起打进分享包。</p>
+
+<h2 id="permissions">5. 系统权限</h2>
+<p>持恒只在用到某项功能时才需要对应的权限，你可以在系统设置里随时关闭。持恒不使用相机、麦克风、位置、通讯录，也不申请读取整个相册或整个存储空间。</p>
+
+<h3>Android</h3>
+<div class="table"><table>
+<tr><th>权限</th><th>用途</th><th>是否离开设备</th></tr>
+<tr><td>通知（POST_NOTIFICATIONS）</td><td>静坐计时时的常驻通知（锁屏可见）和时间到的提醒；播放资料音视频时的通知栏控制</td><td>否</td></tr>
+<tr><td>前台服务（FOREGROUND_SERVICE 及特殊用途、媒体播放两类）</td><td>静坐期间按时敲开始钟、间隔钟和结束钟；资料音视频切到后台或锁屏后继续播放</td><td>否</td></tr>
+<tr><td>精确闹钟（USE_EXACT_ALARM；Android 12 及以下为 SCHEDULE_EXACT_ALARM）</td><td>给结束钟设一个兜底闹钟，熄屏或在后台时也准时</td><td>否</td></tr>
+<tr><td>勿扰权限（ACCESS_NOTIFICATION_POLICY）</td><td>开启“静坐时开启勿扰”后，开始静坐时打开持恒自己的勿扰模式“持恒静坐”（放行闹钟，钟声照常响），结束后关回。需要你在系统设置里授权</td><td>否</td></tr>
+<tr><td>全屏通知、点亮屏幕（USE_FULL_SCREEN_INTENT、TURN_SCREEN_ON）</td><td>“锁屏显示静坐”：熄屏后把静坐页放到锁屏上，时间到时亮屏。可在 我的 › 静坐 里关闭</td><td>否</td></tr>
+<tr><td>保持唤醒（WAKE_LOCK）</td><td>计时和播放时防止系统休眠，避免钟声延迟</td><td>否</td></tr>
+<tr><td>振动（VIBRATE）</td><td>计数时的振动反馈、满一圈提示、只振动不响的钟声</td><td>否</td></tr>
+<tr><td>调整音频设置（MODIFY_AUDIO_SETTINGS）</td><td>播放资料时的“音量增强”</td><td>否</td></tr>
+<tr><td>忽略电池优化（REQUEST_IGNORE_BATTERY_OPTIMIZATIONS）</td><td>只在你点 我的 › 静坐 › 后台运行设置 时，请系统把持恒排除出电池优化，熄屏后钟声更准时</td><td>否</td></tr>
+<tr><td>查看网络状态（ACCESS_NETWORK_STATE）</td><td>播放组件 Media3 自带的声明，只能读取是否联网，不能联网</td><td>否</td></tr>
+<tr><td>文件与文件夹（系统文件选择器、文件夹授权）</td><td>读取你选中的资料文件或文件夹；不需要存储权限</td><td>否</td></tr>
+<tr><td>照片（系统照片选择器）</td><td>给笔记配图、给专题换封面；持恒只拿到你选中的那几张</td><td>否</td></tr>
+</table></div>
+
+<h3>iPhone / iPad</h3>
+<div class="table"><table>
+<tr><th>权限 / 系统功能</th><th>用途</th><th>是否离开设备</th></tr>
+<tr><td>通知</td><td>静坐时间到时发一条本地通知并亮屏提醒</td><td>否</td></tr>
+<tr><td>实时活动（锁屏与灵动岛）</td><td>“锁屏显示静坐”：在锁屏和灵动岛上显示静坐进度，可暂停、继续或结束</td><td>否</td></tr>
+<tr><td>后台音频</td><td>熄屏后照常敲钟；资料音视频在后台继续播放</td><td>否</td></tr>
+<tr><td>文件（系统文件选择器）</td><td>导入你选中的资料，复制一份存在持恒里</td><td>否</td></tr>
+<tr><td>照片（系统照片选择器）</td><td>给笔记配图、给专题换封面；不需要相册访问权限，只拿到你选中的那几张</td><td>否</td></tr>
+</table></div>
+<p>iOS 不允许 App 自动开关专注模式，也不向 App 开放音量键，所以 iPhone / iPad 版没有“静坐时自动开启勿扰”和“音量键计数”。</p>
+
+<h3>HarmonyOS</h3>
+<div class="table"><table>
+<tr><th>权限 / 系统功能</th><th>用途</th><th>是否离开设备</th></tr>
+<tr><td>长时任务（ohos.permission.KEEP_BACKGROUND_RUNNING）</td><td>静坐时切到后台或熄屏仍计时敲钟；资料音频在后台继续播放</td><td>否</td></tr>
+<tr><td>读取勿扰状态（ohos.permission.GET_DONOTDISTURB_STATE）</td><td>只读取系统勿扰是否已开启，在静坐页提示你；持恒不能替你开关勿扰</td><td>否</td></tr>
+<tr><td>播控卡片（系统允许时还有实况窗）</td><td>在锁屏和控制中心显示静坐进度，可暂停或继续</td><td>否</td></tr>
+<tr><td>文件、照片（系统选择器）</td><td>导入你选中的资料（复制一份存在持恒里）、给笔记配图、给专题换封面</td><td>否</td></tr>
+</table></div>
+
+<h2 id="delete">6. 删除数据</h2>
+<ul>
+<li>记录、功课、笔记、资料都可以在 App 里单独删除；存在持恒里的资料文件可以在 <b>我的 › 资料占用空间</b> 里清理。</li>
+<li><b>卸载持恒即删除 App 里的全部数据</b>，包括数据库、笔记图片和复制进来的资料文件。</li>
+<li>你自己导出的备份文件、Android 上留在原文件夹里的资料，不在持恒的存储里，卸载不会删除它们，需要你自己处理。</li>
+<li>我们这边没有保存你的任何使用数据，所以不存在需要向我们申请删除的内容；你发给我们的邮件除外，见第 8 节。</li>
+</ul>
+
+<h2 id="children">7. 儿童</h2>
+<p>持恒不收集任何人的个人信息，也就不会收集儿童的个人信息。未成年人使用持恒，请在监护人知情的情况下进行。</p>
+<!-- 待确认：是否设定最低使用年龄；上架时各应用商店的年龄分级。 -->
+
+<h2 id="email">8. 你写信给我们时</h2>
+<p>你写邮件给我们时，我们会收到你的邮箱地址和邮件里的内容（包括附件和截图）。这些只用于回复你、处理你反映的问题。你可以随时要求我们删除往来邮件。</p>
+<!-- 待确认：邮件的保存期限（Kaihua 的隐私政策写的是会话结束后 12 个月内删除，持恒是否沿用）。 -->
+
+<h2 id="changes">9. 本政策的变更</h2>
+<p>政策有更新时，我们会在本页发布并修改上方的“最后更新”日期。如果变化涉及数据的处理方式（例如新增联网功能或第三方组件），我们会在变化生效前，在 App 内或版本更新说明里告诉你。</p>
+
+<h2 id="contact">10. 联系我们</h2>
+<p>书叶工作室（Shuye Lab）· <a href="mailto:shuyelab@gmail.com">shuyelab@gmail.com</a></p>
+<p>另见：<a href="/zh/apps/chiheng/terms/">使用条款</a> · <a href="/zh/apps/chiheng/support/">帮助与支持</a></p>
+<!-- 待确认：回复时限（Kaihua 页面写的是 15 个工作日内）。 -->

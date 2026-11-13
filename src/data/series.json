@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "grid-by-grid-chinese",
+    "name": "Grid by Grid Chinese",
+    "short": "Grid by Grid",
+    "tagline": {
+      "en": "Character writing and vocabulary workbooks for the new HSK 3.0.",
+      "zh": "按 HSK 3.0 新大纲编的汉字书写与词汇练习册。"
+    },
+    "about": {
+      "en": "One workbook per HSK 3.0 level. Each book takes the official word list and handwriting list for its level and turns them into character pages, exercises and unit checks, in the order you would learn them. Book 1 covers Level 1.",
+      "zh": "HSK 3.0 每个级别一册。每册以该级别的官方词表和手写字表为准，按学习顺序编成字卡页、练习和单元自测。第 1 册对应一级。"
+    }
+  },
+  {
+    "slug": "civics-in-two-languages",
+    "name": "Civics in Two Languages",
+    "short": "Civics in Two Languages",
+    "tagline": {
+      "en": "Bilingual, large-print study guides for the U.S. citizenship test.",
+      "zh": "美国入籍考试的双语大字备考书。"
+    },
+    "about": {
+      "en": "Study guides for the 2025 U.S. citizenship civics test, each written for speakers of one language. The English questions and answers are the official USCIS list, word for word; the translations, notes and practice are written for that reader. Book 1 is Chinese and English. More language editions are planned.",
+      "zh": "面向 2025 版美国入籍公民考试的备考书，每一册针对一种母语的读者。英文题目和答案逐字照录 USCIS 公布的题单，翻译、讲解和练习按这一语种的读者来写。第 1 册是中英对照版，其他语种的版本在计划中。"
+    }
+  },
+  {
+    "slug": "chinese-classics-parallel",
+    "name": "Chinese Classics in Parallel Text",
+    "short": "Parallel Classics",
+    "tagline": {
+      "en": "Classical Chinese texts with a new English translation beside the original.",
+      "zh": "中国典籍原文与新译英文逐段对照。"
+    },
+    "about": {
+      "en": "New English translations of classical Chinese texts, set beside the Chinese passage by passage, with notes drawn from the traditional commentaries. Made for readers who want to check every famous line against what the text actually says. Book 1 is The Art of War.",
+      "zh": "中国古代典籍的英文新译，与中文原文逐段并排，注释取自历代古注。写给想把每一句名言都和原文对上的英语读者。第 1 册是《孙子兵法》。"
+    }
+  },
+  {
+    "slug": "motif-by-motif-chess",
+    "name": "Motif by Motif Chess Workbooks",
+    "short": "Motif by Motif",
+    "tagline": {
+      "en": "Chess tactics workbooks that teach one pattern at a time.",
+      "zh": "一次练一种战术母题的国际象棋题集。"
+    },
+    "about": {
+      "en": "Workbooks for adult club players. Each chapter teaches one tactical motif with worked examples, then gives you puzzles from real games, and every solution comes with a short explanation. Volume 1 covers the 15 core patterns.",
+      "zh": "写给成年俱乐部棋手的题集。每章讲一种战术母题，配例题讲解，再给出来自实战对局的习题，每道题的答案都附简短说明。第 1 册收 15 种核心母题。"
+    }
+  }
+]

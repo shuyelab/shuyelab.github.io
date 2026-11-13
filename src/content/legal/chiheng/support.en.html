@@ -1,0 +1,116 @@
+<h1>Support</h1>
+<p class="meta">Effective date: 13 November 2026 · Last updated: 13 November 2026</p>
+
+<div class="card">
+<b>Contact us</b><br>
+Email: <a href="mailto:shuyelab@gmail.com">shuyelab@gmail.com</a><br>
+Please include your phone or tablet model, the system version, the ChiHeng version (in <b>Me › About › Version</b>), and what you did before the problem appeared. Screenshots help. <b>Please never send us any password.</b>
+</div>
+<!-- 待确认：是否承诺回复时限。 -->
+
+<p>ChiHeng is currently in testing, with versions for Android, iPhone / iPad and HarmonyOS. Some features work differently on each system, so the answers below cover each one separately.</p>
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<details open id="migrate"><summary>I have a new phone. How do I move my data?</summary>
+<p>ChiHeng has no account and no cloud sync, so you move your data with a backup file:</p>
+<ol>
+<li>On the old phone, open <b>Me › Data › Export backup</b> and save the file somewhere the new phone can reach, such as a computer, a cloud drive, or a chat app where you send it to yourself.</li>
+<li>Install ChiHeng on the new phone, open <b>Me › Data › Restore from backup</b> and choose the file.</li>
+<li>When the restore finishes, open your library and check it.</li>
+</ol>
+<p><b>On Android:</b> the backup does not contain the library files themselves or the images in your notes. Copy the folders that held your library files on the old phone to the new phone, in the same location (the same folder path), then give ChiHeng access to them again after restoring (see “No access” below). Files that ChiHeng received from other apps or imported from packages are stored inside ChiHeng and need to be imported again on the new phone.</p>
+<!-- 待确认：“放在相同路径才能对上”是从代码（Access.kt 按 SAF 文档 ID 即路径匹配）推断的，尚无真机换机实测。 -->
+<p>Rely on ChiHeng’s own backup. System or manufacturer phone-transfer tools may not bring ChiHeng’s data with them.</p>
+<p>Between versions:</p>
+<ul>
+<li>iPhone / iPad and HarmonyOS backups can be restored on either of those two.</li>
+<li>An Android backup can be restored on iPhone / iPad or HarmonyOS. Practices, records and notes come across. The Android backup contains no library files, so those items are skipped; when the restore finishes, ChiHeng tells you how many, and you can import them again on the new device.</li>
+<li>Backups from iPhone / iPad or HarmonyOS cannot be restored on Android yet.</li>
+</ul>
+<!-- 待确认：以上跨端恢复的结论来自当前代码（安卓只读 JSON 备份；iOS / 鸿蒙读安卓 JSON 时跳过 content:// 资料），正式上架前是否会改。 -->
+</details>
+
+<details id="backup"><summary>What is in a backup, and how do I restore it?</summary>
+<p><b>Export:</b> Me › Data › Export backup. ChiHeng writes your data to one file and passes it to the system’s save or share screen, so you decide where it goes.</p>
+<ul>
+<li><b>Android:</b> a .json file with your practices, records, prior practice, note text, and your library’s shelf, collections, progress, bookmarks and highlights. It does <b>not</b> include the library files themselves, the images in your notes, or app settings. Library files stay in your own folders; files stored inside ChiHeng (received from other apps or imported from packages) are not in the backup.</li>
+<li><b>iPhone / iPad, HarmonyOS:</b> one file with all your data, including library files and note images, so it can be large.</li>
+</ul>
+<p><b>Restore:</b> Me › Data › Restore from backup, choose the file and confirm. Restoring <b>replaces</b> all of ChiHeng’s current data; nothing is merged. Export a backup of your current data first.</p>
+<p>Export a backup regularly and keep a copy somewhere other than your phone. Your data exists only on your device; if the phone is lost or broken, or the app is uninstalled, it cannot be recovered without a backup.</p>
+</details>
+
+<details id="reauth"><summary>After restoring a backup, my files won’t open and say there is no access</summary>
+<p>This only happens on Android. There, ChiHeng reads files in your folders using the access you granted in the system file picker. That access belongs to that copy of ChiHeng on that phone and <b>is not part of the backup</b>. After you restore a backup, reinstall ChiHeng or change phones, your files are still there, but ChiHeng is not allowed to open them yet. Grant access once more and they open again; progress, bookmarks and notes are kept.</p>
+<p><b>Items added as a whole folder:</b></p>
+<ol>
+<li>After the restore, ChiHeng checks automatically and shows “Folder access needed” with a list of folders.</li>
+<li>Tap <b>Grant access</b>. The system folder picker opens, starting at the folder these folders have in common.</li>
+<li>Choose the original folder, or any folder above it, and allow access. Choosing a higher folder covers several folders at once.</li>
+</ol>
+<p><b>Items added one by one with “Choose files”:</b></p>
+<ol>
+<li>After the folders are done, ChiHeng lists these files and opens the file picker (at their original location when it can work that out).</li>
+<li>Pick the files again; you can select several at once. ChiHeng matches them to your items by file name and size.</li>
+</ol>
+<p>These files are often in folders like Downloads. Since Android 11, the system does not let apps get access to the whole Downloads folder, so they have to be picked individually.</p>
+<p>If you see the message when opening a book, tap <b>Grant access</b> in the message. ChiHeng deals with that book first and takes you back to it once it opens.</p>
+<p>If a file has been moved or deleted, put it back or import it again first.</p>
+</details>
+
+<details id="volume"><summary>Can I count with the volume buttons?</summary>
+<ul>
+<li><b>Android, HarmonyOS:</b> yes. On the counter screen, either volume button adds 1. This works only while the screen is on. To turn it off, go to <b>Me › Count › Count with volume keys</b>.</li>
+<li><b>iPhone / iPad:</b> no. iOS does not give apps access to the volume buttons, so tap the screen to count.</li>
+</ul>
+</details>
+
+<details id="dnd"><summary>Can Do Not Disturb turn on automatically when I meditate?</summary>
+<ul>
+<li><b>Android:</b> yes. Turn on “Do Not Disturb during meditation” above the Start button on the meditation screen, or in <b>Me › Meditation</b>, then follow the prompt to give ChiHeng Do Not Disturb access in system settings. When you start, ChiHeng turns on its own Do Not Disturb mode, “ChiHeng meditation”, and turns it off when you finish. This mode lets alarms through, so the starting, interval and ending bells still ring; everything else follows your phone’s usual Do Not Disturb rules. If Do Not Disturb is already on, ChiHeng leaves it alone. Without access you can still meditate; Do Not Disturb just won’t turn on.</li>
+<li><b>iPhone / iPad, HarmonyOS:</b> the system does not let apps switch Do Not Disturb on or off. Turn on Do Not Disturb or a Focus mode from Control Center (Control Panel on HarmonyOS) before you sit, and turn it off afterwards. On HarmonyOS, the meditation screen shows whether system Do Not Disturb is on.</li>
+</ul>
+</details>
+
+<details id="bell"><summary>The bell didn’t ring, there was no alert with the screen off, or I can’t see the timer on the lock screen</summary>
+<p>ChiHeng does <b>not</b> currently have a daily reminder to do your practice. This answer is about bells, notifications and the lock screen during a meditation timer.</p>
+<p><b>Android:</b></p>
+<ul>
+<li>Allow <b>notifications</b> for ChiHeng in system settings. During meditation, a timer notification in the notification shade and on the lock screen shows the time left or the time sat.</li>
+<li>Open <b>Me › Meditation › Run in background</b> to exempt ChiHeng from battery optimization, so the bells stay on time with the screen off. Some phones also have their own background or auto-start settings; allow ChiHeng there too.</li>
+<li>To see the meditation screen directly on the lock screen and have the screen light up when time is up, turn on <b>Me › Meditation › Lock screen timer</b>. On Android 14 and later you also need to allow full-screen notifications in system settings; on Xiaomi and similar systems, also allow “Show on Lock screen” and “Display pop-up windows while running in the background”. If something is missing, ChiHeng shows “One more step for the lock screen”, which takes you to the right setting.</li>
+<li>Bells use the alarm audio channel. Set their volume separately in <b>Me › Meditation › Bell volume</b>; they ring even when the phone is on silent.</li>
+</ul>
+<p><b>iPhone / iPad:</b></p>
+<ul>
+<li>Allow notifications for ChiHeng; otherwise there is no alert and the screen won’t light up when time is up.</li>
+<li>Meditation progress on the lock screen and in the Dynamic Island uses Live Activities. Allow Live Activities for ChiHeng in system settings; if they are off, a playback card appears on the lock screen instead.</li>
+<li>Bell volume is relative to the system volume. Bells ring even with the silent switch on.</li>
+</ul>
+<p><b>HarmonyOS:</b></p>
+<ul>
+<li>HarmonyOS does not let ordinary apps show their own screens on the lock screen. During meditation, a playback card appears on the lock screen and in Control Panel, where you can pause or resume.</li>
+<li>Timing and bells continue in the background and with the screen off. Please don’t restrict ChiHeng’s background activity in system settings.</li>
+<li>Bell volume follows the media volume.</li>
+</ul>
+</details>
+
+<details id="delete"><summary>How do I delete my data?</summary>
+<ul>
+<li><b>Some of it:</b> practices, records, notes and library items can each be deleted in the app. Library files stored in ChiHeng can be reviewed and cleared in <b>Me › Library storage</b>.</li>
+<li><b>All of it:</b> uninstall ChiHeng. Data inside the app, including note images and copied library files, is deleted with it.</li>
+<li>Backup files you exported, and on Android the original files in your own folders, are not managed by ChiHeng. Uninstalling does not delete them; remove them yourself if you want to.</li>
+<li>We hold none of your usage data. If you have emailed us and want that correspondence deleted, just tell us.</li>
+</ul>
+</details>
+
+<details id="privacy"><summary>Does ChiHeng go online or collect my information?</summary>
+<p>No. ChiHeng needs no account and has no ads or analytics. The Android and HarmonyOS versions do not request the internet permission, and the iPhone / iPad version makes no network requests in its code. See the <a href="/apps/chiheng/privacy/">Privacy Policy</a>.</p>
+</details>
+
+<h2 id="links">Related pages</h2>
+<ul>
+<li><a href="/apps/chiheng/privacy/">Privacy Policy</a></li>
+<li><a href="/apps/chiheng/terms/">Terms of Use</a></li>
+</ul>

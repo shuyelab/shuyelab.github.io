@@ -1,0 +1,26 @@
+---
+import Seal from './Seal.astro';
+import site from '../data/site.json';
+import { t, href, L, type Lang } from '../i18n';
+import { APPS, SERIES } from '../lib/routes';
+const { lang } = Astro.props as { lang: Lang };
+const T = t(lang);
+const nl: Lang = lang === 'zh' ? 'zh' : 'en';
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><a class="brand" href={href(nl, '/')} aria-label={T.nav.home}><Seal /><span class="brand-text"><b>Shuye Lab</b><span lang="zh-CN">书叶工作室</span></span></a>
+        <p class="about-line">{T.footer.about}</p>
+        <p class="about-line"><a href={`mailto:${site.email}`}>{site.email}</a></p></div>
+      <div><h2 class="foot-h">{T.footer.apps}</h2><ul>{APPS.map((a) => <li><a href={href(nl, `/apps/${a.slug}/`)}>{L(a.name, nl)} <span lang={nl === 'zh' ? 'en' : 'zh-CN'}>{L(a.alt_name, nl)}</span></a></li>)}</ul></div>
+      <div><h2 class="foot-h">{T.footer.books}</h2><ul>{SERIES.map((s) => <li><a href={href(nl, `/books/${s.slug}/`)} lang="en">{s.name}</a></li>)}</ul></div>
+      <div><h2 class="foot-h">{T.footer.studio}</h2><ul>
+        <li><a href={href(nl, '/about/')}>{T.nav.about}</a></li>
+        <li><a href={href(nl, '/contact/')}>{T.nav.contact}</a></li>
+        <li><a href={href(nl, '/legal/')}>{T.footer.privacy}</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom"><span>© {site.year} {lang === 'zh' ? '书叶工作室 Shuye Lab' : 'Shuye Lab · 书叶工作室'}</span><span>{T.footer.cookies}</span></div>
+  </div>
+</footer>

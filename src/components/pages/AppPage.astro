@@ -1,0 +1,109 @@
+---
+import Base from '../../layouts/Base.astro';
+import Phone from '../Phone.astro';
+import StoreBadges from '../StoreBadges.astro';
+import site from '../../data/site.json';
+import { t, href, L, LANG_LABEL, HTML_LANG, type Lang } from '../../i18n';
+const { lang, app } = Astro.props as { lang: Lang; app: any };
+const T = t(lang);
+const base = href(lang, `/apps/${app.slug}/`);
+const name = L(app.name, lang); const alt = L(app.alt_name, lang);
+const mail = `<a href="mailto:${site.email}">${site.email}</a>`;
+const check = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+const rel = (h: string) => (h.startsWith('/') || h.startsWith('http') || h.startsWith('#') ? h : base + h);
+const fixLinks = (s: string) => s.replace(/href="(?!\/|https?:|#|mailto:)([^"]*)"/g, (_m, p) => `href="${base}${p}"`);
+const privacyLangs: Lang[] = (app.legal?.privacy?.langs ?? []).filter((l: Lang) => l !== lang);
+const jsonld = [{
+  '@context': 'https://schema.org', '@type': 'MobileApplication', name: L(app.name, 'en'), alternateName: L(app.name, 'zh'),
+  operatingSystem: app.platforms, applicationCategory: app.category, description: L(app.meta.description, lang),
+  publisher: { '@type': 'Organization', name: 'Shuye Lab', email: site.email, url: site.url + '/' }, image: site.url + app.icon,
+}];
+const quiet = app.quiet;
+---
+<Base lang={lang} path={`/apps/${app.slug}/`} title={L(app.meta.title, lang)} description={L(app.meta.description, lang)} section="apps" og={`/assets/og/${app.slug}-${lang === 'zh' ? 'zh' : 'en'}.png`} jsonld={jsonld} bodyClass={quiet ? 'quiet' : ''}>
+<div class="wrap crumbs"><a href={href(lang, '/apps/')}>{T.crumbsApps}</a> <span aria-hidden="true">/</span> <span aria-current="page">{name}</span></div>
+<section class={`k-hero${quiet ? ' quiet' : ''}`}>
+  <div class="wrap k-hero-grid">
+    <div>
+      <div class="app-id"><img class={`app-icon${quiet ? ' quiet-icon' : ''}`} src={app.icon} alt={L(app.icon_alt, lang)} width="76" height="76"><div><p class="app-name">{name} <span class="zh" lang={lang === 'zh' ? 'en' : 'zh-CN'}>{alt}</span></p><p>{L(app.hero.sub, lang)}</p></div></div>
+      <h1 set:html={L(app.hero.h1, lang)} />
+      <p class="lead">{L(app.hero.lead, lang)}</p>
+      {app.hero.badges ? <StoreBadges lang={lang} store={app.store} /> : <p class="status-pill"><span class="dot" aria-hidden="true"></span>{L(app.hero.status, lang)}</p>}
+      <div class="k-facts">{app.hero.facts.map((f: any) => <div><b>{L(f.b, lang)}</b><span>{L(f.t, lang)}</span></div>)}</div>
+    </div>
+    <div class="k-phones">{app.hero.shots.map((s: any, i: number) => <Phone src={s.src} alt={L(s.alt, lang)} cls={`p${i + 1}`} eager={i === 1} />)}</div>
+  </div>
+</section>
+<nav class="wrap toc" aria-label={lang === 'zh' ? '本页目录' : 'On this page'}>
+  {app.toc.map((x: any) => <a href={`#${x.id}`}>{L(x.label, lang)}</a>)}
+</nav>
+{app.blocks.map((b: any) => {
+  if (b.type === 'tones') return (
+    <section class="tones" aria-label={lang === 'zh' ? '四个声调' : 'The four tones'}>
+      <div class="wrap">
+        <div class="tone-row">{b.items.map((x: any) => <div class="tone"><svg viewBox="0 0 84 40" aria-hidden="true"><path d={x.d} fill="none" stroke={x.red ? '#C23A2B' : '#1E1B17'} stroke-width="4" stroke-linecap="round"/></svg><div class="han" lang="zh-CN">{x.han}</div><div class="py">{x.py}</div><div class="gl">{L(x.gl, lang)}</div></div>)}</div>
+        <div class="tone-cap">{b.caption.map((c: any) => <span>{L(c, lang)}</span>)}</div>
+      </div>
+    </section>);
+  if (b.type === 'features') {
+    const rows = b.items.filter((x: any) => !x.pair); const pairs = b.items.filter((x: any) => x.pair);
+    const Row = (x: any) => (
+      <article class={`f-row${x.flip ? ' flip' : ''}${x.compact ? ' compact' : ''}${x.shot ? '' : ' noshot'}`}>
+        <div class="f-text"><span class="num">{L(x.num, lang)}</span><h3>{L(x.h3, lang)}</h3><p set:html={L(x.p, lang)} />
+          {x.list && <ul>{x.list.map((li: any) => <li>{L(li, lang)}</li>)}</ul>}</div>
+        {x.shot && <div class={`f-shot${x.shot.pos ? ' ' + x.shot.pos : ''}`}><Phone src={x.shot.src} alt={L(x.shot.alt, lang)} /></div>}
+      </article>);
+    return (
+      <section id={b.id} class="pt0">
+        <div class="wrap">
+          <div class="sec-head"><div><span class="eyebrow">{L(b.eyebrow, lang)}</span><h2 set:html={L(b.h2, lang)} /></div><p>{L(b.side, lang)}</p></div>
+          <div class="feature-rows">{rows.map(Row)}{pairs.length > 0 && <div class="f-pair">{pairs.map(Row)}</div>}</div>
+        </div>
+      </section>);
+  }
+  if (b.type === 'band') return (
+    <section class="pt0"><div class="wrap"><div class="garden" data-mark={b.watermark}>
+      <div><span class="eyebrow">{L(b.eyebrow, lang)}</span><h2 set:html={L(b.h2, lang)} /></div>
+      <div><p class="lead">{L(b.lead, lang)}</p><div class="garden-stats">{b.stats.map((s: any) => <div><b>{L(s.b, lang)}</b><span>{L(s.t, lang)}</span></div>)}</div></div>
+    </div></div></section>);
+  if (b.type === 'plans') return (
+    <section id={b.id} class="tint">
+      <div class="wrap">
+        <div class="sec-head"><div><span class="eyebrow">{L(b.eyebrow, lang)}</span><h2 set:html={L(b.h2, lang)} /></div><p>{L(b.side, lang)}</p></div>
+        <div class="plans">{[b.free, b.pro].map((p: any, i: number) => (
+          <div class={`plan${i ? ' pro' : ''}`} data-mark={p.watermark}><h3>{L(p.h3, lang)} <small>{L(p.small, lang)}</small></h3>
+            <ul>{p.items.map((it: any) => <li><Fragment set:html={check} /><span>{L(it, lang)}</span></li>)}</ul>
+            <p class="fine">{L(p.fine, lang)}</p></div>))}</div>
+      </div>
+    </section>);
+  if (b.type === 'promise') return (
+    <section class={quiet ? 'pt0' : 'tint pt0 promise-sec'}><div class="wrap"><div class="promise">{b.items.map((x: any) => <div><b>{L(x.b, lang)}</b><span>{L(x.t, lang)}</span></div>)}</div></div></section>);
+  if (b.type === 'faq') return (
+    <section id={b.id}>
+      <div class="wrap">
+        <div class="faq-head"><span class="eyebrow">{L(b.eyebrow, lang)}</span><h2>{L(b.h2, lang)}</h2></div>
+        <div class="faq">{b.items.map((q: any, i: number) => <details open={i === 0}><summary>{L(q.q, lang)}</summary><p set:html={fixLinks(L(q.a, lang))} /></details>)}</div>
+      </div>
+    </section>);
+  if (b.type === 'help') return (
+    <section id={b.id} class="pt0 help-sec">
+      <div class="wrap">
+        <h2 class="visually-hidden">{lang === 'zh' ? '支持与隐私' : 'Support and policies'}</h2>
+        <nav class="help" aria-label={lang === 'zh' ? `${name}的帮助与政策` : `${name} help and policies`}>
+          {b.items.map((h: any) => <a href={rel(h.href)}><b>{L(h.b, lang)} <span class="arr" aria-hidden="true">→</span></b><span>{L(h.t, lang)}</span></a>)}
+        </nav>
+        <p class="help-mail" set:html={L(b.mail, lang).replace('{email}', mail)} />
+        {b.langs && privacyLangs.length > 0 && <p class="help-mail">{L(b.langs, lang)} {privacyLangs.map((l, i) => <>{i > 0 && ' · '}<a href={href(l, `/apps/${app.slug}/privacy/`)} lang={HTML_LANG[l]} hreflang={HTML_LANG[l]}>{LANG_LABEL[l]}</a></>)}{lang === 'zh' ? ' 版本。' : '.'}</p>}
+      </div>
+    </section>);
+  if (b.type === 'cta') return (
+    <section class="pt0"><div class="wrap"><div class="k-cta" data-mark={app.watermark}>
+      <h2>{L(b.h2, lang)}</h2><p>{L(b.p, lang)}</p>
+      {b.badges && <StoreBadges lang={lang} store={app.store} />}
+      <nav class="legal-links" aria-label={lang === 'zh' ? '政策' : 'Policies'}><a href={base + 'privacy/'}>{T.legalNav.privacy}</a><a href={base + 'terms/'}>{T.legalNav.terms}</a><a href={base + 'support/'}>{T.legalNav.support}</a></nav>
+    </div></div></section>);
+  return null;
+})}
+{app.trademark && <div class="wrap"><p class="trademark">{L(app.trademark, lang)}</p></div>}
+<div class="spacer"></div>
+</Base>

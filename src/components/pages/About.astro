@@ -1,0 +1,31 @@
+---
+import Base from '../../layouts/Base.astro';
+import site from '../../data/site.json';
+import { t, href, L, type Lang } from '../../i18n';
+import { APPS, SERIES } from '../../lib/routes';
+const { lang } = Astro.props as { lang: Lang };
+const T = t(lang); const A = T.about;
+---
+<Base lang={lang} path="/about/" title={A.title} description={A.description} section="about">
+<section class="page-hero">
+  <div class="wrap about-grid">
+    <div><span class="eyebrow">{A.eyebrow}</span><h1 class="mt18" set:html={A.h1} />
+      <div class="about-chars">{A.chars.map(([ch, b, c]: string[]) => <figure><div class="ch" lang="zh-CN" aria-hidden="true">{ch}</div><figcaption><b>{b}</b>{c}</figcaption></figure>)}</div></div>
+    <div class="about-text">
+      <p class="lead">{A.lead}</p>
+      <h2 class="h2-sm mt40">{A.principlesH2}</h2>
+      <ol class="principles">{A.principles.map(([b, s]: string[], i: number) => <li><span class="n" aria-hidden="true">0{i + 1}</span><div><b>{b}</b><span>{s}</span></div></li>)}</ol>
+    </div>
+  </div>
+</section>
+<section class="tint">
+  <div class="wrap">
+    <h2 class="h2-sm mb32">{A.makeH2}</h2>
+    <div class="make-grid">
+      <div><h3>{A.makeApps}</h3><ul class="make-list">{APPS.map((a) => <li><a href={href(lang, `/apps/${a.slug}/`)}>{L(a.name, lang)} <span>{L(a.alt_name, lang)}</span> <i aria-hidden="true">→</i></a><p>{L(a.card.lead, lang)}</p></li>)}</ul></div>
+      <div><h3>{A.makeBooks}</h3><ul class="make-list">{SERIES.map((s) => <li><a href={href(lang, `/books/${s.slug}/`)} lang="en">{s.name} <i aria-hidden="true">→</i></a><p>{L(s.tagline, lang)}</p></li>)}</ul></div>
+    </div>
+    <p class="help-mail left write-us">{lang === 'zh' ? '联系我们：' : 'Write to us: '}<a href={`mailto:${site.email}`}>{site.email}</a></p>
+  </div>
+</section>
+</Base>

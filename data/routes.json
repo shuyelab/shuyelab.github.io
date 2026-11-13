@@ -1,12 +1,11 @@
 {
-  "_说明": "跳转表（规范见 docs/url-scheme.md）。go：印刷短链；legacy：旧网址；temp：目标页面上线前的临时跳转。改完运行 python3 tools/gen_redirects.py。",
+  "_说明": "跳转表（规范见 docs/url-scheme.md）。go：印刷短链；legacy：旧网址（源目录下的每个子页面都镜像跳到新位置，含 Astro 生成的系列页与书页）；temp：目标页面上线前的临时跳转（Astro 已生成真实页面的条目自动作废）。改完运行 python3 tools/gen_redirects.py，产物写进 public/。",
   "go": {
-    "cb1": "/books/citizenship-bridge/civics-2025-zh/listen/"
+    "cb1": "/books/civics-in-two-languages/civics-2025-zh/listen/"
   },
   "legacy": {
-    "citizenship": "/books/citizenship-bridge/civics-2025-zh/listen/"
+    "citizenship": "/books/civics-in-two-languages/civics-2025-zh/listen/",
+    "books/citizenship-bridge": "/books/civics-in-two-languages/"
   },
-  "temp": {
-    "books/citizenship-bridge/civics-2025-zh": "/books/citizenship-bridge/civics-2025-zh/listen/"
-  }
+  "temp": {}
 }

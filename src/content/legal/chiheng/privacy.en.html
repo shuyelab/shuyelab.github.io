@@ -1,0 +1,132 @@
+<h1>Privacy Policy</h1>
+<p class="meta">Effective date: 13 November 2026 · Last updated: 13 November 2026</p>
+
+<p>This policy explains how the <b>ChiHeng</b> app (持恒) for Android, iPhone / iPad and HarmonyOS (“ChiHeng”) handles your information. ChiHeng is developed by <b>Shuye Lab</b> (书叶工作室) and is a free, non-commercial tool for keeping a record of your daily practice. If you have any question, write to <a href="mailto:shuyelab@gmail.com">shuyelab@gmail.com</a>.</p>
+
+<div class="card">
+<b>The short version</b>
+<ul>
+<li>ChiHeng is currently in testing and is not yet available in any app store. If anything changes before the public release, we will update this page.</li>
+<li>No sign-up and no sign-in. There is no account.</li>
+<li>We do not collect your personal information, and we have no server that receives your data.</li>
+<li>Your practices, records, notes and library stay on your device. There is no cloud sync.</li>
+<li>No ads, no membership or paid features, no analytics, no crash reporting and no other third-party SDKs.</li>
+<li>You export backups yourself and decide where to keep them.</li>
+<li>Uninstalling ChiHeng deletes the data inside the app (backup files you saved elsewhere are not affected).</li>
+</ul>
+</div>
+
+<h2 id="collect">1. We do not collect personal information</h2>
+<p>ChiHeng never asks for your name, phone number, email address, contacts or location, and it does not read device identifiers or advertising identifiers. What you record in ChiHeng is not sent to us or to anyone else.</p>
+<p>The only exception is when you choose to email us, see section 8.</p>
+
+<h2 id="network">2. Network access and third-party components</h2>
+<p>Everything ChiHeng does happens on your device. It does not need an internet connection:</p>
+<ul>
+<li><b>Android:</b> the app does not request the internet permission (INTERNET), and Android does not let an app without it access the network. The manifest does include “view network state” (ACCESS_NETWORK_STATE). This is declared by the Media3 playback library; it can only read whether the device is online and cannot connect to anything. ChiHeng uses Media3 only to play files on your device.</li>
+<li><b>HarmonyOS:</b> the app does not request the internet permission (ohos.permission.INTERNET) and has no third-party packages.</li>
+<li><b>iPhone / iPad:</b> iOS has no separate internet permission. ChiHeng’s code makes no network requests, and apart from Apple’s system frameworks it uses no third-party libraries.</li>
+</ul>
+<!-- 待确认：iOS 阅读 EPUB 用系统 WKWebView，代码里没有阻止书中引用的远程图片、字体等子资源加载（Android / 鸿蒙因无联网权限不会加载）。是否需要在这里说明，或在代码里加限制？ -->
+<p>If a book or PDF you are reading contains a web link and you tap it, the link opens in your system browser. What happens after that is handled by the browser, not by ChiHeng.</p>
+<p>We checked every component used on each platform. They all run on the device and contain no advertising, analytics or crash-reporting features:</p>
+<div class="table"><table>
+<tr><th>Platform</th><th>Component</th><th>Used for</th></tr>
+<tr><td>Android</td><td>AndroidX (Compose, Activity, Lifecycle, Fragment, DataStore, Room and others)</td><td>Interface, screens, settings and the local database</td></tr>
+<tr><td>Android</td><td>AndroidX Media3 (ExoPlayer, Session)</td><td>Playing audio and video from your library; playback controls on the lock screen and in notifications</td></tr>
+<tr><td>Android</td><td>pdfiumandroid</td><td>Displaying PDFs, selecting and searching text</td></tr>
+<tr><td>Android</td><td>Readium Kotlin Toolkit</td><td>Reading EPUB and TXT files</td></tr>
+<tr><td>Android</td><td>Timber</td><td>Debug logging, switched on only in development builds; release builds log nothing through it</td></tr>
+<tr><td>Android</td><td>Kotlin coroutines, kotlinx-datetime, desugar_jdk_libs</td><td>Basic language libraries and date calculations</td></tr>
+<tr><td>iPhone / iPad</td><td>Apple system frameworks only (SwiftUI, AVFoundation, PDFKit, WebKit, ActivityKit and others) and the system SQLite</td><td>Interface, playback, reading, Live Activities, the local database</td></tr>
+<tr><td>HarmonyOS</td><td>System kits only, no third-party packages</td><td>Interface, playback, reading, the local database</td></tr>
+</table></div>
+<!-- 待确认：上架后是否会接入任何统计 / 崩溃分析 SDK；应用商店（Google Play、App Store、华为应用市场）按用户系统设置向开发者提供的崩溃统计是否需要在此说明。 -->
+
+<h2 id="storage">3. Where your data is kept</h2>
+<p>The following is stored in ChiHeng’s private storage on your device, which other apps cannot read:</p>
+<ul>
+<li>practices and check-ins (including days you filled in later and automatic check-ins), and any totals you entered from before you started using ChiHeng;</li>
+<li>notes (text, tags, links), and images you insert into notes — a copy of each image is kept in the app’s private folder;</li>
+<li>your library’s shelf, collections, sections, progress, bookmarks and highlights;</li>
+<li>app settings, such as the day cutoff time, bells and reading preferences.</li>
+</ul>
+<p>Library files (PDF, EPUB, TXT, audio, video, image folders) are handled differently on each platform:</p>
+<ul>
+<li><b>Android:</b> you pick files or folders with the system file picker, and ChiHeng only gets permission to read them. The files stay where they are and are not copied or changed. Files opened or shared into ChiHeng from other apps, and packages shared by Dharma friends, are copied into ChiHeng.</li>
+<li><b>iPhone / iPad and HarmonyOS:</b> imported files are copied into ChiHeng. The originals are left untouched.</li>
+</ul>
+<p>On Android, ChiHeng turns off the system’s app data backup (allowBackup), so its data is not handed to the system’s cloud backup.</p>
+<!-- 待确认：iOS 未把数据目录排除出 iCloud / 电脑整机备份（未见 isExcludedFromBackup）；鸿蒙系统备份行为未核实。是否需要写明“系统整机备份可能包含持恒数据”？ -->
+
+<h2 id="backup">4. Backups, sharing and export</h2>
+<p>In <b>Me › Data › Export backup</b>, ChiHeng creates a backup file and passes it to the system’s save or share screen. You decide where it goes, for example your phone, a computer or a cloud drive. Once the file leaves ChiHeng, it is managed by wherever you saved it; we have no access to it.</p>
+<ul>
+<li>On <b>Android</b>, the backup is a .json file with your practices, records, prior practice, note text, and your library’s structure, progress, bookmarks and highlights. It does <b>not</b> include the library files themselves, images in notes, or app settings.</li>
+<li>On <b>iPhone / iPad and HarmonyOS</b>, the backup is a single file that also contains the library files stored in ChiHeng and the images in your notes.</li>
+</ul>
+<p>When you share an item or a collection from ChiHeng, the system share sheet opens and the content goes only where you send it. If you choose to include your highlights and notes, they are added to the shared package.</p>
+
+<h2 id="permissions">5. System permissions</h2>
+<p>ChiHeng only needs a permission when you use the feature that relies on it, and you can turn any of them off in system settings. ChiHeng does not use the camera, microphone, location or contacts, and it does not ask for access to your whole photo library or all of your storage.</p>
+
+<h3>Android</h3>
+<div class="table"><table>
+<tr><th>Permission</th><th>What it is for</th><th>Leaves the device?</th></tr>
+<tr><td>Notifications (POST_NOTIFICATIONS)</td><td>The ongoing meditation timer notification (visible on the lock screen) and the time’s-up alert; playback controls in the notification shade for library audio and video</td><td>No</td></tr>
+<tr><td>Foreground service (FOREGROUND_SERVICE, plus the special-use and media-playback types)</td><td>Ringing the starting, interval and ending bells on time during meditation; keeping library audio and video playing in the background or on the lock screen</td><td>No</td></tr>
+<tr><td>Exact alarms (USE_EXACT_ALARM; SCHEDULE_EXACT_ALARM on Android 12 and earlier)</td><td>A backup alarm for the ending bell, so it rings on time with the screen off or the app in the background</td><td>No</td></tr>
+<tr><td>Do Not Disturb access (ACCESS_NOTIFICATION_POLICY)</td><td>With “Do Not Disturb during meditation” on, ChiHeng turns on its own Do Not Disturb mode, “ChiHeng meditation”, when you start (alarms are allowed, so the bells still ring) and turns it off when you finish. You grant this access in system settings</td><td>No</td></tr>
+<tr><td>Full-screen notifications, turn screen on (USE_FULL_SCREEN_INTENT, TURN_SCREEN_ON)</td><td>“Lock screen timer”: shows the meditation screen on the lock screen after the screen goes off, and lights up the screen when time is up. You can turn this off in Me › Meditation</td><td>No</td></tr>
+<tr><td>Keep awake (WAKE_LOCK)</td><td>Stops the system from sleeping during the timer and playback, so the bells are not delayed</td><td>No</td></tr>
+<tr><td>Vibration (VIBRATE)</td><td>Vibration while counting, a signal at the end of each round, and vibrate-only bells</td><td>No</td></tr>
+<tr><td>Change audio settings (MODIFY_AUDIO_SETTINGS)</td><td>“Volume boost” when playing library audio and video</td><td>No</td></tr>
+<tr><td>Ignore battery optimization (REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)</td><td>Only when you tap Me › Meditation › Run in background, ChiHeng asks the system to exempt it from battery optimization so the bells stay on time with the screen off</td><td>No</td></tr>
+<tr><td>View network state (ACCESS_NETWORK_STATE)</td><td>Declared by the Media3 playback library. It can only read whether the device is online and cannot connect</td><td>No</td></tr>
+<tr><td>Files and folders (system file picker, folder access)</td><td>Reading the library files or folders you choose; no storage permission is needed</td><td>No</td></tr>
+<tr><td>Photos (system photo picker)</td><td>Adding images to notes and choosing collection covers; ChiHeng only receives the photos you pick</td><td>No</td></tr>
+</table></div>
+
+<h3>iPhone / iPad</h3>
+<div class="table"><table>
+<tr><th>Permission / system feature</th><th>What it is for</th><th>Leaves the device?</th></tr>
+<tr><td>Notifications</td><td>A local notification that lights up the screen when your meditation time is up</td><td>No</td></tr>
+<tr><td>Live Activities (lock screen and Dynamic Island)</td><td>“Lock screen timer”: shows meditation progress on the lock screen and in the Dynamic Island, with pause, resume and end</td><td>No</td></tr>
+<tr><td>Background audio</td><td>Bells keep ringing with the screen off; library audio and video keep playing in the background</td><td>No</td></tr>
+<tr><td>Files (system file picker)</td><td>Importing the files you choose; a copy is kept in ChiHeng</td><td>No</td></tr>
+<tr><td>Photos (system photo picker)</td><td>Adding images to notes and choosing collection covers; no photo library permission is needed, and ChiHeng only receives the photos you pick</td><td>No</td></tr>
+</table></div>
+<p>iOS does not let apps switch Focus modes on or off, and it does not give apps access to the volume buttons, so the iPhone / iPad version has no automatic Do Not Disturb and no volume-key counting.</p>
+
+<h3>HarmonyOS</h3>
+<div class="table"><table>
+<tr><th>Permission / system feature</th><th>What it is for</th><th>Leaves the device?</th></tr>
+<tr><td>Continuous task (ohos.permission.KEEP_BACKGROUND_RUNNING)</td><td>Keeps timing and ringing bells during meditation when the app is in the background or the screen is off; keeps library audio playing in the background</td><td>No</td></tr>
+<tr><td>Read Do Not Disturb state (ohos.permission.GET_DONOTDISTURB_STATE)</td><td>Only reads whether system Do Not Disturb is on, to tell you on the meditation screen. ChiHeng cannot switch it on or off for you</td><td>No</td></tr>
+<tr><td>Playback card (and Live View where the system allows it)</td><td>Shows meditation progress on the lock screen and in Control Panel, with pause and resume</td><td>No</td></tr>
+<tr><td>Files and photos (system pickers)</td><td>Importing the files you choose (a copy is kept in ChiHeng), adding images to notes, choosing collection covers</td><td>No</td></tr>
+</table></div>
+
+<h2 id="delete">6. Deleting your data</h2>
+<ul>
+<li>Records, practices, notes and library items can each be deleted inside the app. Library files stored in ChiHeng can be cleared in <b>Me › Library storage</b>.</li>
+<li><b>Uninstalling ChiHeng deletes all data inside the app</b>, including the database, note images and copied library files.</li>
+<li>Backup files you exported, and on Android the original files in your own folders, are not in ChiHeng’s storage. Uninstalling does not delete them; remove them yourself if you want to.</li>
+<li>We keep none of your usage data, so there is nothing to ask us to delete, apart from any emails you sent us (see section 8).</li>
+</ul>
+
+<h2 id="children">7. Children</h2>
+<p>ChiHeng does not collect personal information from anyone, so it does not collect personal information from children. Minors should use ChiHeng with the knowledge of a parent or guardian.</p>
+<!-- 待确认：是否设定最低使用年龄；上架时各应用商店的年龄分级。 -->
+
+<h2 id="email">8. When you email us</h2>
+<p>If you email us, we receive your email address and whatever your message contains, including attachments and screenshots. We use it only to reply to you and to look into the problem you report. You can ask us to delete our correspondence at any time.</p>
+<!-- 待确认：邮件的保存期限（Kaihua 的隐私政策写的是会话结束后 12 个月内删除，持恒是否沿用）。 -->
+
+<h2 id="changes">9. Changes to this policy</h2>
+<p>When this policy changes, we will post the update on this page and change the “Last updated” date. If a change affects how data is handled (for example, a feature that goes online or a new third-party component), we will tell you in the app or in the release notes before it takes effect.</p>
+
+<h2 id="contact">10. Contact</h2>
+<p>Shuye Lab · <a href="mailto:shuyelab@gmail.com">shuyelab@gmail.com</a></p>
+<p>See also: <a href="/apps/chiheng/terms/">Terms of Use</a> · <a href="/apps/chiheng/support/">Support</a></p>
+<!-- 待确认：回复时限（Kaihua 页面写的是 15 个工作日内）。 -->

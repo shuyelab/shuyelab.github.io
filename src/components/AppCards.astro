@@ -1,0 +1,31 @@
+---
+import Phone from './Phone.astro';
+import { t, href, L, type Lang } from '../i18n';
+import { APPS } from '../lib/routes';
+const { lang } = Astro.props as { lang: Lang };
+const T = t(lang);
+---
+{APPS.map((app) => !app.quiet ? (
+  <article class="app-kaihua" data-mark={app.watermark}>
+    <div class="copy">
+      <div class="app-id"><img class="app-icon" src={app.icon} alt={L(app.icon_alt, lang)} width="76" height="76" loading="lazy"><div><h3>{L(app.name, 'en')} <span class="zh" lang="zh-CN">{L(app.name, 'zh')}</span></h3><p>{L(app.card.line, lang)}</p></div></div>
+      <p class="lead">{L(app.card.lead, lang)}</p>
+      <ul class="feature-list">
+        {app.card.features.map((f: any) => <li><span class="dot" aria-hidden="true">{f.dot}</span><span><b>{L(f.b, lang)}</b>{lang === 'zh' ? '：' : ' '}{L(f.t, lang)}</span></li>)}
+      </ul>
+      <div class="app-actions"><a class="btn btn-cinnabar" href={href(lang, `/apps/${app.slug}/`)}>{L(app.card.cta, lang)} <span class="arr" aria-hidden="true">→</span></a><span class="note">{L(app.card.note, lang)}</span></div>
+    </div>
+    <div class="phones">{app.card.shots.map((s: any, i: number) => <Phone src={s.src} alt={L(s.alt, lang)} cls={`p${i + 1}`} />)}</div>
+  </article>
+) : (
+  <article class="app-chiheng">
+    <div class="copy">
+      <div class="app-id"><img class="app-icon quiet-icon" src={app.icon} alt={L(app.icon_alt, lang)} width="64" height="64" loading="lazy"><div><h3>{L(app.name, lang)} <span class="zh muted alt">{L(app.alt_name, lang)}</span></h3><p>{L(app.card.line, lang)}</p></div></div>
+      <p class="lead">{L(app.card.lead, lang)}</p>
+      <div class="pledge">{app.card.pledge.map((p: any) => <span>{L(p, lang)}</span>)}</div>
+      <p class="muted quiet-note">{L(app.card.quiet_note, lang)}</p>
+      <a class="btn btn-line" href={href(lang, `/apps/${app.slug}/`)}>{L(app.card.cta, lang)} <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+    <div class={`shot${app.card.shots[0].full ? " full" : ""}`}><Phone src={app.card.shots[0].src} alt={L(app.card.shots[0].alt, lang)} /></div>
+  </article>
+))}

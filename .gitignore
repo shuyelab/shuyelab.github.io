@@ -1,1 +1,9 @@
+node_modules/
+dist/
+.astro/
 design/shots/
+shots/
+*.log
+.env
+.env.*
+.DS_Store

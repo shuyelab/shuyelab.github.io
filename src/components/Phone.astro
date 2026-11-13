@@ -1,0 +1,5 @@
+---
+// 手机外框 + 截图。截图统一 600×1298。
+const { src, alt, cls = '', eager = false } = Astro.props;
+---
+<div class={`phone ${cls}`}><img src={src} alt={alt} width="600" height="1298" loading={eager ? 'eager' : 'lazy'} decoding="async"></div>

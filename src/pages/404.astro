@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import { t } from '../i18n';
+const E = t('en').notFound; const Z = t('zh').notFound;
+---
+<Base lang="en" title={`${E.title} · ${Z.title}`} description={E.p} noindex>
+<section class="page-hero nf">
+  <div class="wrap nf-grid">
+    <div><span class="eyebrow">404</span><h1 set:html={E.h1} /><p class="lead mt16">{E.p}</p><p class="mt24"><a class="btn btn-ink" href="/">{E.home} <span class="arr" aria-hidden="true">→</span></a></p></div>
+    <div lang="zh-CN"><span class="eyebrow">404</span><p class="h1 zh-display" role="heading" aria-level="2" set:html={Z.h1} /><p class="lead mt16">{Z.p}</p><p class="mt24"><a class="btn btn-ink" href="/zh/">{Z.home} <span class="arr" aria-hidden="true">→</span></a></p></div>
+  </div>
+</section>
+</Base>

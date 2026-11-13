@@ -1,0 +1,31 @@
+---
+import Base from '../../layouts/Base.astro';
+import site from '../../data/site.json';
+import { t, href, L, type Lang } from '../../i18n';
+import { APPS, BOOKS, bookPath, seriesOf } from '../../lib/routes';
+const { lang } = Astro.props as { lang: Lang };
+const T = t(lang); const C = T.contact;
+const audio = BOOKS.filter((b) => b.audio);
+---
+<Base lang={lang} path="/contact/" title={C.title} description={C.description} section="contact">
+<section class="page-hero">
+  <div class="wrap">
+    <div class="contact-card" data-mark="信">
+      <div><span class="eyebrow on-dark">{C.eyebrow}</span><h1 class="mt16" set:html={C.h1} /><p>{C.lead}</p></div>
+      <div><a class="mail" href={`mailto:${site.email}`}>{site.email}</a></div>
+    </div>
+  </div>
+</section>
+<section class="pt0">
+  <div class="wrap contact-grid">
+    <div><h2 class="h2-sm mb24">{C.include}</h2>
+      <ul class="inside one">{C.tips.map(([b, s]: string[], i: number) => <li><span class="n" aria-hidden="true">0{i + 1}</span><div><b>{b}</b><span>{s}</span></div></li>)}</ul></div>
+    <div><h2 class="h2-sm mb24">{C.selfHelp}</h2>
+      <ul class="link-list">
+        {APPS.map((a) => <li><a href={href(lang, `/apps/${a.slug}/support/`)}>{L(a.name, lang)} · {T.legalNav.support} <span aria-hidden="true">→</span></a></li>)}
+        {audio.map((b) => <li><a href={bookPath(b) + 'listen/errata/'}>{seriesOf(b.series).name} {L(b.number, lang)} · {lang === 'zh' ? '勘误' : 'Errata'} <span aria-hidden="true">→</span></a></li>)}
+      </ul></div>
+  </div>
+</section>
+<div class="spacer"></div>
+</Base>

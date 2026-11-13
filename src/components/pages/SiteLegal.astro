@@ -1,0 +1,66 @@
+---
+import Base from '../../layouts/Base.astro';
+import site from '../../data/site.json';
+import { t, href, L, type Lang } from '../../i18n';
+import { APPS } from '../../lib/routes';
+const { lang } = Astro.props as { lang: Lang };
+const T = t(lang); const zh = lang === 'zh';
+const gc = site.goatcounter.enabled;
+const mail = `<a href="mailto:${site.email}">${site.email}</a>`;
+const appLinks = APPS.map((a) => `<a href="${href(lang, `/apps/${a.slug}/privacy/`)}">${L(a.name, lang)}</a>`).join(zh ? '、' : ', ');
+const en = `
+<h1>Site privacy</h1>
+<p class="meta">Effective date: 13 November 2026 · Last updated: 13 November 2026</p>
+<p>This notice covers this website, <b>shuyelab.github.io</b>, run by Shuye Lab (“we”). Each of our apps has its own privacy policy: ${appLinks}.</p>
+<div class="card"><b>The short version</b><ul>
+<li>No cookies, no accounts, no sign-up forms, no ads.</li>
+<li>${gc ? 'We count page views with GoatCounter, which uses no cookies and does not identify you.' : 'We do not collect visitor statistics at the moment.'}</li>
+<li>Fonts, images, audio and scripts are served from this site. Pages do not load anything from other companies.</li>
+</ul></div>
+<h2 id="hosting">1. Hosting</h2>
+<p>The site is hosted on GitHub Pages, a service of GitHub, Inc. When you open a page, GitHub’s servers receive your IP address, the page you asked for and technical details your browser sends, as every web server does. GitHub may log this for security and to keep the service running, as described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>. We do not receive these logs.</p>
+<h2 id="stats">2. Visitor statistics</h2>
+${gc
+  ? '<p>We use <a href="https://www.goatcounter.com/">GoatCounter</a> to count page views. It records the page, the referring site, the browser type, screen size and country, uses no cookies and does not store your IP address. We use the totals to see which pages people read and how many people scan the QR codes printed in our books.</p>'
+  : '<p>We do not run any statistics or tracking code. If we add a page-view counter later, it will be one that uses no cookies (we plan to use GoatCounter), and we will update this page before it goes live.</p>'}
+<h2 id="audio">3. Audio pages for our books</h2>
+<p>The audio pages that come with our books (for example the <a href="/books/civics-in-two-languages/civics-2025-zh/listen/">Civics in Two Languages audio</a>) remember your playback settings, such as speed and pause length, in your browser’s local storage. This stays on your device and is never sent to us. Clearing your browser data removes it.</p>
+<h2 id="email">4. Email</h2>
+<p>If you write to ${mail}, we receive your email address and whatever you put in your message. We use it only to answer you and to fix problems you report. We do not add you to a mailing list.</p>
+<h2 id="links">5. Links to other sites</h2>
+<p>Links to Amazon, the App Store, Google Play, USCIS and other sites take you to services with their own privacy policies.</p>
+<h2 id="changes">6. Changes</h2>
+<p>If this notice changes, we will post the new version here and update the date above.</p>
+<h2 id="contact">7. Contact</h2>
+<p>Shuye Lab · ${mail}</p>`;
+const zhBody = `
+<h1>本站隐私声明</h1>
+<p class="meta">生效日期：2026 年 11 月 13 日 · 最后更新：2026 年 11 月 13 日</p>
+<p>本声明适用于书叶工作室（Shuye Lab，下称“我们”）运营的网站 <b>shuyelab.github.io</b>。我们的每款 App 另有各自的隐私政策：${appLinks}。</p>
+<div class="card"><b>简要说明</b><ul>
+<li>不用 Cookie，没有账号、注册表单和广告。</li>
+<li>${gc ? '我们用 GoatCounter 统计页面访问量，它不用 Cookie，也不识别你的身份。' : '目前不收集任何访问统计。'}</li>
+<li>字体、图片、音频和脚本都从本站加载，页面不会向其他公司请求任何内容。</li>
+</ul></div>
+<h2 id="hosting">1. 托管</h2>
+<p>本站托管在 GitHub, Inc. 提供的 GitHub Pages 上。你打开页面时，GitHub 的服务器会收到你的 IP 地址、访问的页面以及浏览器发送的技术信息，所有网站服务器都是这样。GitHub 可能出于安全和维持服务的需要记录这些信息，详见 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>。我们拿不到这些日志。</p>
+<h2 id="stats">2. 访问统计</h2>
+${gc
+  ? '<p>我们用 <a href="https://www.goatcounter.com/">GoatCounter</a> 统计页面访问量。它记录访问的页面、来源网站、浏览器类型、屏幕尺寸和国家或地区，不用 Cookie，也不保存你的 IP 地址。我们用这些总数了解哪些页面有人看，以及书上印的二维码被扫了多少次。</p>'
+  : '<p>本站目前没有任何统计或跟踪代码。以后如果加页面访问计数，会选不用 Cookie 的工具（计划用 GoatCounter），并在启用之前先更新本页。</p>'}
+<h2 id="audio">3. 图书配套音频页</h2>
+<p>图书配套的音频页（例如<a href="/books/civics-in-two-languages/civics-2025-zh/listen/">入籍考试书的朗读音频</a>）会把你的播放设置（语速、停顿时长等）保存在浏览器的本地存储里。这些设置只留在你的设备上，不会发给我们；清除浏览器数据即可删除。</p>
+<h2 id="email">4. 邮件</h2>
+<p>你写信到 ${mail} 时，我们会收到你的邮箱地址和信里的内容，只用来回复你、修正你反馈的问题，不会把你加进任何邮件列表。</p>
+<h2 id="links">5. 外部链接</h2>
+<p>指向亚马逊、App Store、Google Play、USCIS 等网站的链接，打开后适用这些服务各自的隐私政策。</p>
+<h2 id="changes">6. 变更</h2>
+<p>本声明如有修改，我们会在本页发布新版本并更新上方日期。</p>
+<h2 id="contact">7. 联系我们</h2>
+<p>书叶工作室 Shuye Lab · ${mail}</p>`;
+---
+<Base lang={lang} path="/legal/" title={T.legal.title} description={T.legal.description}>
+<div class="wrap legal-wrap single">
+  <article class="legal-body" set:html={zh ? zhBody : en} />
+</div>
+</Base>

@@ -1,0 +1,13 @@
+---
+import Base from '../../layouts/Base.astro';
+import AppCards from '../AppCards.astro';
+import { t, type Lang } from '../../i18n';
+const { lang } = Astro.props as { lang: Lang };
+const T = t(lang); const P = T.apps;
+---
+<Base lang={lang} path="/apps/" title={P.title} description={P.description} section="apps">
+<section class="page-hero">
+  <div class="wrap"><span class="eyebrow">{P.eyebrow}</span><h1 set:html={P.h1} /><p class="lead mt16">{P.lead}</p></div>
+</section>
+<section class="apps pt0"><div class="wrap"><AppCards lang={lang} /></div></section>
+</Base>

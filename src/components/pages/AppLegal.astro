@@ -1,0 +1,53 @@
+---
+import Base from '../../layouts/Base.astro';
+import { t, href, L, LANG_LABEL, HTML_LANG, type Lang } from '../../i18n';
+import { LEGAL_DOCS } from '../../lib/routes';
+const { lang, app, doc } = Astro.props as { lang: Lang; app: any; doc: string };
+const T = t(lang);
+const files = import.meta.glob('../../content/legal/**/*.html', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
+let body = files[`../../content/legal/${app.slug}/${doc}.${lang}.html`];
+if (!body) throw new Error(`缺合规页内容：${app.slug}/${doc}.${lang}.html`);
+body = body.replace(/<!--[\s\S]*?-->/g, ''); // 起草备注（如「待确认」）不上线
+// 译本里的站内链接指向同语言版本（说明“以英文版为准”的 note 段除外）
+if (lang !== 'en') {
+  const re = new RegExp(`href="/apps/${app.slug}/(privacy|terms|support)/`, 'g');
+  body = body.replace(/(<p class="note">[\s\S]*?<\/p>)|href="\/apps\/[^"]*"/g, (m, note) => {
+    if (note) return m;
+    return m.replace(re, (mm, d) => (app.legal?.[d]?.langs ?? []).includes(lang) ? `href="/${lang}/apps/${app.slug}/${d}/` : mm);
+  });
+}
+// 手机上表格改成逐行卡片：给每个单元格记上表头（data-label）
+const strip = (h: string) => h.replace(/<[^>]+>/g, '').replace(/"/g, '&quot;').trim();
+body = body.replace(/<table>([\s\S]*?)<\/table>/g, (_m, inner) => {
+  const head = [...(inner.match(/<tr>([\s\S]*?)<\/tr>/)?.[1] ?? '').matchAll(/<th[^>]*>([\s\S]*?)<\/th>/g)].map((x) => strip(x[1]));
+  let first = true;
+  const rows = inner.replace(/<tr>([\s\S]*?)<\/tr>/g, (row: string, cells: string) => {
+    if (first) { first = false; return row.replace('<tr>', '<tr class="th-row">'); }
+    let i = 0;
+    return '<tr>' + cells.replace(/<(td|th)(\s[^>]*)?>/g, (_c: string, tag: string, attrs = '') => `<${tag}${attrs} data-label="${head[i++] ?? ''}">`) + '</tr>';
+  });
+  return `<table class="stack">${rows}</table>`;
+});
+const cfg = app.legal[doc];
+const navLang: Lang = lang === 'zh' ? 'zh' : 'en';
+const name = L(app.name, navLang);
+const docHref = (d: string) => {
+  const langs: Lang[] = app.legal[d].langs;
+  const l = langs.includes(lang) ? lang : langs.includes(navLang) ? navLang : langs[0];
+  return href(l, `/apps/${app.slug}/${d}/`);
+};
+const others = (cfg.langs as Lang[]).filter((l) => l !== lang);
+---
+<Base lang={lang} path={`/apps/${app.slug}/${doc}/`} title={`${L(cfg.title, lang)} · ${L(app.name, 'en')}`} description={L(cfg.description, lang)} section="apps" og={`/assets/og/${app.slug}-${navLang}.png`}>
+<div class="wrap crumbs"><a href={href(navLang, '/apps/')}>{T.crumbsApps}</a> <span aria-hidden="true">/</span> <a href={href(navLang, `/apps/${app.slug}/`)}>{name}</a> <span aria-hidden="true">/</span> <span aria-current="page">{L(cfg.title, lang)}</span></div>
+<div class="wrap legal-wrap">
+  <aside class="legal-side">
+    <a class="legal-app" href={href(navLang, `/apps/${app.slug}/`)}><img src={app.icon} alt="" width="44" height="44"><span><b>{name}</b><small>{T.legalBack}</small></span></a>
+    <nav aria-label={navLang === 'zh' ? '政策与支持' : 'Policies and support'}><ul>
+      {LEGAL_DOCS.filter((d) => app.legal[d]).map((d) => <li><a href={docHref(d)} aria-current={d === doc ? 'page' : undefined}>{(app.legal[d].langs as Lang[]).includes(lang) ? L(app.legal[d].title, lang) : T.legalNav[d]}</a></li>)}
+    </ul></nav>
+    {others.length > 0 && <p class="legal-langs">{T.legalAlso}<br>{others.map((l, i) => <>{i > 0 && ' · '}<a href={href(l, `/apps/${app.slug}/${doc}/`)} lang={HTML_LANG[l]} hreflang={HTML_LANG[l]}>{LANG_LABEL[l]}</a></>)}</p>}
+  </aside>
+  <article class="legal-body" set:html={body} />
+</div>
+</Base>

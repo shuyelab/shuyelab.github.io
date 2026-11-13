@@ -1,0 +1,14 @@
+---
+import { t, href, L, type Lang } from '../i18n';
+import { booksIn, bookPath } from '../lib/routes';
+const { lang, series, link = 'book' } = Astro.props as { lang: Lang; series: any; link?: 'book' | 'series' };
+const T = t(lang);
+const b = booksIn(series.slug)[0];
+const target = link === 'series' ? `/books/${series.slug}/` : bookPath(b);
+const title = lang === 'zh' ? b.zh_title : b.title;
+---
+<a class="series" href={href(lang, target)}>
+  <div class="shelf"><img src={`/assets/img/books/${b.slug}/cover-400.webp`} srcset={`/assets/img/books/${b.slug}/cover-400.webp 400w, /assets/img/books/${b.slug}/cover-800.webp 800w`} sizes="(max-width: 640px) 92px, 240px" width="400" height="640" alt={lang === 'zh' ? `《${b.zh_title.replace(/[《》]/g, '')}》封面` : `Cover of ${b.title}`} loading="lazy" decoding="async"></div>
+  <div class="body"><span class="sname" lang="en">{series.name}</span><h3 lang={lang === 'zh' ? 'zh-CN' : 'en'}>{title}</h3><p>{L(b.summary, lang)}</p>
+  <div class="foot"><span>{L(b.number, lang)}</span>{link === 'series' ? <b class="go">{T.viewSeries} <span aria-hidden="true">→</span></b> : <b>{b.amazon_url ? T.buyAmazon : T.amazonSoon}</b>}</div></div>
+</a>

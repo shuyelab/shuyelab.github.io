@@ -1,0 +1,29 @@
+---
+// 全站页面都由 src/lib/routes.ts 的路由表生成（每个路径 × 每种语言一页）。
+import { allRoutes } from '../lib/routes';
+import type { Lang } from '../i18n';
+import Home from '../components/pages/Home.astro';
+import AppsIndex from '../components/pages/AppsIndex.astro';
+import AppPage from '../components/pages/AppPage.astro';
+import AppLegal from '../components/pages/AppLegal.astro';
+import BooksIndex from '../components/pages/BooksIndex.astro';
+import SeriesPage from '../components/pages/SeriesPage.astro';
+import BookPage from '../components/pages/BookPage.astro';
+import About from '../components/pages/About.astro';
+import Contact from '../components/pages/Contact.astro';
+import SiteLegal from '../components/pages/SiteLegal.astro';
+
+export function getStaticPaths() {
+  return allRoutes().flatMap((r) => r.langs.map((lang) => {
+    const full = (lang === 'en' ? r.path : `/${lang}${r.path}`).replace(/^\/|\/$/g, '');
+    return { params: { path: full || undefined }, props: { ...r.props, kind: r.kind, lang } };
+  }));
+}
+const { kind, lang, ...rest } = Astro.props as { kind: string; lang: Lang; [k: string]: any };
+const C: Record<string, any> = {
+  home: Home, apps: AppsIndex, app: AppPage, 'app-legal': AppLegal, books: BooksIndex,
+  series: SeriesPage, book: BookPage, about: About, contact: Contact, 'site-legal': SiteLegal,
+};
+const Page = C[kind];
+---
+<Page lang={lang} {...rest} />

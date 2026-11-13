@@ -1,0 +1,63 @@
+---
+import Base from '../../layouts/Base.astro';
+import Phone from '../Phone.astro';
+import AppCards from '../AppCards.astro';
+import SeriesCard from '../SeriesCard.astro';
+import site from '../../data/site.json';
+import { t, href, type Lang } from '../../i18n';
+import { SERIES } from '../../lib/routes';
+const { lang } = Astro.props as { lang: Lang };
+const T = t(lang); const H = T.home; const A = T.about;
+const org = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Shuye Lab', alternateName: '书叶工作室', url: site.url + '/', email: site.email, logo: site.url + '/icon-512.png' };
+---
+<Base lang={lang} path="/" title={H.title} description={H.description} jsonld={[org]}>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow" set:html={H.eyebrow} />
+      <h1 class={lang === 'zh' ? 'zh-display' : ''} set:html={H.h1} />
+      <p class="lead">{H.lead}</p>
+      <div class="hero-cta"><a class="btn btn-ink" href={href(lang, '/apps/')}>{H.ctaApps} <span class="arr" aria-hidden="true">→</span></a><a class="btn btn-line" href={href(lang, '/books/')}>{H.ctaBooks}</a></div>
+      <div class="name-key">{H.key.map(([ch, py, gl]: string[], i: number) => <div><span class={`ch${i ? ' red' : ''}`} lang="zh-CN">{ch}</span><dl><dt>{py}</dt><dd>{gl}</dd></dl></div>)}</div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="vert" lang="zh-CN">书叶</div>
+      <div class="sun"></div>
+      <img class="book b3" src="/assets/img/books/art-of-war/cover-400.webp" alt="" width="400" height="640" fetchpriority="low">
+      <Phone src="/assets/img/apps/kaihua/02-review-600.webp" alt="" eager />
+      <img class="book b2" src="/assets/img/books/civics-2025-zh/cover-400.webp" alt="" width="400" height="640">
+    </div>
+  </div>
+</section>
+<section class="apps" id="apps" aria-labelledby="apps-h">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">{H.appsEyebrow}</span><h2 id="apps-h" set:html={H.appsH2} /></div><p>{H.appsSide}</p></div>
+    <AppCards lang={lang} />
+  </div>
+</section>
+<section id="books" aria-labelledby="books-h">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">{H.booksEyebrow}</span><h2 id="books-h" set:html={H.booksH2} /></div><p>{H.booksSide}</p></div>
+    <div class="series-grid">{SERIES.map((s) => <SeriesCard lang={lang} series={s} />)}</div>
+  </div>
+</section>
+<section id="about" class="tint" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div><span class="eyebrow">{H.aboutEyebrow}</span><h2 id="about-h" class="mt18" set:html={H.aboutH2} />
+      <div class="about-chars">{A.chars.map(([ch, b, c]: string[]) => <figure><div class="ch" lang="zh-CN" aria-hidden="true">{ch}</div><figcaption><b>{b}</b>{c}</figcaption></figure>)}</div></div>
+    <div class="about-text">
+      <p class="lead">{A.lead}</p>
+      <ol class="principles">{A.principles.slice(0, 3).map(([b, s]: string[], i: number) => <li><span class="n" aria-hidden="true">0{i + 1}</span><div><b>{b}</b><span>{s}</span></div></li>)}</ol>
+      <p class="more-link"><a href={href(lang, '/about/')}>{T.readMore} <span aria-hidden="true">→</span></a></p>
+    </div>
+  </div>
+</section>
+<section id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="contact-card" data-mark="信">
+      <div><span class="eyebrow on-dark">{H.contactEyebrow}</span><h2 id="contact-h" class="mt16" set:html={H.contactH2} /><p>{H.contactP}</p></div>
+      <div><a class="mail" href={`mailto:${site.email}`}>{site.email}</a></div>
+    </div>
+  </div>
+</section>
+</Base>

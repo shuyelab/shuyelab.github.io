@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+import SeriesCard from '../SeriesCard.astro';
+import { t, href, L, type Lang } from '../../i18n';
+import { SERIES } from '../../lib/routes';
+const { lang } = Astro.props as { lang: Lang };
+const T = t(lang); const P = T.books;
+---
+<Base lang={lang} path="/books/" title={P.title} description={P.description} section="books">
+<section class="page-hero">
+  <div class="wrap"><span class="eyebrow">{P.eyebrow}</span><h1 set:html={P.h1} /><p class="lead mt16">{P.lead}</p></div>
+</section>
+<section class="pt0">
+  <div class="wrap">
+    <div class="series-grid">{SERIES.map((s) => <SeriesCard lang={lang} series={s} link="series" />)}</div>
+    <div class="series-blurbs">{SERIES.map((s) => <div><h2 class="h3"><a href={href(lang, `/books/${s.slug}/`)} lang="en">{s.name} <span aria-hidden="true">→</span></a></h2><p>{L(s.tagline, lang)}</p></div>)}</div>
+  </div>
+</section>
+<div class="spacer"></div>
+</Base>

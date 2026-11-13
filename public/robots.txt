@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /preview/
+Disallow: /go/
+
+Sitemap: https://shuyelab.github.io/sitemap.xml

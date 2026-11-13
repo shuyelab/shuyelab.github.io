@@ -1,0 +1,118 @@
+---
+import Base from '../../layouts/Base.astro';
+import site from '../../data/site.json';
+import { t, href, L, type Lang } from '../../i18n';
+import { seriesOf, booksIn, bookPath } from '../../lib/routes';
+const { lang, book } = Astro.props as { lang: Lang; book: any };
+const T = t(lang);
+const s = seriesOf(book.series);
+const zh = lang === 'zh';
+const h1 = zh ? book.zh_title : book.title;
+const second = zh ? book.title : book.show_zh_title === false ? null : book.zh_title;
+const img = (n: string) => `/assets/img/books/${book.slug}/${n}`;
+const base = bookPath(book); // 相对链接（listen/、errata/）只存在于英文路径下
+const fix = (v: string) => v.replace(/href="(?!\/|https?:|#|mailto:)([^"]*)"/g, (_m, p) => `href="${base}${p}"`);
+const title = zh ? `${book.zh_title}` : book.title;
+const desc = `${L(book.summary, lang)} ${L(book.for_whom, lang)}`.slice(0, 300);
+const jsonld = [{
+  '@context': 'https://schema.org', '@type': 'Book', name: book.title, alternateName: book.zh_title, description: L(book.summary, lang),
+  image: site.url + img('cover-800.webp'), url: site.url + bookPath(book),
+  isPartOf: { '@type': 'BookSeries', name: s.name }, publisher: { '@type': 'Organization', name: 'Shuye Lab', email: site.email },
+  ...(book.isbn ? { isbn: book.isbn } : {}),
+}];
+const siblings = booksIn(book.series).filter((b) => b.slug !== book.slug);
+---
+<Base lang={lang} path={bookPath(book)} title={title} description={desc} section="books" og={`/assets/og/book-${book.slug}.png`} jsonld={jsonld}>
+<div class="wrap crumbs"><a href={href(lang, '/books/')}>{T.crumbsBooks}</a> <span aria-hidden="true">/</span> <a href={href(lang, `/books/${s.slug}/`)} lang="en">{s.name}</a> <span aria-hidden="true">/</span> <span aria-current="page">{L(book.number, lang)}</span></div>
+<section class="b-hero">
+  <div class="wrap b-hero-grid">
+    <div class="cover-wrap"><img src={img('cover-800.webp')} srcset={`${img('cover-400.webp')} 400w, ${img('cover-800.webp')} 800w`} sizes="(max-width: 640px) 70vw, 348px" width="800" height="1280" alt={zh ? `${book.zh_title} 封面` : `Cover of ${book.title}`} fetchpriority="high"></div>
+    <div>
+      <span class="eyebrow"><span lang="en">{s.name}</span> · {L(book.number, lang)}</span>
+      <h1 lang={zh ? 'zh-CN' : 'en'} class={zh ? 'zh-display' : ''}>{h1}</h1>
+      {second && <p class="zh-title" lang={zh ? 'en' : 'zh-CN'}>{second}</p>}
+      <p class="subtitle" lang="en">{book.subtitle}</p>
+      <div class="for-whom"><b>{T.writtenFor}</b><p>{L(book.for_whom, lang)}</p></div>
+      <div class="buy">
+        {book.amazon_url ? <a class="btn btn-ink" href={book.amazon_url}>{T.buyAmazon}</a> : <span class="btn btn-soon">{T.amazonSoon}</span>}
+        {book.audio && <a class="btn btn-line" href="#audio">{zh ? '听免费音频' : 'Listen to the free audio'} <span class="arr" aria-hidden="true">→</span></a>}
+      </div>
+      <ul class="formats">{book.formats.map((f: any) => <li class={`tag${f.accent ? ' tag-jade' : ''}`}>{L(f, lang)}</li>)}</ul>
+    </div>
+  </div>
+</section>
+
+{book.specimen && (
+<section class="pt0"><div class="wrap"><div class="specimen">
+  <div><span class="eyebrow">{L(book.specimen.eyebrow, lang)}</span><h2 class="mt16">{L(book.specimen.title, lang)}</h2><p class="lead mt16">{L(book.specimen.lead, lang)}</p><p class="cap">{L(book.specimen.cap, lang)}</p></div>
+  <div class="rows">{book.specimen.rows.map((r: any) => <div class="r"><span class="pt">{r.pt}</span><span class={r.cls} lang={r.cls.startsWith('z') ? 'zh-CN' : 'en'}>{L(r.text, lang)}</span></div>)}</div>
+</div></div></section>)}
+
+<section class="pt0">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">{zh ? '关于这本书' : 'About the book'}</span><h2>{zh ? '书里有什么。' : "What's inside."}</h2></div><p class="lead book-lead">{L(book.lead, lang)}</p></div>
+    <ul class="inside">{book.inside.map((x: any, i: number) => { const [b, sp] = L<string[]>(x, lang); return <li><span class="n" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span><div><b>{b}</b><span>{sp}</span></div></li>; })}</ul>
+    {book.tags && <div class="motifs"><h3>{L(book.tags_title, lang)}</h3><ul class="formats">{book.tags.map((x: string) => <li class="tag" lang="en">{x}</li>)}</ul></div>}
+  </div>
+</section>
+
+{book.samples?.length > 0 && (
+<section class="pt0">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">{T.samplePages}</span><h2>{T.lookInside}</h2></div><p>{zh ? '点图片可以看大图。' : 'Tap or click a page to see it full size.'}</p></div>
+    <div class={`samples n${book.samples.length}`}>
+      {book.samples.map((x: any, i: number) => (
+        <figure><a class="zoom" href={img(`sample-${i + 1}-1800.webp`)} data-zoom><img src={img(`sample-${i + 1}-900.webp`)} width="900" height={x.h ?? 1165} alt={L(x.alt, lang)} loading="lazy" decoding="async"></a><figcaption>{L(x.caption, lang)} <a class="zoom-link" href={img(`sample-${i + 1}-1800.webp`)} data-zoom-link>{T.enlarge} <span aria-hidden="true">↗</span></a></figcaption></figure>
+      ))}
+    </div>
+  </div>
+  <dialog class="lightbox" aria-label={T.enlarge}><form method="dialog"><button class="lb-close" aria-label={T.close}>×</button></form><img alt=""></dialog>
+</section>)}
+
+{book.audio && (
+<section id="audio" class="pt0"><div class="wrap"><div class="audio-card" data-mark="听">
+  <div>
+    <span class="eyebrow">{L(book.audio.eyebrow, lang)}</span>
+    <h2>{L(book.audio.title, lang)}<span class="zh">{L(book.audio.subtitle, lang)}</span></h2>
+    <ul>{book.audio.items.map((x: any) => <li>{L(x, lang)}</li>)}</ul>
+    <a class="btn" href={href('en', bookPath(book)) + book.audio.path}>{L(book.audio.button, lang)} <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+  <a class="player" href={href('en', bookPath(book)) + book.audio.path} aria-label={L(book.audio.button, lang)}><span class="player-tag">{zh ? '音频站里的样子 · 点此打开' : 'A page from the audio site · open it'}</span>
+    <div class="unit">{L(book.audio.player.unit, lang)}</div>
+    <div class="q" lang="en">{book.audio.player.q}</div>
+    <div class="qz" lang="zh-CN">{book.audio.player.qz}</div>
+    <div class="ctrl"><span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><span class="speed"><span class="on">{L<string[]>(book.audio.player.speeds, lang)[0]}</span><span>{L<string[]>(book.audio.player.speeds, lang)[1]}</span></span></div>
+    <div class="bar"><i></i></div>
+    <div class="ans">{L(book.audio.player.label, lang)}: <b lang="en">{book.audio.player.ans}</b> · <span lang="zh-CN">{book.audio.player.ansz}</span></div></a>
+</div></div></section>)}
+
+{book.callout && (
+<section class="pt0"><div class="wrap"><div class="senior"><div class="big">{book.callout.big}</div><div><h3>{L(book.callout.title, lang)}</h3><p>{L(book.callout.text, lang)}</p></div></div></div></section>)}
+
+<section class="pt0">
+  <div class="wrap series-note">
+    <div><span class="eyebrow">{T.details}</span>
+      <table class="spec-table mt20"><tbody>
+        {book.details.map((r: any) => { const [k, v] = L<string[]>(r, lang); return <tr><th scope="row">{k}</th><td set:html={fix(v)} /></tr>; })}
+      </tbody></table></div>
+    <div><span class="eyebrow">{T.aboutSeries}</span><h3 class="series-h" lang="en">{s.name}</h3><p class="lead">{L(s.about, lang)}</p>
+      <p class="more-link"><a href={href(lang, `/books/${s.slug}/`)}>{T.viewSeries} <span aria-hidden="true">→</span></a></p>
+      {siblings.length === 0 && <p class="muted small">{T.moreSoon}</p>}</div>
+  </div>
+  {book.disclaimer && <div class="wrap"><p class="disclaimer">{L(book.disclaimer, lang)}</p></div>}
+</section>
+<script>
+  const dlg = document.querySelector<HTMLDialogElement>('dialog.lightbox');
+  if (dlg && typeof dlg.showModal === 'function') {
+    const big = dlg.querySelector('img')!;
+    let last: HTMLElement | null = null;
+    document.querySelectorAll<HTMLAnchorElement>('a[data-zoom], a[data-zoom-link]').forEach((a) => a.addEventListener('click', (e) => {
+      e.preventDefault(); last = a;
+      big.src = a.href; big.alt = (a.closest('figure')?.querySelector('img')?.alt) ?? '';
+      dlg.showModal();
+    }));
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('close', () => last?.focus());
+  }
+</script>
+</Base>

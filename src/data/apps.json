@@ -1,0 +1,1278 @@
+[
+  {
+    "slug": "kaihua",
+    "name": {
+      "en": "Kaihua",
+      "zh": "开花"
+    },
+    "alt_name": {
+      "en": "开花",
+      "zh": "Kaihua"
+    },
+    "icon": "/assets/img/apps/kaihua/icon.webp",
+    "icon_alt": {
+      "en": "Kaihua app icon",
+      "zh": "开花 Kaihua 图标"
+    },
+    "watermark": "花",
+    "quiet": false,
+    "platforms": "iOS, Android",
+    "category": "EducationalApplication",
+    "store": {
+      "app_store": null,
+      "google_play": null
+    },
+    "card": {
+      "line": {
+        "en": "HSK 3.0 vocab & tones · English, 한국어, ไทย",
+        "zh": "HSK 3.0 背词与声调训练 · 界面：英语、한국어、ไทย"
+      },
+      "lead": {
+        "en": "Learn the words of the new HSK 3.0 exam and finally hear the tones.",
+        "zh": "给海外中文学习者的 App：按 2025 年 11 月发布的 HSK 3.0 官方大纲背词，再用七天声调营把四个声调听清楚。"
+      },
+      "features": [
+        {
+          "dot": "声",
+          "b": {
+            "en": "7-Day Tone Camp.",
+            "zh": "七天声调营"
+          },
+          "t": {
+            "en": "See each tone as a pitch curve, then draw the pitch you hear.",
+            "zh": "看音高曲线、听，再用手指画出听到的声调。"
+          }
+        },
+        {
+          "dot": "记",
+          "b": {
+            "en": "Reviews planned by FSRS.",
+            "zh": "FSRS 间隔复习"
+          },
+          "t": {
+            "en": "Always free, never capped.",
+            "zh": "快忘的时候再复习一次，复习永远免费、不限量。"
+          }
+        },
+        {
+          "dot": "字",
+          "b": {
+            "en": "Characters, piece by piece.",
+            "zh": "汉字拆解"
+          },
+          "t": {
+            "en": "Strokes, radicals and components for each character.",
+            "zh": "笔画、部首、部件，联想记忆注明「不是字源」。"
+          }
+        }
+      ],
+      "shots": [
+        {
+          "src": "/assets/img/apps/kaihua/01-camp-600.webp",
+          "alt": {
+            "en": "Tone Camp, day 1: the four tones as pitch curves",
+            "zh": "声调营第一天：四个声调的音高曲线"
+          }
+        },
+        {
+          "src": "/assets/img/apps/kaihua/04-hanzi-600.webp",
+          "alt": {
+            "en": "Character card for 爱 with its components",
+            "zh": "汉字卡：「爱」的部件拆解"
+          }
+        }
+      ],
+      "cta": {
+        "en": "Meet Kaihua",
+        "zh": "了解开花"
+      },
+      "note": {
+        "en": "Coming soon to the App Store and Google Play",
+        "zh": "即将登陆 App Store 与 Google Play"
+      }
+    },
+    "meta": {
+      "title": {
+        "en": "Kaihua 开花 · HSK 3.0 vocab & tones",
+        "zh": "开花 Kaihua · HSK 3.0 背词与声调训练"
+      },
+      "description": {
+        "en": "Kaihua helps you learn the words of the new HSK 3.0 exam and hear the tones: a 7-Day Tone Camp, FSRS reviews that are always free, and explanations in English, Korean and Thai.",
+        "zh": "开花 Kaihua：按 HSK 3.0 官方大纲背词，七天声调营练耳朵，FSRS 复习永远免费，讲解有英语、韩语、泰语三种。"
+      }
+    },
+    "hero": {
+      "sub": {
+        "en": "kāihuā · to bloom",
+        "zh": "kāihuā · 开花"
+      },
+      "h1": {
+        "en": "Learn the HSK 3.0 words. <em>Hear the tones.</em>",
+        "zh": "背 HSK 3.0 的词，<br><em>听清四个声调。</em>"
+      },
+      "lead": {
+        "en": "Short daily sessions built on the new HSK 3.0 word lists, a 7-day camp that trains your ear for tones, and explanations written for your language.",
+        "zh": "每天一小段，词表来自新版 HSK 3.0 官方大纲；七天声调营专练耳朵；讲解按学习者的母语来写。"
+      },
+      "facts": [
+        {
+          "b": "1,000",
+          "t": {
+            "en": "words, HSK 3.0 levels 1–3",
+            "zh": "个词，HSK 3.0 1–3 级"
+          }
+        },
+        {
+          "b": {
+            "en": "7 days",
+            "zh": "7 天"
+          },
+          "t": {
+            "en": "of Tone Camp, free",
+            "zh": "声调营，免费"
+          }
+        },
+        {
+          "b": "3",
+          "t": {
+            "en": "interface languages",
+            "zh": "种界面语言"
+          }
+        }
+      ],
+      "shots": [
+        {
+          "src": "/assets/img/apps/kaihua/01-camp-600.webp",
+          "alt": {
+            "en": "Tone Camp, day 1: meet the four tones",
+            "zh": "声调营第一天：认识四个声调"
+          }
+        },
+        {
+          "src": "/assets/img/apps/kaihua/02-review-600.webp",
+          "alt": {
+            "en": "A word card for 爱 ài after answering",
+            "zh": "作答后的词卡：爱 ài"
+          }
+        }
+      ],
+      "badges": true
+    },
+    "toc": [
+      {
+        "id": "features",
+        "label": {
+          "en": "Features",
+          "zh": "功能"
+        }
+      },
+      {
+        "id": "plans",
+        "label": {
+          "en": "Free and Pro",
+          "zh": "免费与 Pro"
+        }
+      },
+      {
+        "id": "faq",
+        "label": {
+          "en": "FAQ",
+          "zh": "常见问题"
+        }
+      },
+      {
+        "id": "help",
+        "label": {
+          "en": "Support & privacy",
+          "zh": "支持与隐私"
+        }
+      }
+    ],
+    "blocks": [
+      {
+        "type": "tones",
+        "items": [
+          {
+            "han": "妈",
+            "py": "mā",
+            "gl": {
+              "en": "mother · flat tone",
+              "zh": "妈妈 · 第一声"
+            },
+            "d": "M4 8H80"
+          },
+          {
+            "han": "麻",
+            "py": "má",
+            "gl": {
+              "en": "hemp · rising tone",
+              "zh": "麻 · 第二声"
+            },
+            "d": "M6 34L78 6"
+          },
+          {
+            "han": "马",
+            "py": "mǎ",
+            "gl": {
+              "en": "horse · dip tone",
+              "zh": "马 · 第三声"
+            },
+            "d": "M6 14C24 40 52 40 78 4"
+          },
+          {
+            "han": "骂",
+            "py": "mà",
+            "gl": {
+              "en": "to scold · falling tone",
+              "zh": "骂 · 第四声"
+            },
+            "d": "M6 4L78 36",
+            "red": true
+          }
+        ],
+        "caption": [
+          {
+            "en": "Same syllable, four tones, four different words. Kaihua trains your ear first.",
+            "zh": "同一个音节，四个声调，就是四个不同的词。开花先练耳朵。"
+          },
+          {
+            "en": "No speech scoring: it is often wrong, so tone practice is about listening.",
+            "zh": "不做发音打分：机器打分常常不准，声调练习以听为主。"
+          }
+        ]
+      },
+      {
+        "type": "features",
+        "id": "features",
+        "eyebrow": {
+          "en": "What's inside",
+          "zh": "功能"
+        },
+        "h2": {
+          "en": "Inside Kaihua. <em>Real screens.</em>",
+          "zh": "开花里有什么，<br><em>直接看界面。</em>"
+        },
+        "side": {
+          "en": "Every screen on this page is the app itself, with the word list that ships in it.",
+          "zh": "本页的截图都是 App 真实界面，里面的词都来自 App 自带的词库。"
+        },
+        "items": [
+          {
+            "num": {
+              "en": "01 · Tone Camp",
+              "zh": "01 · 声调营"
+            },
+            "h3": {
+              "en": "Seven days to hear the four tones.",
+              "zh": "七天，把四个声调听清楚。"
+            },
+            "p": {
+              "en": "See each tone as a pitch curve, hear it, then draw the pitch you heard with your finger.",
+              "zh": "先看每个声调的音高曲线，再听，然后用手指画出听到的音高。"
+            },
+            "list": [
+              {
+                "en": "Minimal pairs and all 20 two-syllable tone combinations",
+                "zh": "最小对立对，以及全部 20 种双音节声调组合"
+              },
+              {
+                "en": "Tone changes for third tones, 一 yī and 不 bù",
+                "zh": "第三声、「一」「不」的变调"
+              },
+              {
+                "en": "A graduation test at the end, then a short daily warm-up",
+                "zh": "最后一天结业测试，之后每天有简短热身"
+              }
+            ],
+            "shot": {
+              "src": "/assets/img/apps/kaihua/01-camp-600.webp",
+              "alt": {
+                "en": "Tone Camp: pitch curves for the four tones",
+                "zh": "声调营：四个声调的音高曲线"
+              }
+            }
+          },
+          {
+            "num": {
+              "en": "02 · Word cards",
+              "zh": "02 · 词卡"
+            },
+            "h3": {
+              "en": "Answer first, then see the card.",
+              "zh": "先作答，再看词卡。"
+            },
+            "p": {
+              "en": "Kaihua grades you from your answer and how fast you gave it. Tap “Too easy” when a word is already yours.",
+              "zh": "开花根据你答得对不对、用了多久自动评分；已经会的词，点一下「Too easy」就行。"
+            },
+            "list": [
+              {
+                "en": "Collocations and two example sentences with audio",
+                "zh": "常用搭配，两个带录音的例句"
+              },
+              {
+                "en": "Each word compared with the old HSK 2.0 list: new, moved to another level, or the same",
+                "zh": "每个词都和旧版 HSK 2.0 词表对照：新增、调级或不变"
+              },
+              {
+                "en": "Pinyin fades as you master a word",
+                "zh": "越熟的词，拼音显示得越淡"
+              }
+            ],
+            "shot": {
+              "src": "/assets/img/apps/kaihua/02-review-600.webp",
+              "alt": {
+                "en": "Word card for 爱 with collocations and examples",
+                "zh": "「爱」的词卡：搭配与例句"
+              }
+            },
+            "flip": true
+          },
+          {
+            "num": {
+              "en": "03 · Search",
+              "zh": "03 · 搜索"
+            },
+            "h3": {
+              "en": "Look up anything, even without tones.",
+              "zh": "不带声调也能查。"
+            },
+            "p": {
+              "en": "Search words, characters and grammar points by characters, by pinyin with or without tone marks, or by meaning.",
+              "zh": "词、字、语法点都能搜：输入汉字、带调或不带调的拼音、或者意思都行。"
+            },
+            "list": [
+              {
+                "en": "Same sound, different tones: 买 mǎi and 卖 mài side by side",
+                "zh": "同音不同调的词并排对比，比如 买 mǎi 和 卖 mài"
+              },
+              {
+                "en": "Words beyond your level show their HSK level",
+                "zh": "超出当前级别的词会标出它的 HSK 级别"
+              }
+            ],
+            "shot": {
+              "src": "/assets/img/apps/kaihua/03-search-600.webp",
+              "alt": {
+                "en": "Search for mai: 买 mǎi and 卖 mài side by side",
+                "zh": "搜索 mai：买 mǎi 与 卖 mài 并排"
+              }
+            },
+            "compact": true
+          },
+          {
+            "pair": true,
+            "num": {
+              "en": "04 · Characters",
+              "zh": "04 · 汉字"
+            },
+            "h3": {
+              "en": "Built from parts.",
+              "zh": "一个字由几块拼成。"
+            },
+            "p": {
+              "en": "Strokes, radical and components for each character: <span class=\"parts\" lang=\"zh-CN\">爱 = 爫 + 冖 + 友</span>. Memory hooks are labeled “mnemonic, not etymology”.",
+              "zh": "每个字都有笔画、部首和部件，比如 <span class=\"parts\">爱 = 爫 + 冖 + 友</span>。联想记忆会注明「只是助记，不是字源」。"
+            },
+            "shot": {
+              "src": "/assets/img/apps/kaihua/04-hanzi-600.webp",
+              "alt": {
+                "en": "Character card for 爱",
+                "zh": "「爱」的字卡"
+              }
+            },
+            "compact": true
+          },
+          {
+            "pair": true,
+            "num": {
+              "en": "05 · Grammar & mock tests",
+              "zh": "05 · 语法与模拟测验"
+            },
+            "h3": {
+              "en": "Practice in the exam's own formats.",
+              "zh": "按考试原题型练。"
+            },
+            "p": {
+              "en": "Short grammar quizzes with explanations, and mock tests that follow the official HSK question types (Pro).",
+              "zh": "带讲解的语法小测，以及按 HSK 官方题型出的模拟测验（Pro）。"
+            },
+            "shot": {
+              "src": "/assets/img/apps/kaihua/06-mock-600.webp",
+              "alt": {
+                "en": "Mock test: reading part 2, fill in the blank",
+                "zh": "模拟测验：阅读第二部分，选词填空"
+              }
+            },
+            "compact": true
+          }
+        ]
+      },
+      {
+        "type": "band",
+        "watermark": "芽",
+        "eyebrow": {
+          "en": "Memory Garden",
+          "zh": "记忆花园"
+        },
+        "h2": {
+          "en": "Review right before <em>you forget.</em>",
+          "zh": "在快要忘的时候，<br><em>再复习一次。</em>"
+        },
+        "lead": {
+          "en": "Reviews are planned by FSRS, an open-source memory model, and fit the study time you choose each day. Every word is a plant in your Memory Garden: review on time and it blooms, wait too long and it wilts.",
+          "zh": "复习时间由开源记忆模型 FSRS 安排，并按你每天定下的学习时长调整分量。每个词是记忆花园里的一株花：按时复习就开花，拖得太久就会蔫。"
+        },
+        "stats": [
+          {
+            "b": {
+              "en": "Free",
+              "zh": "免费"
+            },
+            "t": {
+              "en": "reviews, always",
+              "zh": "复习永远免费"
+            }
+          },
+          {
+            "b": {
+              "en": "No cap",
+              "zh": "不限量"
+            },
+            "t": {
+              "en": "on how many",
+              "zh": "想复习多少都行"
+            }
+          },
+          {
+            "b": {
+              "en": "Optional",
+              "zh": "可选"
+            },
+            "t": {
+              "en": "reminder at your usual time",
+              "zh": "在你常学的时间提醒"
+            }
+          }
+        ]
+      },
+      {
+        "type": "plans",
+        "id": "plans",
+        "eyebrow": {
+          "en": "Free and Pro",
+          "zh": "免费与 Pro"
+        },
+        "h2": {
+          "en": "Start free. <em>Stay free</em> if you like.",
+          "zh": "免费开始，<br><em>一直免费用也可以。</em>"
+        },
+        "side": {
+          "en": "Prices are shown in the app and vary by region.",
+          "zh": "价格以 App 内显示为准，各地区不同。"
+        },
+        "free": {
+          "h3": {
+            "en": "Free",
+            "zh": "免费版"
+          },
+          "small": {
+            "en": "no time limit",
+            "zh": "不限时间"
+          },
+          "items": [
+            {
+              "en": "The whole 7-Day Tone Camp",
+              "zh": "完整的七天声调营"
+            },
+            {
+              "en": "All of HSK 1",
+              "zh": "HSK 一级全部内容"
+            },
+            {
+              "en": "10 new words a day from HSK 2",
+              "zh": "二级起每天 10 个新词"
+            },
+            {
+              "en": "Unlimited reviews, forever",
+              "zh": "复习不限量，永久免费"
+            }
+          ],
+          "fine": {
+            "en": "Ads are limited to an optional short video (for extra words or to repair a streak) and one ad on the session-complete screen. Never while you study.",
+            "zh": "广告只有两处：你自己选择观看的短视频（换额外新词或补签），以及学习结束页上的一条广告。学习过程中不出现广告。"
+          }
+        },
+        "pro": {
+          "h3": {
+            "en": "Kaihua Pro",
+            "zh": "开花 Pro"
+          },
+          "small": {
+            "en": "monthly, yearly or lifetime",
+            "zh": "按月、按年或终身买断"
+          },
+          "items": [
+            {
+              "en": "Unlimited new words at every level",
+              "zh": "各级别新词不限量"
+            },
+            {
+              "en": "Exam pacing toward your test date",
+              "zh": "按考试日期安排每天的进度"
+            },
+            {
+              "en": "Memory curves for every word",
+              "zh": "每个词的记忆曲线"
+            },
+            {
+              "en": "A second voice, and no ads",
+              "zh": "多一个男声发音，没有广告"
+            }
+          ],
+          "fine": {
+            "en": "Subscriptions are managed in your App Store or Google Play account. The lifetime purchase never renews.",
+            "zh": "订阅在 App Store 或 Google Play 账户里管理；终身买断不会自动续费。"
+          },
+          "watermark": "开花"
+        }
+      },
+      {
+        "type": "promise",
+        "items": [
+          {
+            "b": {
+              "en": "No account",
+              "zh": "不用注册"
+            },
+            "t": {
+              "en": "Open the app and start. Nothing to sign up for.",
+              "zh": "打开就能学，没有账号要注册。"
+            }
+          },
+          {
+            "b": {
+              "en": "On your device",
+              "zh": "存在手机上"
+            },
+            "t": {
+              "en": "Your progress is stored on your phone, not on our servers.",
+              "zh": "学习进度保存在你的手机里，不在我们的服务器上。"
+            }
+          },
+          {
+            "b": {
+              "en": "Works offline",
+              "zh": "离线可用"
+            },
+            "t": {
+              "en": "Words and audio for levels 1–3 ship inside the app.",
+              "zh": "一至三级的词和音频都装在 App 里。"
+            }
+          }
+        ]
+      },
+      {
+        "type": "faq",
+        "id": "faq",
+        "eyebrow": {
+          "en": "FAQ",
+          "zh": "常见问题"
+        },
+        "h2": {
+          "en": "Questions people ask",
+          "zh": "大家常问的问题"
+        },
+        "items": [
+          {
+            "q": {
+              "en": "Which HSK does Kaihua cover?",
+              "zh": "开花用的是哪一版 HSK？"
+            },
+            "a": {
+              "en": "HSK 3.0, the syllabus published in November 2025. Levels 1–3 have 1,000 words in all. Every word is tagged against HSK 2.0, so you can see what is new and what moved.",
+              "zh": "HSK 3.0，即 2025 年 11 月发布的新大纲。一至三级共 1,000 个词，每个词都标出和 HSK 2.0 的差别，哪些是新增的、哪些调了级，一看就知道。"
+            }
+          },
+          {
+            "q": {
+              "en": "Does Kaihua score my pronunciation?",
+              "zh": "开花会给我的发音打分吗？"
+            },
+            "a": {
+              "en": "No. Tone training is listening-first: you hear, compare and draw the pitch. Speech scoring is often wrong, so we left it out.",
+              "zh": "不会。声调训练以听为主：听、比较，再画出音高。机器给发音打分经常出错，所以我们没有做。"
+            }
+          },
+          {
+            "q": {
+              "en": "Is it free?",
+              "zh": "要花钱吗？"
+            },
+            "a": {
+              "en": "The Tone Camp, all of HSK 1 and every review are free. Pro adds unlimited new words, exam pacing, memory curves, a second voice and no ads.",
+              "zh": "声调营、HSK 一级全部内容和所有复习都免费。Pro 增加不限量的新词、备考进度、记忆曲线、第二个发音，并去掉广告。"
+            }
+          },
+          {
+            "q": {
+              "en": "Do I need an account?",
+              "zh": "需要注册账号吗？"
+            },
+            "a": {
+              "en": "No. Progress is stored on your phone and the app works offline.",
+              "zh": "不需要。进度存在手机上，离线也能用。"
+            }
+          },
+          {
+            "q": {
+              "en": "Will my progress move to a new phone?",
+              "zh": "换手机后进度还在吗？"
+            },
+            "a": {
+              "en": "Not yet. There is no cloud sync at the moment. A Pro purchase can be restored on a new phone with Restore purchases.",
+              "zh": "目前不会。现在还没有云同步。已购买的 Pro 可以在新手机上用「Restore purchases」（恢复购买）找回。"
+            }
+          },
+          {
+            "q": {
+              "en": "Where does the word list come from?",
+              "zh": "词表从哪里来？"
+            },
+            "a": {
+              "en": "From the official HSK 3.0 syllabus, word for word. Pinyin and parts of speech are checked against the syllabus and a reference dictionary. How meanings, examples and audio are made and reviewed is explained in section 5 of the <a href=\"privacy/#ai\">Privacy Policy</a>.",
+              "zh": "词表逐词取自 HSK 3.0 官方大纲，拼音和词性都对照大纲和参考词典核对过。释义、例句和音频是怎么制作、怎么审核的，见<a href=\"privacy/#ai\">隐私政策</a>第 5 节。"
+            }
+          }
+        ]
+      },
+      {
+        "type": "help",
+        "id": "help",
+        "items": [
+          {
+            "href": "support/",
+            "b": {
+              "en": "Support",
+              "zh": "支持"
+            },
+            "t": {
+              "en": "Restore purchases, cancel Pro, delete your data",
+              "zh": "恢复购买、取消 Pro、删除数据"
+            }
+          },
+          {
+            "href": "privacy/",
+            "b": {
+              "en": "Privacy Policy",
+              "zh": "隐私政策"
+            },
+            "t": {
+              "en": "What stays on your device, and what does not",
+              "zh": "哪些数据留在手机上，哪些不是"
+            }
+          },
+          {
+            "href": "terms/",
+            "b": {
+              "en": "Terms of Use",
+              "zh": "使用条款"
+            },
+            "t": {
+              "en": "Subscriptions, lifetime purchase, refunds",
+              "zh": "订阅、终身买断、退款"
+            }
+          }
+        ],
+        "mail": {
+          "en": "Still stuck? Write to {email} with your device model and app version.",
+          "zh": "还有问题？写信到 {email}，附上手机型号和 App 版本。"
+        },
+        "langs": {
+          "en": "The Privacy Policy is also available in",
+          "zh": "隐私政策另有"
+        }
+      },
+      {
+        "type": "cta",
+        "h2": {
+          "en": "Let every word bloom.",
+          "zh": "让每个词都开花。"
+        },
+        "p": {
+          "en": "Kaihua is coming soon to iPhone and Android, in English, Korean and Thai.",
+          "zh": "开花即将上线 iPhone 和安卓，界面有英语、韩语、泰语三种。"
+        },
+        "badges": true
+      }
+    ],
+    "trademark": {
+      "en": "HSK is a registered trademark of the Center for Language Education and Cooperation (CLEC). Kaihua is an independent app and is not affiliated with or endorsed by CLEC or Chinese Testing International.",
+      "zh": "HSK 是中外语言交流合作中心（CLEC）的注册商标。开花是独立开发的 App，与 CLEC、汉考国际无关，也未获其认可。"
+    },
+    "legal": {
+      "privacy": {
+        "langs": [
+          "en",
+          "zh",
+          "ko",
+          "th"
+        ],
+        "title": {
+          "en": "Privacy Policy",
+          "zh": "隐私政策",
+          "ko": "개인정보처리방침",
+          "th": "นโยบายความเป็นส่วนตัว"
+        },
+        "description": {
+          "en": "How the Kaihua app handles your information: no account, progress stored on your device, purchases via RevenueCat and ads via Google AdMob.",
+          "zh": "开花 Kaihua 如何处理你的信息：无需账号，进度存在本机，购买经 RevenueCat，广告来自 Google AdMob。",
+          "ko": "Kaihua 앱의 개인정보 처리 방침: 계정 없음, 학습 기록은 기기에만 저장, RevenueCat을 통한 구매, Google AdMob 광고.",
+          "th": "นโยบายความเป็นส่วนตัวของแอป Kaihua: ไม่ต้องมีบัญชี ความคืบหน้าเก็บในเครื่อง การซื้อผ่าน RevenueCat และโฆษณาจาก Google AdMob"
+        }
+      },
+      "terms": {
+        "langs": [
+          "en",
+          "zh"
+        ],
+        "title": {
+          "en": "Terms of Use",
+          "zh": "使用条款"
+        },
+        "description": {
+          "en": "Terms of Use for the Kaihua app: free features, Kaihua Pro subscriptions and lifetime purchase, refunds and learning content.",
+          "zh": "开花 Kaihua 使用条款：免费功能、Pro 订阅与终身买断、退款与学习内容。"
+        }
+      },
+      "support": {
+        "langs": [
+          "en",
+          "zh"
+        ],
+        "title": {
+          "en": "Support",
+          "zh": "支持"
+        },
+        "description": {
+          "en": "Kaihua support: restore purchases, cancel a subscription, refunds, moving to a new phone, deleting your data and contacting us.",
+          "zh": "开花 Kaihua 支持：恢复购买、取消订阅、退款、换手机、删除数据和联系我们。"
+        }
+      }
+    }
+  },
+  {
+    "slug": "chiheng",
+    "name": {
+      "en": "ChiHeng",
+      "zh": "持恒"
+    },
+    "alt_name": {
+      "en": "持恒",
+      "zh": "ChiHeng"
+    },
+    "icon": "/assets/img/apps/chiheng/icon.webp",
+    "icon_alt": {
+      "en": "ChiHeng app icon",
+      "zh": "持恒图标"
+    },
+    "watermark": "恒",
+    "quiet": true,
+    "platforms": "Android, iOS, HarmonyOS",
+    "category": "LifestyleApplication",
+    "store": {
+      "app_store": null,
+      "google_play": null
+    },
+    "card": {
+      "line": {
+        "en": "Android · iPhone & iPad · HarmonyOS, in testing",
+        "zh": "安卓 · iPhone 与 iPad · 鸿蒙，测试中"
+      },
+      "lead": {
+        "en": "A free practice log for daily recitation, meditation and reading: a counter with bead mode, check-in calendar, meditation timer with bells, and a library for your own files.",
+        "zh": "免费、公益的功课记录工具：计数（念珠模式每圈 108）、打卡日历、禅修计时与钟声、个人资料库。"
+      },
+      "pledge": [
+        {
+          "en": "No ads",
+          "zh": "无广告"
+        },
+        {
+          "en": "No membership",
+          "zh": "无会员"
+        },
+        {
+          "en": "No login",
+          "zh": "免登录"
+        },
+        {
+          "en": "Stored on your device",
+          "zh": "本地保存"
+        },
+        {
+          "en": "Backup anytime",
+          "zh": "随时导出备份"
+        }
+      ],
+      "quiet_note": {
+        "en": "Nothing pops up while you count or sit.",
+        "zh": "计数和静坐的时候，不会弹出任何窗口。"
+      },
+      "shots": [
+        {
+          "src": "/assets/img/apps/chiheng/today-600.webp",
+          "alt": {
+            "en": "ChiHeng's Today screen (Chinese interface)",
+            "zh": "持恒「今日功课」界面"
+          },
+          "full": true
+        }
+      ],
+      "cta": {
+        "en": "About ChiHeng",
+        "zh": "了解持恒"
+      }
+    },
+    "meta": {
+      "title": {
+        "en": "ChiHeng 持恒 · a quiet practice log",
+        "zh": "持恒 · 功课记录、计数与禅修计时"
+      },
+      "description": {
+        "en": "ChiHeng is a free practice log for daily recitation, meditation and reading: counter with bead mode, check-in calendar, meditation timer and your own library. No ads, no login, stored on your device.",
+        "zh": "持恒是免费、公益的功课记录工具：计数与念珠模式、打卡日历、禅修计时与钟声、个人资料库。无广告、免登录、数据存在本机。"
+      }
+    },
+    "hero": {
+      "sub": {
+        "en": "chí héng · to keep at it",
+        "zh": "chí héng · 持之以恒"
+      },
+      "h1": {
+        "en": "A log for your <em>daily practice.</em>",
+        "zh": "每天的功课，<em>安安静静地记下来。</em>"
+      },
+      "lead": {
+        "en": "Count recitations with a tap, check in on a calendar, sit with a timer and soft bells, and keep the texts and recordings you study in one place. Free, with nothing to sign up for.",
+        "zh": "点一下屏幕就是一遍；日历上打卡；静坐时有计时和轻柔的钟声；平时学的经本、录音都放在一处。免费，不用注册。"
+      },
+      "facts": [
+        {
+          "b": {
+            "en": "Free",
+            "zh": "免费"
+          },
+          "t": {
+            "en": "no ads, no membership",
+            "zh": "无广告、无会员"
+          }
+        },
+        {
+          "b": "108",
+          "t": {
+            "en": "beads per round, adjustable",
+            "zh": "念珠每圈默认颗数，可改"
+          }
+        },
+        {
+          "b": "3",
+          "t": {
+            "en": "platforms: Android, Apple, HarmonyOS",
+            "zh": "个平台：安卓、苹果、鸿蒙"
+          }
+        }
+      ],
+      "shots": [
+        {
+          "src": "/assets/img/apps/chiheng/counter-600.webp",
+          "alt": {
+            "en": "Counter screen in bead mode (Chinese interface)",
+            "zh": "持恒计数界面（念珠模式）"
+          }
+        },
+        {
+          "src": "/assets/img/apps/chiheng/today-600.webp",
+          "alt": {
+            "en": "Today screen with the day's practices (Chinese interface)",
+            "zh": "持恒「今日功课」界面"
+          }
+        }
+      ],
+      "status": {
+        "en": "In testing. Not yet in the app stores.",
+        "zh": "测试中，尚未在应用商店上架。"
+      }
+    },
+    "toc": [
+      {
+        "id": "features",
+        "label": {
+          "en": "Features",
+          "zh": "功能"
+        }
+      },
+      {
+        "id": "faq",
+        "label": {
+          "en": "FAQ",
+          "zh": "常见问题"
+        }
+      },
+      {
+        "id": "help",
+        "label": {
+          "en": "Support & privacy",
+          "zh": "支持与隐私"
+        }
+      }
+    ],
+    "blocks": [
+      {
+        "type": "features",
+        "id": "features",
+        "eyebrow": {
+          "en": "What it does",
+          "zh": "功能"
+        },
+        "h2": {
+          "en": "Five tools for <em>your daily practice.</em>",
+          "zh": "记录每天功课的<em>几样工具。</em>"
+        },
+        "side": {
+          "en": "Everything revolves around one thing you set up yourself: a practice, such as a daily recitation, a sitting or a reading. Screens shown are the Chinese interface; English is also available.",
+          "zh": "一切围绕你自己设定的「功课」：每天念多少遍、坐多久、读什么。截图为中文界面，也可切换为英文。"
+        },
+        "items": [
+          {
+            "num": {
+              "en": "01 · Counter",
+              "zh": "01 · 计数"
+            },
+            "h3": {
+              "en": "Tap anywhere to count.",
+              "zh": "点屏幕任意处就是一遍。"
+            },
+            "p": {
+              "en": "The whole screen is the button. Each tap counts one, with a vibration, and a different one when a round is complete.",
+              "zh": "整个屏幕都是按钮，点一下记一遍，有振动；满一圈换一种振动或提示音。"
+            },
+            "list": [
+              {
+                "en": "Bead mode, 108 per round by default",
+                "zh": "念珠模式，每圈默认 108"
+              },
+              {
+                "en": "Count with the volume keys on Android while the counter is open",
+                "zh": "安卓上打开计数页时，可以用音量键计数"
+              },
+              {
+                "en": "Undo, a lock against stray taps, and add +N for beads counted offline",
+                "zh": "可撤销、防误触锁，线下拨珠可补录 +N"
+              }
+            ],
+            "shot": {
+              "src": "/assets/img/apps/chiheng/counter-600.webp",
+              "alt": {
+                "en": "Counter screen",
+                "zh": "计数界面"
+              }
+            }
+          },
+          {
+            "num": {
+              "en": "02 · Check-in",
+              "zh": "02 · 打卡"
+            },
+            "h3": {
+              "en": "A calendar that doesn't nag.",
+              "zh": "日历不催你。"
+            },
+            "p": {
+              "en": "Practices can be counted, timed or simply ticked. Set them for every day, certain weekdays, a number of times a week, or a fixed stretch such as a hundred days.",
+              "zh": "功课可以计数、计时或打勾；节奏可以是每天、每周固定几天、每周几次，或一段时间（比如百日）。"
+            },
+            "list": [
+              {
+                "en": "Streaks, total days and completion rate at a glance, with no warnings when a streak is about to break",
+                "zh": "连续天数、累计天数和完成率一眼看清，不会催你「快断签了」"
+              },
+              {
+                "en": "Make up a missed day, with a small mark on the calendar",
+                "zh": "漏记可以补卡，日历上会有小标记"
+              }
+            ],
+            "shot": {
+              "src": "/assets/img/apps/chiheng/calendar-600.webp",
+              "alt": {
+                "en": "Check-in calendar for one practice",
+                "zh": "一项功课的打卡日历"
+              }
+            },
+            "flip": true
+          },
+          {
+            "num": {
+              "en": "03 · Meditation timer",
+              "zh": "03 · 静坐计时"
+            },
+            "h3": {
+              "en": "Sit. The bell will tell you.",
+              "zh": "坐下来，时间到了钟声会告诉你。"
+            },
+            "p": {
+              "en": "Count down, count up, or sit until a set time. Bells with a long, soft tail mark the start, intervals and the end.",
+              "zh": "倒计时、正计时，或坐到某个时刻为止。开始、间隔、结束都可以设钟声，音色轻柔、余音长。"
+            },
+            "list": [
+              {
+                "en": "Singing bowl, qing, small bell, water drop, chime and a guqin harmonic",
+                "zh": "颂钵、引磬、铜铃、水滴、柔和钟声、古琴泛音"
+              },
+              {
+                "en": "Turns on Do Not Disturb while you sit, and turns it off afterwards",
+                "zh": "静坐时自动开勿扰，结束后关回去"
+              },
+              {
+                "en": "While you sit, a dim screen shows over the lock screen so the light does not distract you",
+                "zh": "静坐时锁屏上显示调暗的界面，光线不晃眼"
+              }
+            ],
+            "shot": {
+              "src": "/assets/img/apps/chiheng/timer-600.webp",
+              "alt": {
+                "en": "Meditation timer",
+                "zh": "静坐计时界面"
+              },
+              "pos": "full"
+            }
+          },
+          {
+            "num": {
+              "en": "04 · Statistics",
+              "zh": "04 · 统计"
+            },
+            "h3": {
+              "en": "See how far you have come.",
+              "zh": "看看走了多远。"
+            },
+            "p": {
+              "en": "Totals by practice for this month, last month, this year or any range, compared with the period before. Long-term goals such as 100,000 recitations show their progress.",
+              "zh": "按功课看本月、上月、今年或任意时间段的总量，并和上一周期比较；十万遍这样的长期目标也能看到进度。"
+            },
+            "shot": {
+              "src": "/assets/img/apps/chiheng/stats-600.webp",
+              "alt": {
+                "en": "Statistics screen",
+                "zh": "统计界面"
+              }
+            },
+            "compact": true,
+            "flip": true
+          },
+          {
+            "num": {
+              "en": "05 · Library",
+              "zh": "05 · 资料库"
+            },
+            "h3": {
+              "en": "Your own texts and recordings.",
+              "zh": "自己的经本和录音。"
+            },
+            "p": {
+              "en": "ChiHeng ships no content. Add your own PDFs, EPUBs, audio and video, read and listen inside the app, and it remembers where you stopped.",
+              "zh": "持恒不内置任何内容。你自己导入 PDF、EPUB、音视频，在 App 里读、听，它记得你上次停在哪里。"
+            },
+            "compact": true,
+            "list": [
+              {
+                "en": "PDF, EPUB and TXT open in the built-in reader, with bookmarks, highlights and search",
+                "zh": "PDF、EPUB、TXT 在内置阅读器里打开，可加书签、划线、搜索"
+              },
+              {
+                "en": "Audio and video play with speed control, a sleep timer and A–B repeat",
+                "zh": "音视频可调倍速、定时关闭、AB 复读"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "promise",
+        "items": [
+          {
+            "b": {
+              "en": "No ads, no membership",
+              "zh": "无广告、无会员"
+            },
+            "t": {
+              "en": "Nothing to buy and nothing to watch. It is free.",
+              "zh": "没有付费点，也没有广告，就是免费。"
+            }
+          },
+          {
+            "b": {
+              "en": "No login",
+              "zh": "免登录"
+            },
+            "t": {
+              "en": "Your records are stored on your device.",
+              "zh": "记录保存在你自己的设备上。"
+            }
+          },
+          {
+            "b": {
+              "en": "Backup",
+              "zh": "备份"
+            },
+            "t": {
+              "en": "Export a backup whenever you like and keep it where you choose.",
+              "zh": "随时导出备份，存到你自己选的地方。"
+            }
+          }
+        ]
+      },
+      {
+        "type": "faq",
+        "id": "faq",
+        "eyebrow": {
+          "en": "FAQ",
+          "zh": "常见问题"
+        },
+        "h2": {
+          "en": "Questions people ask",
+          "zh": "大家常问的问题"
+        },
+        "items": [
+          {
+            "q": {
+              "en": "Is ChiHeng really free?",
+              "zh": "持恒真的免费吗？"
+            },
+            "a": {
+              "en": "Yes. There are no ads, no membership and nothing to buy.",
+              "zh": "是的。没有广告，没有会员，也没有任何付费项目。"
+            }
+          },
+          {
+            "q": {
+              "en": "Is it only for Buddhist practice?",
+              "zh": "只能用来记佛教功课吗？"
+            },
+            "a": {
+              "en": "No. It was made with Buddhist practitioners in mind, but the wording is neutral and a practice can be anything you repeat: recitation, sitting, reading, exercise.",
+              "zh": "不是。持恒主要为学佛的人设计，但界面用语是中性的，功课可以是任何你想坚持的事：念诵、静坐、读书、锻炼。"
+            }
+          },
+          {
+            "q": {
+              "en": "How do I move to a new phone?",
+              "zh": "换手机怎么办？"
+            },
+            "a": {
+              "en": "Export a backup on the old phone, copy the file to the new one and restore it there. On Android the backup holds your practices, records, notes and how your library is organized, but not the files themselves, so copy those over too. On iPhone, iPad and HarmonyOS the backup also includes your library files and note images. ChiHeng does not sync through the cloud.",
+              "zh": "在旧手机上导出备份，把文件拷到新手机上恢复。安卓版的备份里有功课、记录、笔记和资料库的整理方式，但不含资料文件本身，文件要另外拷过去；iPhone、iPad 和鸿蒙版的备份连资料文件和笔记图片一起打包。持恒不做云同步。"
+            }
+          },
+          {
+            "q": {
+              "en": "Where can I download it?",
+              "zh": "在哪里下载？"
+            },
+            "a": {
+              "en": "ChiHeng is in testing and not yet in the app stores. This page will link to the stores when it is.",
+              "zh": "持恒还在测试，暂未在应用商店上架。上架后这里会放下载链接。"
+            }
+          }
+        ]
+      },
+      {
+        "type": "help",
+        "id": "help",
+        "items": [
+          {
+            "href": "support/",
+            "b": {
+              "en": "Support",
+              "zh": "支持"
+            },
+            "t": {
+              "en": "Backups, moving phones, timers and bells",
+              "zh": "备份、换手机、计时与钟声"
+            }
+          },
+          {
+            "href": "privacy/",
+            "b": {
+              "en": "Privacy Policy",
+              "zh": "隐私政策"
+            },
+            "t": {
+              "en": "Everything stays on your device",
+              "zh": "数据都留在你的设备上"
+            }
+          },
+          {
+            "href": "terms/",
+            "b": {
+              "en": "Terms of Use",
+              "zh": "使用条款"
+            },
+            "t": {
+              "en": "Free to use, provided as is",
+              "zh": "免费使用，按现状提供"
+            }
+          }
+        ],
+        "mail": {
+          "en": "Questions or suggestions? Write to {email} with your device model and app version.",
+          "zh": "有问题或建议？写信到 {email}，附上设备型号和 App 版本。"
+        }
+      }
+    ],
+    "legal": {
+      "privacy": {
+        "langs": [
+          "zh",
+          "en"
+        ],
+        "title": {
+          "en": "Privacy Policy",
+          "zh": "隐私政策"
+        },
+        "description": {
+          "en": "How ChiHeng handles your data: no account, no ads, records stored on your device, backups under your control.",
+          "zh": "持恒如何处理你的数据：无需账号、没有广告，记录存在本机，备份由你自己保管。"
+        }
+      },
+      "terms": {
+        "langs": [
+          "zh",
+          "en"
+        ],
+        "title": {
+          "en": "Terms of Use",
+          "zh": "使用条款"
+        },
+        "description": {
+          "en": "Terms of Use for the ChiHeng app.",
+          "zh": "持恒使用条款。"
+        }
+      },
+      "support": {
+        "langs": [
+          "zh",
+          "en"
+        ],
+        "title": {
+          "en": "Support",
+          "zh": "支持"
+        },
+        "description": {
+          "en": "ChiHeng support: backups, moving to a new phone, timers, bells and contacting us.",
+          "zh": "持恒支持：备份与恢复、换手机、计时与钟声、联系我们。"
+        }
+      }
+    }
+  }
+]

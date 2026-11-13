@@ -1,0 +1,35 @@
+---
+import Seal from './Seal.astro';
+import { t, href, LANG_SHORT, HTML_LANG, type Lang } from '../i18n';
+import { alternates } from '../lib/routes';
+const { lang, path, section } = Astro.props as { lang: Lang; path?: string; section?: string };
+const T = t(lang);
+const navLang: Lang = lang === 'zh' ? 'zh' : 'en';
+const alts = path ? alternates(path) : { en: '/', zh: '/zh/' };
+const links = [
+  ['apps', '/apps/'], ['books', '/books/'], ['about', '/about/'], ['contact', '/contact/'],
+];
+---
+<header class="site-header">
+  <nav class="nav wrap" aria-label={T.nav.main}>
+    <a class="brand" href={href(navLang, '/')} aria-label={T.nav.home}><Seal /><span class="brand-text"><b>Shuye Lab</b><span lang="zh-CN">书叶工作室</span></span></a>
+    <ul class="nav-links" id="nav-links">
+      {links.map(([k, p]) => <li><a href={href(navLang, p)} aria-current={section === k ? 'page' : undefined}>{T.nav[k]}</a></li>)}
+      <li class="lang-item"><span class="lang" role="group" aria-label={T.nav.language}>
+        {Object.entries(alts).map(([l, u]) => <a href={u} lang={HTML_LANG[l as Lang]} hreflang={HTML_LANG[l as Lang]} aria-current={l === lang ? 'true' : undefined}>{LANG_SHORT[l as Lang]}</a>)}
+      </span></li>
+    </ul>
+    <button class="menu-btn" type="button" aria-label={T.nav.menu} aria-expanded="false" aria-controls="nav-links"><span></span></button>
+  </nav>
+</header>
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('.menu-btn');
+  btn?.addEventListener('click', () => {
+    const h = btn.closest('header')!;
+    const open = h.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && btn?.closest('header')?.classList.contains('open')) { btn.click(); btn.focus(); }
+  });
+</script>

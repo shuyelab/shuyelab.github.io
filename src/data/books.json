@@ -1,0 +1,916 @@
+[
+  {
+    "slug": "hsk1-workbook",
+    "series": "grid-by-grid-chinese",
+    "source": "hsk1-workbook",
+    "number": {
+      "en": "Book 1",
+      "zh": "第 1 册"
+    },
+    "title": "Chinese Character Writing & Vocabulary Workbook for the New HSK 3.0 Level 1",
+    "subtitle": "All 300 Words and the 100 Level 1–2 Handwriting Characters, with Stroke Order, Tian Zi Ge Grids, Component Puzzles & Answers",
+    "zh_title": "HSK 3.0 一级汉字书写与词汇练习册",
+    "summary": {
+      "en": "All 300 Level 1 words and the 100 handwriting characters for Levels 1–2, with stroke order and tian zi ge grids.",
+      "zh": "一级全部 300 词，外加一、二级要求手写的 100 个汉字，有笔顺和田字格。"
+    },
+    "for_whom": {
+      "en": "Adults studying for the new HSK 3.0 Level 1 who want to read the characters without pinyin and get a head start on writing.",
+      "zh": "按 HSK 3.0 新大纲备考一级、想脱离拼音认字并提前练手写的成人学习者。全书讲解为英文。"
+    },
+    "lead": {
+      "en": "The HSK 1 exam tests listening and reading only, and it prints pinyin over the Chinese. There is no writing section. This workbook teaches the characters so you can read without pinyin, and starts your handwriting for HSK 2, which adds two writing tasks. There is no audio, so use it next to your course or flashcard app.",
+      "zh": "HSK 一级只考听力和阅读，试卷上汉字头顶都标着拼音，没有书写题。这本练习册教你把汉字认下来，不靠拼音也能读；同时为二级打好手写基础，二级起会加两种书写题。书里没有音频，适合配合课程或背词 App 一起用。"
+    },
+    "formats": [
+      {
+        "en": "Paperback · 8.5 × 11 in",
+        "zh": "平装 · 8.5 × 11 英寸"
+      },
+      {
+        "en": "270 pages",
+        "zh": "270 页"
+      },
+      {
+        "en": "English, with simplified Chinese",
+        "zh": "英文讲解 · 简体中文"
+      }
+    ],
+    "inside": [
+      {
+        "en": [
+          "Exactly the new list",
+          "All 300 Level 1 words of the November 2025 syllabus and the 248 characters they use. 95 of those characters are on the handwriting list for Levels 1–2; a Bridge unit adds the other 5."
+        ],
+        "zh": [
+          "完全按新大纲",
+          "2025 年 11 月大纲的一级 300 词，以及这些词用到的 248 个汉字。其中 95 个在一、二级手写字表上，另外 5 个手写字放在衔接单元。"
+        ]
+      },
+      {
+        "en": [
+          "100 WRITE pages",
+          "One page per handwriting character: a large model, every stroke in order, its components, a memory hook, the words that use it, and about 50 practice grids."
+        ],
+        "zh": [
+          "100 张书写页",
+          "每个手写字一整页：大字范字、逐笔笔顺、部件、记忆提示、含这个字的一级词，以及约 50 个练习格。"
+        ]
+      },
+      {
+        "en": [
+          "153 READ characters",
+          "The other 153 of the 248, four to a page, with stroke order, components, words and one practice row, so you recognize them and know how they are put together."
+        ],
+        "zh": [
+          "153 个认读字",
+          "248 个字里其余的 153 个，一页四个，有笔顺、部件、词语和一行练习格，认得出，也知道字是怎么拼起来的。"
+        ]
+      },
+      {
+        "en": [
+          "18 units in order",
+          "From Numbers One to Ten to Sorry, Thanks and the Doctor, plus a Bridge unit. In Units 1–18, every sentence uses only words you have already learned."
+        ],
+        "zh": [
+          "18 个单元循序推进",
+          "从「数字一到十」到「对不起、谢谢和看医生」，另有一个衔接单元。第 1–18 单元的每个句子都只用前面学过的词。"
+        ]
+      },
+      {
+        "en": [
+          "Ready for HSK 2 writing",
+          "The “Build the character” and “Pinyin to character” drills practice the two writing tasks that HSK 2 adds."
+        ],
+        "zh": [
+          "为二级书写题做准备",
+          "「组字」和「看拼音写汉字」两种练习，对应二级新增的两种书写题。"
+        ]
+      },
+      {
+        "en": [
+          "Checks and answers",
+          "Four exercises and a 20-point Unit check in every unit, four Reviews, and a full answer key."
+        ],
+        "zh": [
+          "自测与答案",
+          "每单元四组练习和一份 20 分的单元自测，另有四次复习，书末附全部答案。"
+        ]
+      },
+      {
+        "en": [
+          "Word list with 2.0 → 3.0 marks",
+          "The 300 words with pinyin, meaning and unit, each marked against HSK 2.0: 83 are new to Level 1 and 71 moved down from higher levels."
+        ],
+        "zh": [
+          "标注新旧大纲差异的词表",
+          "300 词附拼音、释义和所在单元，并标出与 HSK 2.0 的差异：83 个是一级新增，71 个从更高级别移下来。"
+        ]
+      },
+      {
+        "en": [
+          "Index and extra grids",
+          "A character index in pinyin order, a component table and spare practice pages."
+        ],
+        "zh": [
+          "索引与备用格",
+          "按拼音排序的汉字索引、部件表和备用练习页。"
+        ]
+      }
+    ],
+    "samples": [
+      {
+        "page": 30,
+        "alt": {
+          "en": "WRITE page for 你 nǐ: stroke order, components, memory hook and practice grids",
+          "zh": "「你」字书写页：笔顺、部件、记忆提示和练习格"
+        },
+        "caption": {
+          "en": "A WRITE page: 你 nǐ, from model and strokes to trace, fade and on your own.",
+          "zh": "书写页：「你」字，从范字、笔顺到描红、渐隐、独立书写。"
+        },
+        "h": 1165
+      },
+      {
+        "page": 39,
+        "alt": {
+          "en": "READ page with four characters: 您, 呢, 认, 识",
+          "zh": "认读页：您、呢、认、识四个字"
+        },
+        "caption": {
+          "en": "A READ page: four characters, each with strokes, parts, words and a practice row.",
+          "zh": "认读页：四个字，各有笔顺、部件、词语和一行练习格。"
+        },
+        "h": 1165
+      }
+    ],
+    "details": [
+      {
+        "en": [
+          "Series",
+          "Grid by Grid Chinese, Book 1"
+        ],
+        "zh": [
+          "系列",
+          "Grid by Grid Chinese 第 1 册"
+        ]
+      },
+      {
+        "en": [
+          "Format",
+          "Paperback, 8.5 × 11 in, 270 pages"
+        ],
+        "zh": [
+          "开本",
+          "平装，8.5 × 11 英寸，270 页"
+        ]
+      },
+      {
+        "en": [
+          "Word list",
+          "HSK 3.0 syllabus (November 2025), Level 1"
+        ],
+        "zh": [
+          "词表",
+          "HSK 3.0 考试大纲（2025 年 11 月），一级"
+        ]
+      },
+      {
+        "en": [
+          "Language",
+          "English explanations, simplified Chinese"
+        ],
+        "zh": [
+          "语言",
+          "英文讲解，简体中文"
+        ]
+      }
+    ],
+    "disclaimer": {
+      "en": "Independent study aid. Not affiliated with or endorsed by CLEC, Chinese Testing International or any HSK test organizer. HSK is a trademark of its owner.",
+      "zh": "本书为独立出版的学习用书，与中外语言交流合作中心（CLEC）、汉考国际及任何 HSK 考试主办方无关，也未获其认可。HSK 是其所有者的商标。"
+    },
+    "amazon_url": null,
+    "isbn": null
+  },
+  {
+    "slug": "civics-2025-zh",
+    "series": "civics-in-two-languages",
+    "source": "citizenship-zh",
+    "featured": true,
+    "number": {
+      "en": "Book 1",
+      "zh": "第 1 册"
+    },
+    "title": "U.S. Citizenship Test 2025 in Chinese and English",
+    "subtitle": "Large Print Guide to All 128 Civics Questions with Chinese Translations, Notes, the 65/20 Section, Reading and Writing Practice, and 7 Practice Tests",
+    "zh_title": "美国入籍考试 2025 版 128 题 · 中英对照大字版",
+    "summary": {
+      "en": "All 128 civics questions in large print, with Chinese translations and notes, plus free audio.",
+      "zh": "128 道公民题全收，大字排版，每题有中文翻译和讲解，配免费朗读音频。"
+    },
+    "for_whom": {
+      "en": "Chinese-speaking applicants who file Form N-400 on or after October 20, 2025, and the family members who help them study.",
+      "zh": "母语是中文、2025 年 10 月 20 日及以后递交 N-400 的申请人，以及帮他们复习的家人。"
+    },
+    "lead": {
+      "en": "Only the 2025 test is in this book: all 128 civics questions, with the English questions and answers copied word for word from the USCIS list (M‑1778, 09/25), and Chinese for every one of them.",
+      "zh": "全书只收 2025 版 128 道公民题。英文题目与答案逐字来自 USCIS 公布的题单（M‑1778, 09/25），每一条都配了中文。"
+    },
+    "formats": [
+      {
+        "en": "Paperback · 8.5 × 11 in",
+        "zh": "平装 · 8.5 × 11 英寸"
+      },
+      {
+        "en": "Kindle edition",
+        "zh": "Kindle 电子版"
+      },
+      {
+        "en": "English + simplified Chinese",
+        "zh": "英文 + 简体中文"
+      },
+      {
+        "en": "Free audio companion",
+        "zh": "免费配套音频",
+        "accent": true
+      }
+    ],
+    "specimen": {
+      "title": {
+        "en": "Sized for reading glasses.",
+        "zh": "戴老花镜也看得清。"
+      },
+      "eyebrow": {
+        "en": "Large print, for real",
+        "zh": "真正的大字"
+      },
+      "lead": {
+        "en": "Letter-size pages, with type about twice the size of a typical paperback.",
+        "zh": "信纸大小的开本，字号大约是普通平装书的两倍。"
+      },
+      "cap": {
+        "en": "Shown at screen size, close to the printed proportions.",
+        "zh": "按屏幕尺寸显示，比例接近印刷实物。"
+      },
+      "rows": [
+        {
+          "pt": "19 pt",
+          "cls": "s19",
+          "text": "What is the supreme law of the land?"
+        },
+        {
+          "pt": "18 pt",
+          "cls": "s18",
+          "text": "(U.S.) Constitution"
+        },
+        {
+          "pt": "18 pt",
+          "cls": "z18",
+          "text": "美国的最高法律是什么？宪法。"
+        },
+        {
+          "pt": "22 pt",
+          "cls": "z22",
+          "text": "65/20 学习页：中文更大"
+        }
+      ]
+    },
+    "inside": [
+      {
+        "en": [
+          "Only the 2025 test",
+          "All 128 civics questions. English questions and answers word for word from the USCIS list (M‑1778, 09/25)."
+        ],
+        "zh": [
+          "只收 2025 版",
+          "128 道公民题全收。英文题目和答案逐字照录 USCIS 题单（M‑1778, 09/25）。"
+        ]
+      },
+      {
+        "en": [
+          "Chinese for every official answer",
+          "Matched line by line, for applicants who study, or take the test, in Chinese."
+        ],
+        "zh": [
+          "每条官方答案都有中文",
+          "英中逐条对应，方便用中文复习、用中文应考的申请人。"
+        ]
+      },
+      {
+        "en": [
+          "One card per question",
+          "A recommended answer chosen only from the official answers, stress marks, background notes, a one-line memory aid, and pointers to look-alike questions."
+        ],
+        "zh": [
+          "每题一张题卡",
+          "推荐答法（只从官方答案里挑）、重音提示、背景讲解、一句记忆提示，并指出容易混淆的题。"
+        ]
+      },
+      {
+        "en": [
+          "A 65/20 chapter",
+          "For applicants 65 or older with 20+ years as permanent residents: the 20 starred questions in simplified Chinese with traditional characters alongside, four 10-question tests and 20 cut-out fold cards."
+        ],
+        "zh": [
+          "65/20 长者专章",
+          "65 岁以上、绿卡满 20 年的申请人只考 20 道星号题：集中编排，简体为主附繁体，四套 10 题模拟，书末 20 张可剪折叠卡。"
+        ]
+      },
+      {
+        "en": [
+          "Answers that change",
+          "President, Vice President, Speaker and Chief Justice carry an as-of date. For your own senators, representative, governor and capital: lookup steps and a “My answers” card."
+        ],
+        "zh": [
+          "会变动的答案",
+          "总统、副总统、众议院议长、首席大法官都标明截至日期；本州参议员、众议员、州长和首府给出查找步骤和一张「我的答案卡」。"
+        ]
+      },
+      {
+        "en": [
+          "The English test too",
+          "Common N-400 interview phrasings, the official reading and writing vocabulary, and 60 practice sentences written only with it."
+        ],
+        "zh": [
+          "英语测试也照顾到",
+          "N-400 面试的常见问法、官方阅读与写作词表，以及只用官方词表写成的 60 个练习句。"
+        ]
+      },
+      {
+        "en": [
+          "Seven practice tests",
+          "Twenty questions each, covering all 128 between them."
+        ],
+        "zh": [
+          "七套模拟题",
+          "每套 20 题，合起来覆盖全部 128 题。"
+        ]
+      },
+      {
+        "en": [
+          "Quick references",
+          "A table of state capitals and a one-page index of all 128 questions."
+        ],
+        "zh": [
+          "速查表",
+          "各州首府表，以及一页纸的 128 题速查表。"
+        ]
+      }
+    ],
+    "samples": [
+      {
+        "page": 41,
+        "alt": {
+          "en": "Sample page: questions 1 and 2 with official answers, Chinese translations and notes",
+          "zh": "样张：第 1、2 题，含官方答案、中文翻译和讲解"
+        },
+        "caption": {
+          "en": "Question 1: the official answers in the grey box, then the recommended answer, the stress mark, background and a memory line.",
+          "zh": "第 1 题：灰框里是官方答案，下面是推荐答法、重音、背景讲解和一句记忆提示。"
+        },
+        "h": 1165
+      },
+      {
+        "page": 42,
+        "alt": {
+          "en": "Sample page: the answer to question 2 and question 3",
+          "zh": "样张：第 2 题答案与第 3 题"
+        },
+        "caption": {
+          "en": "Each card ends by pointing to the questions that are easy to mix up with it.",
+          "zh": "每张题卡最后都会指出容易混淆的题。"
+        },
+        "h": 1165
+      }
+    ],
+    "audio": {
+      "path": "listen/",
+      "eyebrow": {
+        "en": "Free companion · 配套资源",
+        "zh": "免费配套资源"
+      },
+      "title": {
+        "en": "Hear every question read aloud.",
+        "zh": "每道题都能听。"
+      },
+      "subtitle": {
+        "en": "免费朗读音频，不用登录",
+        "zh": "免费，不用注册登录"
+      },
+      "items": [
+        {
+          "en": "Every English question and recommended answer, at normal and slow speed",
+          "zh": "128 题的英文题目和推荐答法，常速、慢速各一遍"
+        },
+        {
+          "en": "The 20 questions for 65/20 also in Chinese",
+          "zh": "65/20 的 20 道题另有中文问答"
+        },
+        {
+          "en": "20 units that match the book, with a pause to answer",
+          "zh": "20 个单元与书对应，每题留出作答停顿"
+        }
+      ],
+      "button": {
+        "en": "Open the audio site",
+        "zh": "打开音频站"
+      },
+      "player": {
+        "unit": {
+          "en": "Unit 1 · Question 1",
+          "zh": "第 1 单元 · 第 1 题"
+        },
+        "q": "What is the form of government of the United States?",
+        "qz": "美国的政体是什么？",
+        "ans": "Republic",
+        "ansz": "共和制",
+        "label": {
+          "en": "Recommended answer",
+          "zh": "推荐答法"
+        },
+        "speeds": {
+          "en": [
+            "Normal",
+            "Slow"
+          ],
+          "zh": [
+            "常速",
+            "慢速"
+          ]
+        }
+      }
+    },
+    "callout": {
+      "big": "65/20",
+      "title": {
+        "en": "A chapter for older applicants",
+        "zh": "给长辈的专章"
+      },
+      "text": {
+        "en": "If you are 65 or older and have been a permanent resident for 20 years or more, you study only 20 starred questions and may take the test in Chinese. The book gathers them in one place, in larger type, with four short practice tests and cut-out cards.",
+        "zh": "年满 65 岁、拿绿卡满 20 年的申请人，只需准备 20 道星号题，而且可以用中文考。书里把这 20 题集中放在一章，字更大，附四套小测验和可以剪下来的卡片。"
+      }
+    },
+    "details": [
+      {
+        "en": [
+          "Series",
+          "Civics in Two Languages, Book 1"
+        ],
+        "zh": [
+          "系列",
+          "Civics in Two Languages 第 1 册"
+        ]
+      },
+      {
+        "en": [
+          "Formats",
+          "Paperback (8.5 × 11 in, 334 pages) · Kindle"
+        ],
+        "zh": [
+          "版本",
+          "平装（8.5 × 11 英寸，334 页）· Kindle 电子版"
+        ]
+      },
+      {
+        "en": [
+          "Languages",
+          "English and simplified Chinese (65/20 section also in traditional)"
+        ],
+        "zh": [
+          "语言",
+          "英文与简体中文（65/20 专章另附繁体）"
+        ]
+      },
+      {
+        "en": [
+          "Question list",
+          "USCIS 2025 civics test, 128 questions (M‑1778, 09/25)"
+        ],
+        "zh": [
+          "题单",
+          "USCIS 2025 版公民考试 128 题（M‑1778, 09/25）"
+        ]
+      },
+      {
+        "en": [
+          "Current as of",
+          "November 13, 2026"
+        ],
+        "zh": [
+          "信息截至",
+          "2026 年 11 月 13 日"
+        ]
+      },
+      {
+        "en": [
+          "Corrections",
+          "<a href=\"listen/errata/\">Errata &amp; updates</a>"
+        ],
+        "zh": [
+          "勘误",
+          "<a href=\"listen/errata/\">勘误与更新</a>"
+        ]
+      }
+    ],
+    "disclaimer": {
+      "en": "Not affiliated with or endorsed by USCIS or any government agency. This book is not legal advice.",
+      "zh": "本书与 USCIS 及任何政府机构无关，也未获其认可；书中内容不构成法律意见。"
+    },
+    "amazon_url": null,
+    "isbn": null
+  },
+  {
+    "slug": "art-of-war",
+    "series": "chinese-classics-parallel",
+    "source": "sunzi",
+    "number": {
+      "en": "Book 1",
+      "zh": "第 1 册"
+    },
+    "title": "The Art of War (Translated and Annotated)",
+    "subtitle": "A New Translation from the Chinese, with the Original Text, Classical Commentary, and Notes",
+    "zh_title": "《孙子兵法》英译注本",
+    "summary": {
+      "en": "A new English translation set beside the Chinese, verse by verse, with notes on every passage.",
+      "zh": "新译英文与中文原文逐段对照，每段都有注释。"
+    },
+    "for_whom": {
+      "en": "Readers who want to check every famous line of Sunzi against the Chinese, and to know what the classical commentators made of it.",
+      "zh": "想把《孙子》每一句名言都和原文对照着读、也想知道历代注家怎么理解的英语读者。"
+    },
+    "lead": {
+      "en": "Master Sun's thirteen chapters have been quoted for centuries by people who never saw what the text says. This edition puts the Chinese and a new English translation side by side, verse by verse. Under each passage, notes explain the words that carry the argument, report what commentators from Cao Cao to Zhang Yu said, and give the history behind it.",
+      "zh": "《孙子》十三篇被人引用了上千年，很多引用者并没读过原文。这一版把中文原文和新译英文逐节并排；每段下面有注释，讲清全篇论证所依靠的关键词，转述曹操到张预等注家的看法，并交代相关史实。"
+    },
+    "formats": [
+      {
+        "en": "Paperback · 6 × 9 in",
+        "zh": "平装 · 6 × 9 英寸"
+      },
+      {
+        "en": "Hardcover",
+        "zh": "精装"
+      },
+      {
+        "en": "Kindle edition",
+        "zh": "Kindle 电子版"
+      },
+      {
+        "en": "English + classical Chinese",
+        "zh": "英文 + 中文原文"
+      }
+    ],
+    "inside": [
+      {
+        "en": [
+          "A new translation",
+          "Made directly from the Chinese. Each key term keeps one English rendering from the first chapter to the last, and a glossary explains them."
+        ],
+        "zh": [
+          "全新英译",
+          "直接从中文译出。关键术语从第一篇到最后一篇只用一种英文译法，书末术语表逐一说明。"
+        ]
+      },
+      {
+        "en": [
+          "Chinese and English side by side",
+          "Verse by verse, numbered as in Lionel Giles's 1910 edition, so you can compare with any Giles reprint."
+        ],
+        "zh": [
+          "中英逐节并排",
+          "节号沿用 Lionel Giles 1910 年译本，方便和任何 Giles 译本对照。"
+        ]
+      },
+      {
+        "en": [
+          "Notes on every passage",
+          "The words that carry the argument (shì, momentum; xíng, form; surprise and regular; hollow and solid), the commentators, and the history."
+        ],
+        "zh": [
+          "每段都有注释",
+          "讲解关键词（势、形、奇正、虚实），转述注家意见，交代史实背景。"
+        ]
+      },
+      {
+        "en": [
+          "Eleven commentators",
+          "Classical commentators quoted in Chinese and English, from Cao Cao, Du Mu and Mei Yaochen to Zhang Yu."
+        ],
+        "zh": [
+          "十一家古注",
+          "从曹操、杜牧、梅尧臣到张预，古注原句中英并列。"
+        ]
+      },
+      {
+        "en": [
+          "A text you can check",
+          "Established from the received Song-dynasty edition, newly punctuated and collated, with the variants explained."
+        ],
+        "zh": [
+          "可核对的底本",
+          "以传世宋本为底本，重新标点、校勘，异文逐条说明。"
+        ]
+      },
+      {
+        "en": [
+          "Each chapter read whole",
+          "A short account of the argument at the start of every chapter, and an essay at the end that reads it as a whole."
+        ],
+        "zh": [
+          "每篇通读",
+          "每篇开头概述论证脉络，结尾一篇短文把全篇连起来读。"
+        ]
+      },
+      {
+        "en": [
+          "Back matter",
+          "The translation alone, the Chinese in simplified characters, a glossary of 32 key terms, units and measures, people and battles, textual notes and an index."
+        ],
+        "zh": [
+          "附录",
+          "单独排印的英译全文、简体中文全文、32 个关键术语表、度量衡、人物与战役、校勘记和索引。"
+        ]
+      }
+    ],
+    "samples": [
+      {
+        "page": 32,
+        "alt": {
+          "en": "Chapter 1, verses 1.1 to 1.4: Chinese and English side by side with notes",
+          "zh": "第一篇 1.1–1.4 节：中英并排及注释"
+        },
+        "caption": {
+          "en": "Chapter 1 opens: the Chinese on the left, the translation on the right, notes underneath.",
+          "zh": "第一篇开头：左边中文，右边英译，下面是注释。"
+        },
+        "h": 1350
+      },
+      {
+        "page": 34,
+        "alt": {
+          "en": "Chapter 1, verses 1.7 to 1.10, with commentators and context notes",
+          "zh": "第一篇 1.7–1.10 节，附注家与背景注释"
+        },
+        "caption": {
+          "en": "Commentators are quoted in Chinese, then translated; context notes give the history.",
+          "zh": "注家原话先引中文再译英文；「背景」一栏交代史实。"
+        },
+        "h": 1350
+      }
+    ],
+    "details": [
+      {
+        "en": [
+          "Series",
+          "Chinese Classics in Parallel Text, Book 1"
+        ],
+        "zh": [
+          "系列",
+          "Chinese Classics in Parallel Text 第 1 册"
+        ]
+      },
+      {
+        "en": [
+          "Formats",
+          "Paperback and hardcover (6 × 9 in, 250 pages) · Kindle"
+        ],
+        "zh": [
+          "版本",
+          "平装与精装（6 × 9 英寸，250 页）· Kindle 电子版"
+        ]
+      },
+      {
+        "en": [
+          "Text",
+          "All thirteen chapters, complete"
+        ],
+        "zh": [
+          "内容",
+          "十三篇全文"
+        ]
+      },
+      {
+        "en": [
+          "Languages",
+          "English translation with the Chinese text"
+        ],
+        "zh": [
+          "语言",
+          "英文译文，附中文原文"
+        ]
+      }
+    ],
+    "amazon_url": null,
+    "isbn": null
+  },
+  {
+    "slug": "core-tactics",
+    "series": "motif-by-motif-chess",
+    "source": "chess-tactics-1",
+    "number": {
+      "en": "Vol. 1",
+      "zh": "第 1 册"
+    },
+    "title": "Chess Tactics, Motif by Motif",
+    "subtitle": "A Workbook for Club Players — Learn 15 Core Patterns, Then Solve 570 Engine-Checked Puzzles with Every Solution Explained",
+    "zh_title": "国际象棋战术题集 第 1 册",
+    "summary": {
+      "en": "15 tactical patterns and 570 puzzles from real games, every solution explained.",
+      "zh": "15 种战术母题，570 道实战题，每道题都有讲解。"
+    },
+    "for_whom": {
+      "en": "Adult club and online players rated roughly 1200–1800 (Chess.com rapid) who know the rules and basic notation.",
+      "zh": "等级分大约 1200–1800（Chess.com 快棋）、懂规则和基本记谱的成年俱乐部棋手与网棋玩家。全书为英文。"
+    },
+    "lead": {
+      "en": "If you keep losing pieces to tactics you only spot after the game, start here. Each chapter teaches one motif, then tests you on it; the mixed tests at the end give you positions where nobody tells you what to look for.",
+      "zh": "如果你总是赛后才看出对方的战术，可以从这本开始。每章讲一种母题再出题练；书末的综合测试不告诉你考哪种母题，和实战一样。"
+    },
+    "formats": [
+      {
+        "en": "Paperback · 8.5 × 11 in",
+        "zh": "平装 · 8.5 × 11 英寸"
+      },
+      {
+        "en": "Kindle edition",
+        "zh": "Kindle 电子版"
+      },
+      {
+        "en": "244 pages",
+        "zh": "244 页"
+      }
+    ],
+    "inside": [
+      {
+        "en": [
+          "One motif per chapter",
+          "15 chapters, each with a two-page lesson and three worked examples."
+        ],
+        "zh": [
+          "一章一种母题",
+          "15 章，每章两页讲解，配三道例题。"
+        ]
+      },
+      {
+        "en": [
+          "24 puzzles, then review",
+          "Puzzles get harder as you go through a chapter, followed by six review puzzles drawn from earlier chapters."
+        ],
+        "zh": [
+          "24 道题加复习",
+          "每章题目由易到难，最后六道复习题取自前面各章。"
+        ]
+      },
+      {
+        "en": [
+          "Solutions on the back of the page",
+          "In the paperback you never see an answer by accident. In the Kindle edition each puzzle links to its solution and back."
+        ],
+        "zh": [
+          "答案印在背面",
+          "平装版翻过来才看到答案，不会无意中瞄到；Kindle 版每道题都能跳到答案再跳回。"
+        ]
+      },
+      {
+        "en": [
+          "Every solution explained",
+          "The forcing line, the result, and two or three sentences on how the tactic works and how the defender can resist, next to a small diagram."
+        ],
+        "zh": [
+          "每道题都有讲解",
+          "给出强制变化和结果，再用两三句话讲清战术原理、守方怎样抵抗，旁边附小棋图。"
+        ]
+      },
+      {
+        "en": [
+          "Positions from real games",
+          "570 positions from the open Lichess puzzle database. Every solution was checked with the Stockfish 19 engine, and puzzles with more than one good answer were left out."
+        ],
+        "zh": [
+          "来自实战对局",
+          "570 个局面取自公开的 Lichess 题库，每个答案都用 Stockfish 19 引擎核对过，有不止一个好解的题一律不收。"
+        ]
+      },
+      {
+        "en": [
+          "Four mixed tests",
+          "30 puzzles each with a score sheet, and a progress log for three passes through the book."
+        ],
+        "zh": [
+          "四套综合测试",
+          "每套 30 题，附计分表；另有可记三轮的进度表。"
+        ]
+      }
+    ],
+    "tags_title": {
+      "en": "The 15 motifs",
+      "zh": "15 种母题"
+    },
+    "tags": [
+      "Loose pieces",
+      "Forks",
+      "Pins",
+      "Skewers and x-rays",
+      "Discovered attacks and double check",
+      "Trapped pieces",
+      "Mating nets",
+      "The back rank",
+      "Promotion tactics",
+      "Removing the defender",
+      "Deflection and overloading",
+      "Attraction",
+      "Clearance and interference",
+      "The in-between move",
+      "Quiet moves"
+    ],
+    "samples": [
+      {
+        "page": 23,
+        "alt": {
+          "en": "Chapter 2, The Fork: lesson page with a worked example",
+          "zh": "第 2 章「双重攻击」：讲解页与例题"
+        },
+        "caption": {
+          "en": "Each chapter opens with a short lesson and worked examples.",
+          "zh": "每章先是简短讲解和例题。"
+        },
+        "h": 1165
+      },
+      {
+        "page": 25,
+        "alt": {
+          "en": "Puzzle page: six fork puzzles with answer lines",
+          "zh": "习题页：六道双重攻击题"
+        },
+        "caption": {
+          "en": "Six puzzles to a page, with the side to move and the last move played.",
+          "zh": "一页六题，标明轮到哪方走以及上一步棋。"
+        },
+        "h": 1165
+      },
+      {
+        "page": 26,
+        "alt": {
+          "en": "Solutions page with mini diagrams and explanations",
+          "zh": "答案页：小棋图与讲解"
+        },
+        "caption": {
+          "en": "Turn the sheet over for the solutions, each with a short note.",
+          "zh": "翻到背面看答案，每题附简短讲解。"
+        },
+        "h": 1165
+      }
+    ],
+    "details": [
+      {
+        "en": [
+          "Series",
+          "Motif by Motif Chess Workbooks, Vol. 1"
+        ],
+        "zh": [
+          "系列",
+          "Motif by Motif Chess Workbooks 第 1 册"
+        ]
+      },
+      {
+        "en": [
+          "Formats",
+          "Paperback (8.5 × 11 in, 244 pages) · Kindle"
+        ],
+        "zh": [
+          "版本",
+          "平装（8.5 × 11 英寸，244 页）· Kindle 电子版"
+        ]
+      },
+      {
+        "en": [
+          "Puzzles",
+          "570, plus 45 worked examples"
+        ],
+        "zh": [
+          "题量",
+          "570 道习题，另有 45 道例题"
+        ]
+      },
+      {
+        "en": [
+          "Level",
+          "About 1200–1800 (Chess.com rapid)"
+        ],
+        "zh": [
+          "适合水平",
+          "约 1200–1800（Chess.com 快棋）"
+        ]
+      }
+    ],
+    "disclaimer": {
+      "en": "Positions come from the open Lichess puzzle database (CC0). This book is not affiliated with Lichess or the Stockfish project.",
+      "zh": "局面取自公开的 Lichess 题库（CC0）。本书与 Lichess 及 Stockfish 项目无关。"
+    },
+    "amazon_url": null,
+    "isbn": null,
+    "show_zh_title": false
+  }
+]
