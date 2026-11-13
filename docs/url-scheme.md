@@ -24,6 +24,7 @@
 | `/books/<series>/<book>/` | 单本书页面（封面、介绍、购买链接、资源入口） | 预留（暂时跳转到 listen/） |
 | `/books/<series>/<book>/listen/` | 配套音频播放 | **已上线**：`/books/citizenship-bridge/civics-2025-zh/listen/` |
 | `/books/<series>/<book>/errata/`、`downloads/`、`extras/` | 勘误、可打印资料、补充内容 | 预留（勘误目前在 listen/errata/ 下，等书页上线后迁出） |
+| `/preview/` | 设计稿预览（临时，noindex，定稿后删除） | 已上线 |
 | `/go/<code>/…` | **印刷短链**，只做跳转（见第 3 节） | 已上线：`/go/cb1/` |
 | `/about/`、`/contact/` | 工作室介绍、联系方式 | 预留 |
 | `/legal/` | 工作室网站本身的隐私声明、使用条款 | 预留 |

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>书叶工作室 Shuye Lab · 学习类 App 与纸质学习书</title>
+<meta name="description" content="书叶工作室是一家独立工作室，做学习类 App 和纸质学习书。">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../../assets/logo/leaf-page.svg" type="image/svg+xml">
+<style>
+  /* Chinese page tweaks: CJK display face, looser leading */
+  .zh .display { font-family: var(--serif-zh); font-size: clamp(46px, 6.4vw, 92px); line-height: 1.12; letter-spacing: .02em; }
+  .zh .display em { font-style: normal; }
+  .zh .h2, .zh .h3 { font-family: var(--serif-zh); letter-spacing: .02em; line-height: 1.25; }
+  .zh .h2 em, .zh .h3 em { font-style: normal; }
+  .zh .lead, .zh p { line-height: 1.85; }
+  .zh .eyebrow { letter-spacing: .2em; }
+</style>
+</head>
+<body class="zh">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="lg-l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6E7C6"/><stop offset="1" stop-color="#C9A266"/></linearGradient>
+    <linearGradient id="lg-r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBF1DC"/><stop offset="1" stop-color="#DDBE86"/></linearGradient>
+  </defs>
+  <symbol id="logo" viewBox="0 0 64 64">
+    <path fill="url(#lg-l)" d="M30.7 3.5C21 9.5 9.5 20.5 9.5 35.5c0 6.4 1.8 11 4.6 14.2 6.6.2 12.2 2.6 16.6 7.3Z"/>
+    <path fill="url(#lg-r)" d="M33.3 3.5C43 9.5 54.5 20.5 54.5 35.5c0 6.4-1.8 11-4.6 14.2-6.6.2-12.2 2.6-16.6 7.3Z"/>
+    <g fill="none" stroke="#0B0E0D" stroke-width="2.1" stroke-linecap="round">
+      <path d="M30.7 25.2C26.6 22.6 22.6 21.6 18.4 22"/><path d="M30.7 34.6C25.6 31.6 20.6 30.6 15.2 31.4"/><path d="M30.7 44C25.6 41.2 20.4 40.4 15 41.2"/>
+      <path d="M33.3 25.2C37.4 22.6 41.4 21.6 45.6 22"/><path d="M33.3 34.6C38.4 31.6 43.4 30.6 48.8 31.4"/>
+    </g>
+  </symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="书叶工作室首页">
+      <svg aria-hidden="true"><use href="#logo"/></svg>
+      <span class="brand-word">Shuye Lab<small>书叶工作室</small></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#apps">App</a>
+      <a href="#books">图书</a>
+      <a href="#about">关于</a>
+      <a href="#contact">联系</a>
+      <span class="lang"><a href="../index.html" lang="en">EN</a><span aria-current="true">中文</span></span>
+    </nav>
+    <details class="menu">
+      <summary><i></i>菜单</summary>
+      <div class="menu-panel">
+        <a href="#apps">App</a><a href="#books">图书</a><a href="#about">关于</a><a href="#contact">联系</a>
+        <span class="lang"><a href="../index.html" lang="en">EN</a><span aria-current="true">中文</span></span>
+      </div>
+    </details>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">独立工作室 · Shuye Lab</span>
+        <h1 class="display">做学习用的<br><em class="glow-text">App 和书。</em></h1>
+        <p class="lead">书叶工作室是一家独立工作室。我们做学中文、记功课的 App，也出版纸质学习书：汉字书写、美国入籍考试、中国古典的英译注本、国际象棋战术题。</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="#apps">看看 App <span class="arrow">→</span></a>
+          <a class="btn btn-ghost" href="#books">浏览图书</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <img class="cover c1" src="../../assets/img/books/grid-by-grid.webp" alt="">
+        <img class="cover c2" src="../../assets/img/books/parallel-classics.webp" alt="">
+        <img class="cover c3" src="../../assets/img/books/citizenship-bridge.webp" alt="">
+        <div class="phone"><img src="../../assets/img/kaihua/02-review.webp" alt=""></div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="meaning">
+        <div><span class="zh">书</span><span>出版物</span></div>
+        <div><span class="zh">叶</span><span>一点点长出来的东西</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="apps">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">App</span>
+          <h2 class="h2" style="margin-top:18px">两款 App，<em class="glow-text">都不用注册。</em></h2>
+          <p class="muted">学到哪里、记了多少，都只存在你自己的手机上。</p>
+        </div>
+        <span class="num">01</span>
+      </div>
+
+      <article class="glass app-feature">
+        <div>
+          <div class="app-id">
+            <img class="app-icon" src="../../assets/img/kaihua/icon-dark.webp" alt="开花 App 图标">
+            <div>
+              <div class="name">开花 <span class="zh-serif" lang="en" style="font-family:var(--serif)">Kaihua</span></div>
+              <div class="sub">面向海外中文学习者 · iPhone 与 Android</div>
+            </div>
+          </div>
+          <h3 class="h3">HSK 3.0 背词与声调训练，<em class="glow-text">界面有英语、韩语、泰语。</em></h3>
+          <div class="facts">
+            <div><b>1,000</b><span>个词，HSK 3.0 一至三级</span></div>
+            <div><b>7 天</b><span>声调训练营，免费</span></div>
+            <div><b>3</b><span>种界面语言</span></div>
+          </div>
+          <div class="btns">
+            <a class="btn btn-primary" href="../apps/kaihua/index.html">了解开花（英文页）<span class="arrow">→</span></a>
+            <span class="tag dot">即将上架 App Store 与 Google Play</span>
+          </div>
+        </div>
+        <div class="app-shots" aria-hidden="true">
+          <div class="phone back"><img src="../../assets/img/kaihua/01-camp.webp" alt=""></div>
+          <div class="phone front"><img src="../../assets/img/kaihua/04-hanzi.webp" alt=""></div>
+        </div>
+      </article>
+
+      <article class="glass app-quiet">
+        <div>
+          <span class="eyebrow plain" style="color:var(--jade)">永久免费</span>
+          <h3 class="h3">持恒</h3>
+          <p class="muted">免费、公益的功课记录工具：计数（念珠模式，每圈 108）、打卡日历、禅修计时与钟声、个人资料库。无广告、无会员、无付费点；免登录，数据存在本机，随时可导出完整备份。计数和计时的时候，不会弹出任何窗口。</p>
+          <ul class="pills">
+            <li>Android</li><li>iPhone 与 iPad</li><li>鸿蒙</li><li>测试中</li>
+          </ul>
+        </div>
+        <div class="halo jade" aria-hidden="true">
+          <div class="phone"><img src="../../assets/img/chiheng/today.webp" alt=""></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section class="section" id="books">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">图书 · 按系列</span>
+          <h2 class="h2" style="margin-top:18px">四个系列，<em class="glow-text">各出第 1 册。</em></h2>
+          <p class="muted">平装与 Kindle 电子版，即将在亚马逊上架。</p>
+        </div>
+        <span class="num">02</span>
+      </div>
+      <div class="books-grid">
+        <article class="book">
+          <div class="book-cover"><span class="tag">封面待更新</span><img src="../../assets/img/books/grid-by-grid.webp" alt="Grid by Grid Chinese 第 1 册封面"></div>
+          <span class="series" lang="en">Grid by Grid Chinese</span>
+          <h3>HSK 3.0 一级汉字书写与词汇练习册</h3>
+          <p>一级全部 300 词，加上一、二级要求书写的 100 个字，有笔顺和田字格。</p>
+          <span class="soon">即将在亚马逊上架</span>
+        </article>
+        <a class="book" href="../books/citizenship-bridge/civics-2025-zh/index.html">
+          <div class="book-cover"><span class="tag">封面待更新</span><img src="../../assets/img/books/citizenship-bridge.webp" alt="Citizenship Bridge 第 1 册封面"></div>
+          <span class="series" lang="en">Citizenship Bridge</span>
+          <h3>美国入籍考试 2025 版 128 题 · 中英对照大字版</h3>
+          <p>128 道公民题全收，大字排版，每条官方答案都有中文，另配免费朗读音频。</p>
+          <span class="soon">即将在亚马逊上架</span>
+          <span class="more">查看这本书（英文页）→</span>
+        </a>
+        <article class="book">
+          <div class="book-cover"><span class="tag">封面待更新</span><img src="../../assets/img/books/parallel-classics.webp" alt="《孙子兵法》英译注本封面"></div>
+          <span class="series" lang="en">Chinese Classics in Parallel Text</span>
+          <h3>《孙子兵法》原创英译注本</h3>
+          <p>新译英文与中文原文逐段对照，每段都有注释。</p>
+          <span class="soon">即将在亚马逊上架</span>
+        </article>
+        <article class="book">
+          <div class="book-cover"><span class="tag">封面待更新</span><img src="../../assets/img/books/motif-by-motif.webp" alt="国际象棋战术题集封面"></div>
+          <span class="series" lang="en">Motif by Motif Chess</span>
+          <h3>国际象棋战术题集 第 1 册</h3>
+          <p>15 种战术母题，570 道实战题，每道题的解答都有讲解。</p>
+          <span class="soon">即将在亚马逊上架</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section class="section" id="about">
+    <div class="wrap about-grid">
+      <div class="about-mark glow-text">书叶<small>shū · yè</small></div>
+      <div>
+        <span class="eyebrow">关于</span>
+        <h2 class="h2" style="margin:18px 0 22px">一个小书架，<em class="glow-text">放有用的东西。</em></h2>
+        <p class="lead">书叶工作室是一家独立工作室，做学习类 App 和纸质学习书。“书”是出版物，“叶”是一点点长出来的东西。</p>
+        <ul class="principles">
+          <li><span class="n">一</span><div><b>以官方来源为准</b><span>词表取自 HSK 3.0 官方大纲，入籍题目与答案取自 USCIS 公布的题单。</span></div></li>
+          <li><span class="n">二</span><div><b>不用注册</b><span>我们的 App 都把进度存在你的设备上。</span></div></li>
+          <li><span class="n">三</span><div><b>免费的一直免费</b><span>开花的复习、整个持恒、入籍朗读音频，都不收费，也不用登录。</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="glass contact">
+        <span class="eyebrow plain">联系</span>
+        <h2 class="h2">有问题、发现错误，<em class="glow-text">都可以写信。</em></h2>
+        <a class="mail" href="mailto:hello@shuyelab.com" lang="en">hello@shuyelab.com</a>
+        <p class="muted" style="max-width:30em;margin:0 auto">所有 App 和图书的支持都发到这一个邮箱。书里有错，请告诉我们页码。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><svg aria-hidden="true"><use href="#logo"/></svg><span class="brand-word">Shuye Lab</span></a>
+        <p class="small" style="margin-top:16px;max-width:26em">书叶工作室 · 学习类 App 与纸质学习书。</p>
+      </div>
+      <div><h4>App</h4><a href="../apps/kaihua/index.html">开花 Kaihua</a><a href="apps/chiheng/index.html">持恒</a></div>
+      <div><h4>图书</h4><a href="books/grid-by-grid-chinese/index.html" lang="en">Grid by Grid Chinese</a><a href="books/citizenship-bridge/index.html" lang="en">Citizenship Bridge</a><a href="books/chinese-classics-parallel/index.html" lang="en">Classics in Parallel Text</a><a href="books/motif-by-motif-chess/index.html" lang="en">Motif by Motif Chess</a></div>
+      <div><h4>工作室</h4><a href="#about">关于</a><a href="#contact">联系</a><a href="../index.html" lang="en">English</a></div>
+    </div>
+    <div class="foot-note"><span>© 2026 书叶工作室 Shuye Lab</span><span lang="en">shuyelab.github.io/zh/</span></div>
+  </div>
+</footer>
+</body>
+</html>

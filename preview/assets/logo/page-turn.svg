@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Shuye Lab">
+  <path fill="#1B1A17" d="M12.5 51.5C12.5 30 26 14.6 40.4 12.2L51.8 23.6C49.6 39.5 35.5 51.5 12.5 51.5Z"/>
+  <path fill="none" stroke="#1B1A17" stroke-width="2.6" stroke-linecap="round" d="M12.5 51.5 7 57"/>
+  <path fill="#C8402F" stroke="#F7F2E8" stroke-width="1.6" stroke-linejoin="round" d="M40.4 12.2 51.8 23.6 38.6 25.4Z"/>
+  <path fill="none" stroke="#F7F2E8" stroke-width="2.3" stroke-linecap="round" d="M16.5 47.5C22.5 40 28.4 34 34.4 29.6"/>
+</svg>

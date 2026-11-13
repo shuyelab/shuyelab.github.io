@@ -1,0 +1,7 @@
+@font-face{font-family:'Shuye Serif SC';font-style:normal;font-weight:400;font-display:swap;src:url(./cjk/serif-400.woff2) format('woff2');unicode-range:U+2E80-9FFF,U+F900-FAFF,U+FE30-FE4F,U+FF00-FFEF,U+3000-303F;}
+@font-face{font-family:'Shuye Serif SC';font-style:normal;font-weight:700;font-display:swap;src:url(./cjk/serif-700.woff2) format('woff2');unicode-range:U+2E80-9FFF,U+F900-FAFF,U+FE30-FE4F,U+FF00-FFEF,U+3000-303F;}
+@font-face{font-family:'Shuye Sans SC';font-style:normal;font-weight:400;font-display:swap;src:url(./cjk/sans-400.woff2) format('woff2');unicode-range:U+2E80-9FFF,U+F900-FAFF,U+FE30-FE4F,U+FF00-FFEF,U+3000-303F;}
+@font-face{font-family:'Shuye Sans SC';font-style:normal;font-weight:700;font-display:swap;src:url(./cjk/sans-700.woff2) format('woff2');unicode-range:U+2E80-9FFF,U+F900-FAFF,U+FE30-FE4F,U+FF00-FFEF,U+3000-303F;}
+@font-face{font-family:'Shuye Kai';font-style:normal;font-weight:400;font-display:swap;src:url(./cjk/kai-400.woff2) format('woff2');unicode-range:U+2E80-9FFF,U+F900-FAFF,U+FE30-FE4F,U+FF00-FFEF,U+3000-303F;}
+@font-face{font-family:'Shuye Sans KR TH';font-style:normal;font-weight:400 700;font-display:swap;src:url(./cjk/kr-500.woff2) format('woff2');unicode-range:U+1100-11FF,U+3130-318F,U+AC00-D7AF;}
+@font-face{font-family:'Shuye Sans KR TH';font-style:normal;font-weight:400 700;font-display:swap;src:url(./cjk/th-500.woff2) format('woff2');unicode-range:U+0E00-0E7F;}
