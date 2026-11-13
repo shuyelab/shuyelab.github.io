@@ -116,10 +116,10 @@
       },
       "facts": [
         {
-          "b": "1,000",
+          "b": "5,400",
           "t": {
-            "en": "words, HSK 3.0 levels 1–3",
-            "zh": "个词，HSK 3.0 1–3 级"
+            "en": "words, HSK 3.0 levels 1–6",
+            "zh": "个词，HSK 3.0 一至六级"
           }
         },
         {
@@ -499,8 +499,8 @@
             }
           ],
           "fine": {
-            "en": "Ads are limited to an optional short video (for extra words or to repair a streak) and one ad on the session-complete screen. Never while you study.",
-            "zh": "广告只有两处：你自己选择观看的短视频（换额外新词或补签），以及学习结束页上的一条广告。学习过程中不出现广告。"
+            "en": "Ads are limited to an optional short video (for extra words or to repair a streak) and one ad on the session-complete screen. Never while you study. Some regions also offer a one-time Remove Ads purchase.",
+            "zh": "广告只有两处：你自己选择观看的短视频（换额外新词或补签），以及学习结束页上的一条广告。学习过程中不出现广告。部分地区另有一次性的「去广告」购买。"
           }
         },
         "pro": {
@@ -514,12 +514,12 @@
           },
           "items": [
             {
-              "en": "Unlimited new words at every level",
-              "zh": "各级别新词不限量"
+              "en": "Unlimited new words and characters at every level",
+              "zh": "各级别新词、新字不限量"
             },
             {
-              "en": "Exam pacing toward your test date",
-              "zh": "按考试日期安排每天的进度"
+              "en": "Exam pacing, mock tests and grammar for levels 2–3",
+              "zh": "按考试日期排进度、模拟测验、二三级语法"
             },
             {
               "en": "Memory curves for every word",
@@ -566,8 +566,8 @@
               "zh": "离线可用"
             },
             "t": {
-              "en": "Words and audio for levels 1–3 ship inside the app.",
-              "zh": "一至三级的词和音频都装在 App 里。"
+              "en": "All words, and audio for levels 1–4, ship inside the app.",
+              "zh": "全部词条和一至四级的音频都装在 App 里。"
             }
           }
         ]
@@ -590,8 +590,8 @@
               "zh": "开花用的是哪一版 HSK？"
             },
             "a": {
-              "en": "HSK 3.0, the syllabus published in November 2025. Levels 1–3 have 1,000 words in all. Every word is tagged against HSK 2.0, so you can see what is new and what moved.",
-              "zh": "HSK 3.0，即 2025 年 11 月发布的新大纲。一至三级共 1,000 个词，每个词都标出和 HSK 2.0 的差别，哪些是新增的、哪些调了级，一看就知道。"
+              "en": "HSK 3.0, the syllabus published in November 2025. Kaihua covers levels 1–6: all 5,400 words and 1,940 characters, plus 244 grammar points for levels 1–3. Audio for levels 5–6 is coming in an update. Every word is tagged against HSK 2.0, so you can see what is new and what moved.",
+              "zh": "HSK 3.0，即 2025 年 11 月发布的新大纲。开花覆盖一至六级：全部 5,400 个词、1,940 个字，另有一至三级的 244 个语法点；五、六级的音频会在后续更新里补上。每个词都标出和 HSK 2.0 的差别，哪些是新增的、哪些调了级，一看就知道。"
             }
           },
           {
@@ -610,8 +610,8 @@
               "zh": "要花钱吗？"
             },
             "a": {
-              "en": "The Tone Camp, all of HSK 1 and every review are free. Pro adds unlimited new words, exam pacing, memory curves, a second voice and no ads.",
-              "zh": "声调营、HSK 一级全部内容和所有复习都免费。Pro 增加不限量的新词、备考进度、记忆曲线、第二个发音，并去掉广告。"
+              "en": "The Tone Camp, all of HSK 1 and every review are free. Pro adds unlimited new words, grammar for levels 2–3, exam prep with mock tests, memory curves, a second voice and no ads. In some regions a one-time Remove Ads purchase is also offered; it removes ads only.",
+              "zh": "声调营、HSK 一级全部内容和所有复习都免费。Pro 增加不限量的新词、二三级语法、备考进度和模拟测验、记忆曲线、第二个发音，并去掉广告。部分地区另有一次性的「去广告」购买，只去掉广告。"
             }
           },
           {
@@ -640,8 +640,8 @@
               "zh": "词表从哪里来？"
             },
             "a": {
-              "en": "From the official HSK 3.0 syllabus, word for word. Pinyin and parts of speech are checked against the syllabus and a reference dictionary. How meanings, examples and audio are made and reviewed is explained in section 5 of the <a href=\"privacy/#ai\">Privacy Policy</a>.",
-              "zh": "词表逐词取自 HSK 3.0 官方大纲，拼音和词性都对照大纲和参考词典核对过。释义、例句和音频是怎么制作、怎么审核的，见<a href=\"privacy/#ai\">隐私政策</a>第 5 节。"
+              "en": "From the official HSK 3.0 syllabus, word for word. Pinyin and parts of speech are checked against the syllabus and a reference dictionary. How meanings, examples and audio are made and checked is explained in section 7 of the <a href=\"privacy/#ai\">Privacy Policy</a>.",
+              "zh": "词表逐词取自 HSK 3.0 官方大纲，拼音和词性都对照大纲和参考词典核对过。释义、例句和音频是怎么制作、怎么核对的，见<a href=\"privacy/#ai\">隐私政策</a>第 7 节。"
             }
           }
         ]

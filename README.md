@@ -67,9 +67,10 @@ tools/rebuild_assets.sh    # 构建 → 统计用字 → 子集化字体 → 生
 
 ## Kaihua 合规页
 
-Kaihua 的英文隐私政策、韩 / 泰语隐私政策、条款和支持页以 kaihua 仓库 `store/site/` 为准，导入时内容不改，
-只换链接和联系邮箱：`python3 tools/import_kaihua_legal.py`（会覆盖 `src/content/legal/kaihua/*.{en,ko,th}.html`）。
-中文译本 `*.zh.html` 单独维护，kaihua 那边改了政策要同步改译本。
+**本站是 Kaihua 合规页的唯一事实源**（2026-11-13 起；kaihua 仓库的 `store/site/` 已停用，旧导入脚本已删除）：
+直接改 `src/content/legal/kaihua/<doc>.<lang>.html`。英文版为准，改完同步译本：隐私政策有 zh / ko / th，条款和支持页有 zh
+（支持页末尾的韩、泰语小节写在英文版里，中文版照抄）。内容必须与 App 实际一致（SDK、权限、本地数据、付费边界、级别与词数），
+kaihua 仓库 `store/compliance-forms.md` 的商店问卷要跟着改。买了 kaihua.app 之后迁回，这里的网址保留并做跳转。
 这些页面里有法规要求的 AI 内容披露（韩国 AI 基本法），是去 AI 味规则 R1 的例外（见 docs/decisions.md）。
 
 ## 配套音频站怎么同步进来
