@@ -1,0 +1,12 @@
+{
+  "_说明": "跳转表（规范见 docs/url-scheme.md）。go：印刷短链；legacy：旧网址；temp：目标页面上线前的临时跳转。改完运行 python3 tools/gen_redirects.py。",
+  "go": {
+    "cb1": "/books/citizenship-bridge/civics-2025-zh/listen/"
+  },
+  "legacy": {
+    "citizenship": "/books/citizenship-bridge/civics-2025-zh/listen/"
+  },
+  "temp": {
+    "books/citizenship-bridge/civics-2025-zh": "/books/citizenship-bridge/civics-2025-zh/listen/"
+  }
+}
