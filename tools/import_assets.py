@@ -61,9 +61,10 @@ def apps():
             if f.stem.startswith(("icon", "feature")):
                 continue
             print(app, f.stem, save_webp(Image.open(f), OUT / "apps" / app / f"{f.stem}-600.webp", 600))
-    # 持恒打卡日历：换成没有弹层的真机截图（安卓模拟器；顶部状态栏涂成底色）
+    # 持恒打卡日历：2026-11-15 起改用中性内容的设计稿（design/assets/img/chiheng/calendar.webp，已去掉弹层），
+    # 不再用真机截图 streak_fix.png（里面是佛教功课名）。要换回真机图，先把截图里的功课名换成中性内容。
     cal = CHIHENG / "tmp/shots/streak_fix.png"
-    if cal.exists():
+    if False and cal.exists():
         src = Image.open(cal).convert("RGB")
         bg = src.getpixel((8, 70))
         im = Image.new("RGB", src.size, bg)  # 去掉状态栏，内容整体下移，给手机外框的灵动岛让位

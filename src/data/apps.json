@@ -790,8 +790,8 @@
         "zh": "安卓 · iPhone 与 iPad · 鸿蒙，测试中"
       },
       "lead": {
-        "en": "A free practice log for daily recitation, meditation and reading: a counter with bead mode, check-in calendar, meditation timer with bells, and a library for your own files.",
-        "zh": "免费、公益的功课记录工具：计数（念珠模式每圈 108）、打卡日历、禅修计时与钟声、个人资料库。"
+        "en": "A free log for the things you do every day, such as reading aloud, meditation or exercise: a counter with rounds, check-in calendar, meditation timer with bells, and a library for your own files.",
+        "zh": "免费、公益的习惯记录工具：计数（可分圈）、打卡日历、静坐计时与钟声、个人资料库。"
       },
       "pledge": [
         {
@@ -824,7 +824,7 @@
           "src": "/assets/img/apps/chiheng/today-600.webp",
           "alt": {
             "en": "ChiHeng's Today screen (Chinese interface)",
-            "zh": "持恒「今日功课」界面"
+            "zh": "持恒「今日计划」界面"
           },
           "full": true
         }
@@ -837,11 +837,11 @@
     "meta": {
       "title": {
         "en": "ChiHeng 持恒 · a quiet practice log",
-        "zh": "持恒 · 功课记录、计数与禅修计时"
+        "zh": "持恒 · 习惯打卡、计数与静坐计时"
       },
       "description": {
-        "en": "ChiHeng is a free practice log for daily recitation, meditation and reading: counter with bead mode, check-in calendar, meditation timer and your own library. No ads, no login, stored on your device.",
-        "zh": "持恒是免费、公益的功课记录工具：计数与念珠模式、打卡日历、禅修计时与钟声、个人资料库。无广告、免登录、数据存在本机。"
+        "en": "ChiHeng is a free log for the things you do every day, such as reading aloud, meditation or exercise: counter with rounds, check-in calendar, meditation timer and your own library. No ads, no login, stored on your device.",
+        "zh": "持恒是免费、公益的习惯记录工具：计数与分圈、打卡日历、静坐计时与钟声、个人资料库。无广告、免登录、数据存在本机。"
       }
     },
     "hero": {
@@ -851,11 +851,11 @@
       },
       "h1": {
         "en": "A log for your <em>daily practice.</em>",
-        "zh": "每天的功课，<em>安安静静地记下来。</em>"
+        "zh": "每天坚持的事，<em>安安静静地记下来。</em>"
       },
       "lead": {
-        "en": "Count recitations with a tap, check in on a calendar, sit with a timer and soft bells, and keep the texts and recordings you study in one place. Free, with nothing to sign up for.",
-        "zh": "点一下屏幕就是一遍；日历上打卡；静坐时有计时和轻柔的钟声；平时学的经本、录音都放在一处。免费，不用注册。"
+        "en": "Count with a tap, check in on a calendar, sit with a timer and soft bells, and keep the files and recordings you use in one place. Free, with nothing to sign up for.",
+        "zh": "点一下屏幕就是一遍；日历上打卡；静坐时有计时和轻柔的钟声；平时用的资料、录音都放在一处。免费，不用注册。"
       },
       "facts": [
         {
@@ -869,10 +869,10 @@
           }
         },
         {
-          "b": "108",
+          "b": "100",
           "t": {
-            "en": "beads per round, adjustable",
-            "zh": "念珠每圈默认颗数，可改"
+            "en": "per round by default, adjustable",
+            "zh": "每圈默认次数，可改"
           }
         },
         {
@@ -887,15 +887,15 @@
         {
           "src": "/assets/img/apps/chiheng/counter-600.webp",
           "alt": {
-            "en": "Counter screen in bead mode (Chinese interface)",
-            "zh": "持恒计数界面（念珠模式）"
+            "en": "Counter screen counting in rounds (Chinese interface)",
+            "zh": "持恒计数界面（分圈计数）"
           }
         },
         {
           "src": "/assets/img/apps/chiheng/today-600.webp",
           "alt": {
             "en": "Today screen with the day's practices (Chinese interface)",
-            "zh": "持恒「今日功课」界面"
+            "zh": "持恒「今日计划」界面"
           }
         }
       ],
@@ -937,11 +937,11 @@
         },
         "h2": {
           "en": "Five tools for <em>your daily practice.</em>",
-          "zh": "记录每天功课的<em>几样工具。</em>"
+          "zh": "记录每天坚持的<em>几样工具。</em>"
         },
         "side": {
-          "en": "Everything revolves around one thing you set up yourself: a practice, such as a daily recitation, a sitting or a reading. Screens shown are the Chinese interface; English is also available.",
-          "zh": "一切围绕你自己设定的「功课」：每天念多少遍、坐多久、读什么。截图为中文界面，也可切换为英文。"
+          "en": "Everything revolves around one thing you set up yourself: a practice, such as reading aloud, a sitting or a walk. Screens shown are the Chinese interface; English is also available.",
+          "zh": "一切围绕你自己设定的「项目」：每天读多少遍、坐多久、走多少步。截图为中文界面，也可切换为英文。"
         },
         "items": [
           {
@@ -959,15 +959,15 @@
             },
             "list": [
               {
-                "en": "Bead mode, 108 per round by default",
-                "zh": "念珠模式，每圈默认 108"
+                "en": "Count in rounds, 100 per round by default",
+                "zh": "分圈计数，每圈默认 100"
               },
               {
                 "en": "Count with the volume keys on Android while the counter is open",
                 "zh": "安卓上打开计数页时，可以用音量键计数"
               },
               {
-                "en": "Undo, a lock against stray taps, and add +N for beads counted offline",
+                "en": "Undo, a lock against stray taps, and add +N for counts done away from the phone",
                 "zh": "可撤销、防误触锁，线下拨珠可补录 +N"
               }
             ],
@@ -990,7 +990,7 @@
             },
             "p": {
               "en": "Practices can be counted, timed or simply ticked. Set them for every day, certain weekdays, a number of times a week, or a fixed stretch such as a hundred days.",
-              "zh": "功课可以计数、计时或打勾；节奏可以是每天、每周固定几天、每周几次，或一段时间（比如百日）。"
+              "zh": "项目可以计数、计时或打勾；节奏可以是每天、每周固定几天、每周几次，或一段时间（比如百日）。"
             },
             "list": [
               {
@@ -1006,7 +1006,7 @@
               "src": "/assets/img/apps/chiheng/calendar-600.webp",
               "alt": {
                 "en": "Check-in calendar for one practice",
-                "zh": "一项功课的打卡日历"
+                "zh": "一个项目的打卡日历"
               }
             },
             "flip": true
@@ -1057,8 +1057,8 @@
               "zh": "看看走了多远。"
             },
             "p": {
-              "en": "Totals by practice for this month, last month, this year or any range, compared with the period before. Long-term goals such as 100,000 recitations show their progress.",
-              "zh": "按功课看本月、上月、今年或任意时间段的总量，并和上一周期比较；十万遍这样的长期目标也能看到进度。"
+              "en": "Totals by item for this month, last month, this year or any range, compared with the period before. Long-term goals such as 100,000 repetitions show their progress.",
+              "zh": "按项目看本月、上月、今年或任意时间段的总量，并和上一周期比较；十万遍这样的长期目标也能看到进度。"
             },
             "shot": {
               "src": "/assets/img/apps/chiheng/stats-600.webp",
@@ -1077,7 +1077,7 @@
             },
             "h3": {
               "en": "Your own texts and recordings.",
-              "zh": "自己的经本和录音。"
+              "zh": "自己的资料和录音。"
             },
             "p": {
               "en": "ChiHeng ships no content. Add your own PDFs, EPUBs, audio and video, read and listen inside the app, and it remembers where you stopped.",
@@ -1156,12 +1156,12 @@
           },
           {
             "q": {
-              "en": "Is it only for Buddhist practice?",
-              "zh": "只能用来记佛教功课吗？"
+              "en": "What can I track with it?",
+              "zh": "可以用来记哪些事？"
             },
             "a": {
-              "en": "No. It was made with Buddhist practitioners in mind, but the wording is neutral and a practice can be anything you repeat: recitation, sitting, reading, exercise.",
-              "zh": "不是。持恒主要为学佛的人设计，但界面用语是中性的，功课可以是任何你想坚持的事：念诵、静坐、读书、锻炼。"
+              "en": "Anything you want to keep doing: reading aloud, vocabulary, meditation, exercise, a daily walk. Each item can be counted, timed or simply checked off.",
+              "zh": "任何你想坚持的事：跟读、背单词、静坐、锻炼、每天走一走。每个项目可以计数、计时，或者只打个勾。"
             }
           },
           {
@@ -1171,7 +1171,7 @@
             },
             "a": {
               "en": "Export a backup on the old phone, copy the file to the new one and restore it there. On Android the backup holds your practices, records, notes and how your library is organized, but not the files themselves, so copy those over too. On iPhone, iPad and HarmonyOS the backup also includes your library files and note images. ChiHeng does not sync through the cloud.",
-              "zh": "在旧手机上导出备份，把文件拷到新手机上恢复。安卓版的备份里有功课、记录、笔记和资料库的整理方式，但不含资料文件本身，文件要另外拷过去；iPhone、iPad 和鸿蒙版的备份连资料文件和笔记图片一起打包。持恒不做云同步。"
+              "zh": "在旧手机上导出备份，把文件拷到新手机上恢复。安卓版的备份里有项目、记录、笔记和资料库的整理方式，但不含资料文件本身，文件要另外拷过去；iPhone、iPad 和鸿蒙版的备份连资料文件和笔记图片一起打包。持恒不做云同步。"
             }
           },
           {
