@@ -8,7 +8,7 @@ import { t, href, type Lang } from '../../i18n';
 import { SERIES } from '../../lib/routes';
 const { lang } = Astro.props as { lang: Lang };
 const T = t(lang); const H = T.home; const A = T.about;
-const org = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Shuye Lab', alternateName: '书叶工作室', url: site.url + '/', email: site.email, logo: site.url + '/icon-512.png' };
+const org = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Shuye Lab', alternateName: '书叶工作室', url: site.url + '/', email: site.email, logo: site.url + '/icon-512.png', sameAs: 'https://github.com/shuyelab' };
 ---
 <Base lang={lang} path="/" title={H.title} description={H.description} jsonld={[org]}>
 <section class="hero">

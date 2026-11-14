@@ -4,5 +4,12 @@
   "name_zh": "书叶工作室",
   "email": "shuyelab@gmail.com",
   "year": 2026,
-  "goatcounter": { "enabled": false, "code": "shuyelab" }
+  "goatcounter": {
+    "enabled": false,
+    "code": "shuyelab"
+  },
+  "verify": {
+    "bing": "84DB70DDC04A8F5BC3EE4B85DCB75501",
+    "google": ""
+  }
 }

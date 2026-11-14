@@ -15,9 +15,8 @@ const fixLinks = (s: string) => s.replace(/href="(?!\/|https?:|#|mailto:)([^"]*)
 const privacyLangs: Lang[] = (app.legal?.privacy?.langs ?? []).filter((l: Lang) => l !== lang);
 const jsonld = [{
   '@context': 'https://schema.org', '@type': 'MobileApplication', name: L(app.name, 'en'), alternateName: L(app.name, 'zh'),
-  operatingSystem: app.platforms, applicationCategory: 'EducationalApplication', description: L(app.meta.description, lang),
+  operatingSystem: app.platforms, applicationCategory: app.category, description: L(app.meta.description, lang),
   publisher: { '@type': 'Organization', name: 'Shuye Lab', email: site.email, url: site.url + '/' }, image: site.url + app.icon,
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
 }];
 const quiet = app.quiet;
 ---

@@ -1,0 +1,34 @@
+# Shuye Lab
+
+> Apps and books for learning Chinese
+
+Shuye Lab (书叶工作室) is an independent studio making apps for learning Chinese and tracking daily practice, as well as printed study books.
+
+## Apps
+
+- Kaihua: HSK 3.0 vocabulary with tone training (7-Day Tone Camp), spaced repetition, and character breakdowns. Available in English, Korean, and Thai. Coming soon to iOS and Android.
+  https://shuyelab.github.io/apps/kaihua/
+
+- ChiHeng: A quiet log for daily practice, helping learners track study streaks. Coming soon to iOS and Android.
+  https://shuyelab.github.io/apps/chiheng/
+
+## Books
+
+All books are available on Amazon in paperback, hardcover, and Kindle editions.
+
+- Grid by Grid Chinese: HSK 3.0 workbook series covering Levels 1-4, with stroke-by-stroke character practice, vocabulary exercises, and full-length practice tests.
+  https://shuyelab.github.io/books/grid-by-grid-chinese/
+
+- Civics in Two Languages: Bilingual study guides for the U.S. citizenship test, with large print for senior learners and free audio resources.
+  https://shuyelab.github.io/books/civics-in-two-languages/
+
+- Chinese Classics in Parallel Text: Original English translations of classical Chinese texts, including The Art of War with scholarly annotations.
+  https://shuyelab.github.io/books/chinese-classics-parallel/
+
+- Motif by Motif: Chess tactics workbooks with 500+ positions verified by Stockfish, organized by tactical themes.
+  https://shuyelab.github.io/books/motif-by-motif-chess/
+
+## Contact
+
+Email: shuyelab@gmail.com
+Website: https://shuyelab.github.io/

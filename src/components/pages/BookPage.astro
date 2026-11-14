@@ -16,10 +16,8 @@ const title = zh ? `${book.zh_title}` : book.title;
 const desc = `${L(book.summary, lang)} ${L(book.for_whom, lang)}`.slice(0, 300);
 const jsonld = [{
   '@context': 'https://schema.org', '@type': 'Book', name: book.title, alternateName: book.zh_title, description: L(book.summary, lang),
-  image: site.url + img('cover-800.webp'), url: site.url + bookPath(book), inLanguage: ['en', 'zh-CN'],
-  author: { '@type': 'Person', name: book.author || 'Shuye Lab' },
+  image: site.url + img('cover-800.webp'), url: site.url + bookPath(book),
   isPartOf: { '@type': 'BookSeries', name: s.name }, publisher: { '@type': 'Organization', name: 'Shuye Lab', email: site.email },
-  ...(book.pages ? { numberOfPages: book.pages } : {}),
   ...(book.isbn ? { isbn: book.isbn } : {}),
   ...(book.amazon_url ? { offers: { '@type': 'Offer', url: book.amazon_url, availability: 'https://schema.org/InStock' } } : {}),
 }];
