@@ -21,6 +21,6 @@ const nl: Lang = lang === 'zh' ? 'zh' : 'en';
         <li><a href={href(nl, '/legal/')}>{T.footer.privacy}</a></li>
       </ul></div>
     </div>
-    <div class="foot-bottom"><span>© {site.year} {lang === 'zh' ? '书叶工作室 Shuye Lab' : 'Shuye Lab · 书叶工作室'}</span><span>{T.footer.cookies}</span></div>
+    <div class="foot-bottom"><span>© {site.year} {lang === 'zh' ? '书叶工作室 Shuye Lab' : 'Shuye Lab · 书叶工作室'}</span>{site.ga4?.enabled && <button type="button" class="link-btn" data-consent-open>{T.footer.cookies}</button>}</div>
   </div>
 </footer>

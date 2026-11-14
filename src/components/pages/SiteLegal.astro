@@ -6,21 +6,24 @@ import { APPS } from '../../lib/routes';
 const { lang } = Astro.props as { lang: Lang };
 const T = t(lang); const zh = lang === 'zh';
 const gc = site.goatcounter.enabled;
+const ga = site.ga4?.enabled;
 const mail = `<a href="mailto:${site.email}">${site.email}</a>`;
 const appLinks = APPS.map((a) => `<a href="${href(lang, `/apps/${a.slug}/privacy/`)}">${L(a.name, lang)}</a>`).join(zh ? '、' : ', ');
 const en = `
 <h1>Site privacy</h1>
-<p class="meta">Effective date: 13 November 2026 · Last updated: 13 November 2026</p>
+<p class="meta">Effective date: 13 November 2026 · Last updated: 14 November 2026</p>
 <p>This notice covers this website, <b>shuyelab.github.io</b>, run by Shuye Lab (“we”). Each of our apps has its own privacy policy: ${appLinks}.</p>
 <div class="card"><b>The short version</b><ul>
-<li>No cookies, no accounts, no sign-up forms, no ads.</li>
-<li>${gc ? 'We count page views with GoatCounter, which uses no cookies and does not identify you.' : 'We do not collect visitor statistics at the moment.'}</li>
-<li>Fonts, images, audio and scripts are served from this site. Pages do not load anything from other companies.</li>
+<li>${ga ? 'No accounts, no sign-up forms, no ads. The only cookies are Google Analytics cookies, and only if you click “Allow” in the banner.' : 'No cookies, no accounts, no sign-up forms, no ads.'}</li>
+<li>${ga ? 'If you allow it, Google Analytics counts page views. If you say no, nothing is loaded and nothing is counted. You can change your choice any time with “Cookie settings” at the bottom of every page.' : gc ? 'We count page views with GoatCounter, which uses no cookies and does not identify you.' : 'We do not collect visitor statistics at the moment.'}</li>
+<li>${ga ? 'Fonts, images, audio and other scripts are served from this site. Apart from Google Analytics (after you allow it), pages do not load anything from other companies.' : 'Fonts, images, audio and scripts are served from this site. Pages do not load anything from other companies.'}</li>
 </ul></div>
 <h2 id="hosting">1. Hosting</h2>
 <p>The site is hosted on GitHub Pages, a service of GitHub, Inc. When you open a page, GitHub’s servers receive your IP address, the page you asked for and technical details your browser sends, as every web server does. GitHub may log this for security and to keep the service running, as described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>. We do not receive these logs.</p>
 <h2 id="stats">2. Visitor statistics</h2>
-${gc
+${ga
+  ? '<p>We use <a href="https://marketingplatform.google.com/about/analytics/">Google Analytics</a>, a service of Google LLC, to count visits, but only after you click “Allow” in the banner. Until then the Google Analytics script is not loaded and no cookie is set. If you allow it, Google Analytics sets cookies (named <code>_ga</code> and <code>_ga_…</code>, kept for up to 2 years) and records the pages you view, the site you came from, your browser and device type, an approximate location (country or city), and how you move through the site. Google processes this data, which may involve servers outside your country, including in the United States. We use only the totals: which pages people read, how visitors find us, and how many people scan the QR codes printed in our books. We do not use it for advertising and we do not try to identify you.</p><p>Your choice is stored in your browser’s local storage under <code>sl-consent</code>. To change it, click “Cookie settings” at the bottom of any page. If you choose “No thanks” after allowing, we delete the Google Analytics cookies on this site. You can also block cookies in your browser or install the <a href="https://tools.google.com/dlpage/gaoptout">Google Analytics opt-out add-on</a>. Google’s own practices are described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites that use its services</a>.</p>'
+  : gc
   ? '<p>We use <a href="https://www.goatcounter.com/">GoatCounter</a> to count page views. It records the page, the referring site, the browser type, screen size and country, uses no cookies and does not store your IP address. We use the totals to see which pages people read and how many people scan the QR codes printed in our books.</p>'
   : '<p>We do not run any statistics or tracking code. If we add a page-view counter later, it will be one that uses no cookies (we plan to use GoatCounter), and we will update this page before it goes live.</p>'}
 <h2 id="audio">3. Audio pages for our books</h2>
@@ -35,17 +38,19 @@ ${gc
 <p>Shuye Lab · ${mail}</p>`;
 const zhBody = `
 <h1>本站隐私声明</h1>
-<p class="meta">生效日期：2026 年 11 月 13 日 · 最后更新：2026 年 11 月 13 日</p>
+<p class="meta">生效日期：2026 年 11 月 13 日 · 最后更新：2026 年 11 月 14 日</p>
 <p>本声明适用于书叶工作室（Shuye Lab，下称“我们”）运营的网站 <b>shuyelab.github.io</b>。我们的每款 App 另有各自的隐私政策：${appLinks}。</p>
 <div class="card"><b>简要说明</b><ul>
-<li>不用 Cookie，没有账号、注册表单和广告。</li>
-<li>${gc ? '我们用 GoatCounter 统计页面访问量，它不用 Cookie，也不识别你的身份。' : '目前不收集任何访问统计。'}</li>
-<li>字体、图片、音频和脚本都从本站加载，页面不会向其他公司请求任何内容。</li>
+<li>${ga ? '没有账号、注册表单和广告。唯一的 Cookie 是 Google Analytics 的，而且只有你在横幅里点了“同意”才会设置。' : '不用 Cookie，没有账号、注册表单和广告。'}</li>
+<li>${ga ? '你同意后，Google Analytics 会统计页面访问量；你不同意，就不加载、也不统计。每页底部的“Cookie 设置”可以随时改主意。' : gc ? '我们用 GoatCounter 统计页面访问量，它不用 Cookie，也不识别你的身份。' : '目前不收集任何访问统计。'}</li>
+<li>${ga ? '字体、图片、音频和其他脚本都从本站加载；除 Google Analytics（经你同意后）外，页面不会向其他公司请求任何内容。' : '字体、图片、音频和脚本都从本站加载，页面不会向其他公司请求任何内容。'}</li>
 </ul></div>
 <h2 id="hosting">1. 托管</h2>
 <p>本站托管在 GitHub, Inc. 提供的 GitHub Pages 上。你打开页面时，GitHub 的服务器会收到你的 IP 地址、访问的页面以及浏览器发送的技术信息，所有网站服务器都是这样。GitHub 可能出于安全和维持服务的需要记录这些信息，详见 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>。我们拿不到这些日志。</p>
 <h2 id="stats">2. 访问统计</h2>
-${gc
+${ga
+  ? '<p>我们用 Google LLC 提供的 <a href="https://marketingplatform.google.com/about/analytics/">Google Analytics</a> 统计访问，但只有你在横幅里点了“同意”才会启用。在此之前，不加载 Google Analytics 脚本，也不设置任何 Cookie。你同意后，Google Analytics 会设置 Cookie（名为 <code>_ga</code> 和 <code>_ga_…</code>，最长保留 2 年），记录你浏览的页面、来源网站、浏览器和设备类型、大致位置（国家或城市）以及在站内的浏览路径。这些数据由 Google 处理，可能存放在你所在国家以外（包括美国）的服务器上。我们只看汇总数字：哪些页面有人看、访客从哪里来、书上印的二维码被扫了多少次。我们不拿它做广告，也不会试图识别你是谁。</p><p>你的选择保存在浏览器本地存储的 <code>sl-consent</code> 里。要改，点任意页面底部的“Cookie 设置”。同意之后再选“不用了”，我们会删除本站的 Google Analytics Cookie。你也可以在浏览器里屏蔽 Cookie，或安装 <a href="https://tools.google.com/dlpage/gaoptout">Google Analytics 停用插件</a>。Google 自己如何处理数据，见 <a href="https://policies.google.com/privacy">Google 隐私权政策</a> 和 <a href="https://policies.google.com/technologies/partner-sites">Google 如何使用来自使用其服务的网站的信息</a>。</p>'
+  : gc
   ? '<p>我们用 <a href="https://www.goatcounter.com/">GoatCounter</a> 统计页面访问量。它记录访问的页面、来源网站、浏览器类型、屏幕尺寸和国家或地区，不用 Cookie，也不保存你的 IP 地址。我们用这些总数了解哪些页面有人看，以及书上印的二维码被扫了多少次。</p>'
   : '<p>本站目前没有任何统计或跟踪代码。以后如果加页面访问计数，会选不用 Cookie 的工具（计划用 GoatCounter），并在启用之前先更新本页。</p>'}
 <h2 id="audio">3. 图书配套音频页</h2>

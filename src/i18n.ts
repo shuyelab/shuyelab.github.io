@@ -18,7 +18,7 @@ const en: Dict = {
   nav: { apps: 'Apps', books: 'Books', about: 'About', contact: 'Contact', menu: 'Menu', main: 'Main', home: 'Shuye Lab home', language: 'Language' },
   footer: {
     about: 'An independent studio making study apps and printed study books.',
-    apps: 'Apps', books: 'Books', studio: 'Studio', privacy: 'Site privacy', cookies: 'No cookies on this site.',
+    apps: 'Apps', books: 'Books', studio: 'Studio', privacy: 'Site privacy', cookies: 'Cookie settings',
   },
   comingSoon: 'Coming soon', amazonSoon: 'Coming soon on Amazon', buyAmazon: 'Buy on Amazon',
   appStore: 'App Store', googlePlay: 'Google Play', inTesting: 'In testing',
@@ -79,7 +79,14 @@ const en: Dict = {
   },
   legal: {
     title: 'Site privacy',
-    description: 'Privacy notice for the shuyelab.github.io website: no cookies, no tracking, hosted on GitHub Pages.',
+    description: 'Privacy notice for the shuyelab.github.io website: visitor statistics with Google Analytics only if you agree, hosted on GitHub Pages.',
+  },
+  consent: {
+    label: 'Cookie consent',
+    text: 'May we use Google Analytics cookies to count visits? This helps us see which pages people read. Nothing is tracked unless you agree.',
+    more: 'Details',
+    yes: 'Allow',
+    no: 'No thanks',
   },
   apps: {
     title: 'Apps by Shuye Lab',
@@ -103,7 +110,7 @@ const zh: Dict = {
   nav: { apps: '应用', books: '图书', about: '关于', contact: '联系', menu: '菜单', main: '主导航', home: '书叶工作室首页', language: '语言' },
   footer: {
     about: '独立工作室，做学习类 App 和纸质学习书。',
-    apps: '应用', books: '图书', studio: '工作室', privacy: '本站隐私声明', cookies: '本站不使用 Cookie',
+    apps: '应用', books: '图书', studio: '工作室', privacy: '本站隐私声明', cookies: 'Cookie 设置',
   },
   comingSoon: '即将上线', amazonSoon: '即将在亚马逊上架', buyAmazon: '在亚马逊购买',
   appStore: 'App Store', googlePlay: 'Google Play', inTesting: '测试中',
@@ -164,7 +171,14 @@ const zh: Dict = {
   },
   legal: {
     title: '本站隐私声明',
-    description: 'shuyelab.github.io 网站的隐私声明：不用 Cookie，不做跟踪，托管在 GitHub Pages。',
+    description: 'shuyelab.github.io 网站的隐私声明：经你同意才用 Google Analytics 统计访问，托管在 GitHub Pages。',
+  },
+  consent: {
+    label: 'Cookie 同意',
+    text: '可以用 Google Analytics 的 Cookie 统计访问量吗？这能帮我们了解大家在看哪些页面。你不同意就不会统计。',
+    more: '详情',
+    yes: '同意',
+    no: '不用了',
   },
   apps: {
     title: '书叶工作室的 App',
@@ -185,7 +199,8 @@ const zh: Dict = {
 const ko: Dict = {
   skip: '본문으로 건너뛰기',
   nav: { apps: '앱', books: '도서', about: '소개', contact: '문의', menu: '메뉴', main: '주 메뉴', home: 'Shuye Lab 홈', language: '언어' },
-  footer: { about: '학습용 앱과 학습서를 만드는 독립 스튜디오입니다.', apps: '앱', books: '도서', studio: '스튜디오', privacy: '사이트 개인정보', cookies: '이 사이트는 쿠키를 사용하지 않습니다.' },
+  footer: { about: '학습용 앱과 학습서를 만드는 독립 스튜디오입니다.', apps: '앱', books: '도서', studio: '스튜디오', privacy: '사이트 개인정보', cookies: '쿠키 설정' },
+  consent: { label: '쿠키 동의', text: '방문 수를 세기 위해 Google Analytics 쿠키를 사용해도 될까요? 동의하지 않으면 아무것도 추적하지 않습니다.', more: '자세히(영문)', yes: '동의', no: '거부' },
   legalAlso: '다른 언어:', backTo: '돌아가기', legalBack: '앱 소개', crumbsApps: '앱',
   legalNav: { privacy: '개인정보처리방침', terms: '이용약관(영문)', support: '고객 지원(영문)' },
 };
@@ -193,7 +208,8 @@ const ko: Dict = {
 const th: Dict = {
   skip: 'ข้ามไปที่เนื้อหา',
   nav: { apps: 'แอป', books: 'หนังสือ', about: 'เกี่ยวกับเรา', contact: 'ติดต่อ', menu: 'เมนู', main: 'เมนูหลัก', home: 'หน้าแรก Shuye Lab', language: 'ภาษา' },
-  footer: { about: 'สตูดิโออิสระที่ทำแอปและหนังสือสำหรับการเรียน', apps: 'แอป', books: 'หนังสือ', studio: 'สตูดิโอ', privacy: 'ความเป็นส่วนตัวของเว็บไซต์', cookies: 'เว็บไซต์นี้ไม่ใช้คุกกี้' },
+  footer: { about: 'สตูดิโออิสระที่ทำแอปและหนังสือสำหรับการเรียน', apps: 'แอป', books: 'หนังสือ', studio: 'สตูดิโอ', privacy: 'ความเป็นส่วนตัวของเว็บไซต์', cookies: 'การตั้งค่าคุกกี้' },
+  consent: { label: 'ความยินยอมคุกกี้', text: 'เราขอใช้คุกกี้ของ Google Analytics เพื่อนับจำนวนผู้เข้าชมได้ไหม หากคุณไม่ยินยอม เราจะไม่ติดตามใดๆ', more: 'รายละเอียด (ภาษาอังกฤษ)', yes: 'ยินยอม', no: 'ไม่ยินยอม' },
   legalAlso: 'ภาษาอื่น:', backTo: 'กลับไปที่', legalBack: 'เกี่ยวกับแอป', crumbsApps: 'แอป',
   legalNav: { privacy: 'นโยบายความเป็นส่วนตัว', terms: 'ข้อกำหนดการใช้งาน (ภาษาอังกฤษ)', support: 'ฝ่ายช่วยเหลือ (ภาษาอังกฤษ)' },
 };

@@ -4,6 +4,7 @@ import '../styles/global.css';
 import site from '../data/site.json';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Consent from '../components/Consent.astro';
 import { HTML_LANG, OG_LOCALE, t, type Lang } from '../i18n';
 import { alternates } from '../lib/routes';
 
@@ -68,5 +69,6 @@ const gc = site.goatcounter;
 <slot />
 </main>
 <Footer lang={lang} />
+<Consent lang={lang} />
 </body>
 </html>

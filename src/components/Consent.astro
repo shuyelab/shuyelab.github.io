@@ -1,0 +1,52 @@
+---
+// 统计同意横幅：只有访客点「同意」后才加载 GA4；选择存在 localStorage（sl-consent = yes / no）。
+// 页脚的「Cookie 设置」按钮（data-consent-open）可以重新打开横幅。
+import site from '../data/site.json';
+import { t, href, type Lang } from '../i18n';
+const { lang } = Astro.props as { lang: Lang };
+const T = t(lang).consent;
+const nl: Lang = lang === 'zh' ? 'zh' : 'en';
+const ga = site.ga4;
+---
+{ga?.enabled && <>
+<div class="consent" id="consent" role="dialog" aria-live="polite" aria-label={T.label} hidden>
+  <p>{T.text} <a href={href(nl, '/legal/') + '#stats'}>{T.more}</a></p>
+  <div class="consent-btns"><button type="button" class="btn btn-line" data-consent="no">{T.no}</button><button type="button" class="btn btn-ink" data-consent="yes">{T.yes}</button></div>
+</div>
+<script is:inline define:vars={{ gaId: ga.id }}>
+(function () {
+  var KEY = 'sl-consent', box = document.getElementById('consent');
+  function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+  function load() {
+    if (window.__slGa) return; window.__slGa = 1;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date()); gtag('config', gaId);
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId; document.head.appendChild(s);
+  }
+  function clearGa() {
+    document.cookie.split(';').forEach(function (c) {
+      var n = c.split('=')[0].trim();
+      if (n === '_ga' || n.indexOf('_ga_') === 0) {
+        document.cookie = n + '=; Max-Age=0; path=/';
+        document.cookie = n + '=; Max-Age=0; path=/; domain=' + location.hostname;
+        document.cookie = n + '=; Max-Age=0; path=/; domain=.' + location.hostname;
+      }
+    });
+  }
+  var v = get();
+  if (v === 'yes') load(); else if (v !== 'no') box.hidden = false;
+  box.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-consent]'); if (!b) return;
+    var yes = b.getAttribute('data-consent') === 'yes';
+    set(yes ? 'yes' : 'no'); box.hidden = true;
+    if (yes) load(); else if (window.__slGa) { clearGa(); location.reload(); } else clearGa();
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('[data-consent-open]')) { e.preventDefault(); box.hidden = false; box.querySelector('[data-consent="yes"]').focus(); }
+  });
+})();
+</script>
+</>}
