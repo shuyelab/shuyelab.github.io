@@ -14,18 +14,20 @@ Shuye Lab (书叶工作室) is an independent studio making apps for learning Ch
 
 ## Books
 
-All books are available on Amazon in paperback, hardcover, and Kindle editions.
+Printed study books published on Amazon. Two are on sale now; the others are coming soon.
 
-- Grid by Grid Chinese: HSK 3.0 workbook series covering Levels 1-4, with stroke-by-stroke character practice, vocabulary exercises, and full-length practice tests.
+- Grid by Grid Chinese: handwriting and vocabulary workbooks for the new HSK 3.0 syllabus (Levels 1-4), with stroke order, tian zi ge grids and answer keys.
+  Book 1 (HSK 3.0 Level 1, paperback) is on sale: https://www.amazon.com/dp/B0HS2NJF9Y
   https://shuyelab.github.io/books/grid-by-grid-chinese/
 
-- Civics in Two Languages: Bilingual study guides for the U.S. citizenship test, with large print for senior learners and free audio resources.
+- Civics in Two Languages: bilingual large-print study guides for the 2025 U.S. citizenship civics test, with free audio.
+  Book 1 (Chinese and English) is on sale in paperback and Kindle: https://www.amazon.com/dp/B0HRVDM2DW
   https://shuyelab.github.io/books/civics-in-two-languages/
 
-- Chinese Classics in Parallel Text: Original English translations of classical Chinese texts, including The Art of War with scholarly annotations.
+- Chinese Classics in Parallel Text: original English translations of classical Chinese texts with the Chinese original and notes, starting with The Art of War (coming soon).
   https://shuyelab.github.io/books/chinese-classics-parallel/
 
-- Motif by Motif: Chess tactics workbooks with 500+ positions verified by Stockfish, organized by tactical themes.
+- Motif by Motif: chess tactics workbooks organized by tactical motif, with 570 positions checked with a chess engine (coming soon).
   https://shuyelab.github.io/books/motif-by-motif-chess/
 
 ## Contact
